@@ -27,7 +27,7 @@ export async function GET(
   { params }: { params: Promise<{ course: string; path: string[] }> }
 ) {
   const { course, path: assetPath } = await params;
-  const filePath = path.join(process.cwd(), course, ...assetPath);
+  const filePath = path.join(process.cwd(), course, "assets", ...assetPath);
 
   if (!fs.existsSync(filePath)) {
     return new NextResponse("Not found", { status: 404 });
