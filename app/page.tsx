@@ -1,67 +1,43 @@
 import Link from "next/link";
 
-const courses = [
+const series = [
   {
-    slug: "civil_war",
-    title: "Civil War: 1820–1865",
-    subtitle: "West Point Drama",
-    description: "A character-driven narrative history course on the personal relationships between Civil War generals forged at West Point.",
-    lessons: 13,
-    color: "from-amber-500 to-orange-600",
-    icon: "⚔",
-    badge: "History",
-  },
-  {
-    slug: "vowel-teams",
-    title: "Vowel Teams",
-    subtitle: "Phonics for Ages 9–11",
-    description: "Systematic, explicit instruction on vowel teams. UFLI-aligned. Multi-sensory and game-like activities for developing readers.",
-    lessons: 15,
-    color: "from-blue-500 to-indigo-600",
-    icon: "🔤",
-    badge: "Literacy",
-  },
-  {
-    slug: "green-advantage",
-    title: "The Green Advantage",
-    subtitle: "Business, Networking & Golf",
-    description: "Master the unwritten rules, etiquette, and networking power of golf — the game where deals are made and careers are advanced.",
-    lessons: 10,
-    color: "from-emerald-500 to-teal-600",
-    icon: "🏌️",
-    badge: "Business",
-  },
-  {
-    slug: "power-table",
-    title: "The Power Table",
-    subtitle: "Business Dining & Etiquette",
-    description: "Master the etiquette, strategy, and relationship-building power of the business meal — from wine selection to seating politics.",
-    lessons: 10,
-    color: "from-rose-500 to-pink-600",
-    icon: "🍽",
-    badge: "Business",
-  },
-  {
-    slug: "inner-circle",
-    title: "The Inner Circle",
-    subtitle: "Private Clubs & Networks",
-    description: "Understand the power of private membership clubs — deal flow on leather sofas, unwritten rules of admission, reciprocity, and belonging.",
-    lessons: 10,
-    color: "from-violet-500 to-purple-600",
-    icon: "🏛",
-    badge: "Business",
-  },
-  {
-    slug: "offsite-advantage",
-    title: "The Off-Site Advantage",
-    subtitle: "Conferences & Events",
-    description: "Master the hidden economy of conferences — the real business that happens between sessions in hallways, bars, and after-parties.",
-    lessons: 10,
-    color: "from-sky-500 to-cyan-600",
-    icon: "🎤",
-    badge: "Business",
+    title: "Second Business Spaces",
+    subtitle: "4 Courses · 40 Modules",
+    description: "Master the hidden language of business across the spaces where deals are really made — the golf course, the dining table, the private club, and the conference floor.",
+    gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    courses: [
+      { slug: "green-advantage", title: "The Green Advantage", icon: "🏌️", subtitle: "Golf & Networking", lessons: 10, color: "from-emerald-500 to-teal-600" },
+      { slug: "power-table", title: "The Power Table", icon: "🍽", subtitle: "Dining & Etiquette", lessons: 10, color: "from-rose-500 to-pink-600" },
+      { slug: "inner-circle", title: "The Inner Circle", icon: "🏛", subtitle: "Private Clubs", lessons: 10, color: "from-violet-500 to-purple-600" },
+      { slug: "offsite-advantage", title: "The Off-Site Advantage", icon: "🎤", subtitle: "Conferences & Events", lessons: 10, color: "from-sky-500 to-cyan-600" },
+    ],
   },
 ];
+
+const standalone = [
+  { slug: "civil_war", title: "Civil War: 1820–1865", subtitle: "West Point Drama", icon: "⚔", lessons: 13, color: "from-amber-500 to-orange-600", badge: "History" },
+  { slug: "vowel-teams", title: "Vowel Teams", subtitle: "Phonics for Ages 9–11", icon: "🔤", lessons: 15, color: "from-blue-500 to-indigo-600", badge: "Literacy" },
+];
+
+function CourseCard({ course, baseSlug }: { course: any; baseSlug?: string }) {
+  const href = baseSlug ? `/courses/${baseSlug}` : `/courses/${course.slug}`;
+  return (
+    <Link href={href} className="lms-card overflow-hidden no-underline hover:-translate-y-0.5 transition-all duration-200">
+      <div className={`h-28 bg-gradient-to-br ${course.color} p-4 flex items-end`}>
+        <div>
+          {course.badge && <span className="inline-block lms-badge bg-white/20 text-white text-[10px] mb-1.5 backdrop-blur-sm">{course.badge}</span>}
+          <h3 className="text-white text-base font-bold leading-tight">{course.title}</h3>
+          <p className="text-white/70 text-[11px] mt-0.5">{course.subtitle}</p>
+        </div>
+      </div>
+      <div className="p-4 space-y-2.5">
+        <p className="text-xs text-lms-text-muted">{course.lessons} modules</p>
+        <div className="lms-progress"><div className="lms-progress-fill" style={{ width: "0%" }} /></div>
+      </div>
+    </Link>
+  );
+}
 
 export default function Home() {
   return (
@@ -72,7 +48,7 @@ export default function Home() {
         <p className="text-lms-text-secondary mt-1 text-sm">Welcome back. Continue where you left off.</p>
       </div>
 
-      {/* Stats row */}
+      {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
           { label: "Enrolled Courses", value: "6", color: "text-lms-accent" },
@@ -87,43 +63,28 @@ export default function Home() {
         ))}
       </div>
 
-      {/* My Courses */}
+      {/* Series Banner */}
+      {series.map((s) => (
+        <section key={s.title} className="rounded-xl overflow-hidden">
+          <div className={`bg-gradient-to-br ${s.gradient} p-5 md:p-6 text-white`}>
+            <h2 className="text-lg font-bold">{s.title}</h2>
+            <p className="text-white/80 text-sm mt-1">{s.subtitle}</p>
+            <p className="text-white/60 text-xs mt-2 max-w-2xl">{s.description}</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 p-4 bg-white border-x border-b border-lms-border rounded-b-xl">
+            {s.courses.map((course) => (
+              <CourseCard key={course.slug} course={course} baseSlug={course.slug} />
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {/* Standalone Courses */}
       <section>
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold">My Courses</h2>
-        </div>
+        <h2 className="text-lg font-semibold mb-4">Other Courses</h2>
         <div className="grid md:grid-cols-2 gap-5">
-          {courses.map((course) => (
-            <Link
-              key={course.slug}
-              href={`/courses/${course.slug}`}
-              className="lms-card overflow-hidden no-underline hover:-translate-y-0.5 transition-all duration-200"
-            >
-              {/* Course header gradient */}
-              <div className={`h-32 bg-gradient-to-br ${course.color} p-5 flex items-end`}>
-                <div>
-                  <span className="inline-block lms-badge bg-white/20 text-white text-xs mb-2 backdrop-blur-sm">
-                    {course.badge}
-                  </span>
-                  <h3 className="text-white text-lg font-bold leading-tight">{course.title}</h3>
-                  <p className="text-white/80 text-xs mt-0.5">{course.subtitle}</p>
-                </div>
-              </div>
-              {/* Course body */}
-              <div className="p-5 space-y-3">
-                <p className="text-sm text-lms-text-secondary leading-relaxed line-clamp-2">
-                  {course.description}
-                </p>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-lms-text-secondary">{course.lessons} modules</span>
-                  <span className="text-lms-accent text-xs font-medium hover:underline">View Course →</span>
-                </div>
-                <div className="lms-progress">
-                  <div className="lms-progress-fill" style={{ width: "0%" }} />
-                </div>
-                <p className="text-xs text-lms-text-muted">0% complete</p>
-              </div>
-            </Link>
+          {standalone.map((course) => (
+            <CourseCard key={course.slug} course={course} />
           ))}
         </div>
       </section>
