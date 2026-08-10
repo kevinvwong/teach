@@ -19,10 +19,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: `Item bank "${bankName}" not found` }, { status: 404 });
     }
 
-    // Filter active items for this domain
+    // Filter items for this domain (active or draft — all are usable until empirically calibrated)
     const allItems = bankName
-      ? bank.items.filter((i: any) => i.domain === bankName && (!i.calibration || i.calibration.status === "active"))
-      : bank.items.filter((i: any) => !i.calibration || i.calibration.status === "active");
+      ? bank.items.filter((i: any) => i.domain === bankName && (!i.calibration || i.calibration.status !== "retired"))
+      : bank.items.filter((i: any) => !i.calibration || i.calibration.status !== "retired");
 
     // Build scored responses
     const scoredResponses = responses

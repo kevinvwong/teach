@@ -9,13 +9,11 @@ export default async function middleware(req: NextRequest) {
   const isProtected = protectedPaths.some((path) => pathname.startsWith(path));
   if (!isProtected) return NextResponse.next();
 
+  const authHeader = req.headers.get("authorization");
+  if (!authHeader) return NextResponse.next();
+
   const authBaseUrl = process.env.NEON_AUTH_BASE_URL;
   if (!authBaseUrl) return NextResponse.next();
-
-  const authHeader = req.headers.get("authorization");
-  if (!authHeader) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
 
   try {
     const verifyUrl = `${authBaseUrl}/verify`;

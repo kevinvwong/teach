@@ -24,9 +24,9 @@ export async function GET(
   `;
 
   html = html.replace(/<body[^>]*>/, (match) => `${match}${banner}`);
-  html = html.replace(/(href|src)=(["'])(\.\.\/assets\/)/g, `$1=$2/courses/${course}/assets/`);
-  html = html.replace(/(href|src)=(["'])(\.\.\/assessments\/)/g, `$1=$2/courses/${course}/assessments/`);
-  html = html.replace(/(href|src)=(["'])(\.\.\/reference\/)/g, `$1=$2/courses/${course}/reference/`);
+  html = html.replace(/(["'])(\.\.\/assets\/)/g, `$1/courses/${course}/assets/`);
+  html = html.replace(/(["'])(\.\.\/assessments\/)/g, `$1/courses/${course}/assessments/`);
+  html = html.replace(/(["'])(\.\.\/reference\/)/g, `$1/courses/${course}/reference/`);
 
   return new NextResponse(html, {
     headers: { "Content-Type": "text/html; charset=utf-8" },
