@@ -15,6 +15,13 @@
 ├── SYLLABUS.md            ← full course syllabus (modules, order, pacing)
 ├── RESOURCES.md           ← curated decodable texts, games, manipulatives
 ├── NOTES.md               ← user preferences and working notes
+├── .env.local             ← PEXELS_API_KEY for image fetching
+├── assessments/
+│   ├── item-bank.json     ← IRT-calibrated item bank (3PL model)
+│   └── quiz-renderer.js   ← Client-side adaptive quiz component
+├── api/
+│   ├── irt-score.mjs      ← Vercel Edge Function for IRT scoring
+│   └── irt-schema.ts      ← Drizzle schema for response storage
 ├── assets/
 │   └── stylesheet.css     ← shared kid-friendly CSS for all lessons
 ├── lessons/
@@ -33,10 +40,6 @@
 │   ├── 0012-oi-oy.html                   ← /oi/ oi, oy (UFLI 95)
 │   ├── 0013-ou-ow.html                   ← /ou/ ou, ow (UFLI 96)
 │   └── 0014-final-review.html            ← all vowel teams + post-assessment (UFLI 97)
-├── reference/
-│   ├── vowel-team-cards.html             ← printable sound-spelling cards
-│   ├── self-test-progress.html           ← progress check (10 Q per section)
-│   └── word-lists.tsv                    ← decodable word bank for all teams
 ├── reference/
 │   ├── vowel-team-cards.html            ← printable sound-spelling cards
 │   ├── self-test-progress.html          ← progress check (10 Q per section)
@@ -166,6 +169,62 @@ UFLI Foundations materials are free for educational use. Always link directly to
 - This course targets **remedial readers ages 9-11** — all text, examples, and activities must be age-respecting (not babyish)
 - Vowel teams are taught by **sound first**, then spelling pattern — never the reverse
 
+## Assessments (IRT-Based)
+
+Adaptive quizzes use Item Response Theory (3PL model) via `assessments/` and `api/`.
+
+```html
+<h2>Check Your Understanding</h2>
+<div id="quiz-container"
+     data-item-bank="../assessments/item-bank.json"
+     data-domain="vowel-teams-module-2"
+     data-n-items="5">
+  <noscript>
+    <div class="warning-box">
+      <p>This adaptive quiz requires JavaScript.</p>
+      <p><a href="0002-quiz-static.html">Take the printable version</a></p>
+    </div>
+  </noscript>
+  <div class="quiz-progress">Question <span id="q-num">0</span> of <span id="q-total">0</span></div>
+  <div id="quiz-question"></div>
+  <div id="quiz-options"></div>
+  <div id="quiz-feedback"></div>
+</div>
+<script src="../assessments/quiz-renderer.js" defer></script>
+```
+
+For the no-JS fallback, see `C:\Users\kwong318\.agents\skills\teach\NO-JS-FALLBACK.md`.
+
+## Image Workflow (Pexels API)
+
+Source lesson images via Pexels API. Key in `.env.local`.
+
+```bash
+node "C:\Users\kwong318\.agents\skills\teach\scripts\fetch-lesson-image.js" ^
+  --query "children reading books" ^
+  --orientation landscape ^
+  --output assets/images/hero-reading.jpg ^
+  --course .
+```
+
+Every image needs attribution:
+```html
+<p class="img-caption">Photo by <a href="...">Photographer</a> on <a href="https://www.pexels.com">Pexels</a></p>
+```
+
+## IMSCC Export
+
+```bash
+node "C:\Users\kwong318\.agents\skills\teach\scripts\export-imscc.mjs" ^
+  --course . ^
+  --output vowel-teams.imscc ^
+  --version 1.3
+```
+
+## Review Cycle
+
+Run student panels after drafting a module (3-5 students). File observations as `learning-records/review-<lesson>-panel-<number>.md`. Run expert reviews (learning design, content accuracy, accessibility) before publishing.
+
 ## Verification
 
 After building a new lesson, verify against this checklist:
@@ -176,3 +235,8 @@ After building a new lesson, verify against this checklist:
 - [ ] Includes cumulative review connections
 - [ ] Preview or closing links to the next lesson
 - [ ] Uses `<span class="vowel-highlight">` on target vowel team in example words
+- [ ] All images have alt text and photographer attribution
+- [ ] No JavaScript in core lesson (assessments may use JS with `<noscript>` fallback)
+- [ ] Print preview shows all content
+- [ ] WCAG: keyboard-navigable, color contrast ≥ 4.5:1, skip-to-content link
+- [ ] No horizontal scroll on mobile (600px)

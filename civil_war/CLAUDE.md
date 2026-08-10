@@ -15,6 +15,13 @@
 ├── SYLLABUS.md            ← full course syllabus (13 modules, 7 sessions)
 ├── RESOURCES.md           ← curated books, articles, communities
 ├── NOTES.md               ← user preferences and working notes
+├── .env.local             ← PEXELS_API_KEY for image fetching
+├── assessments/
+│   ├── item-bank.json     ← IRT-calibrated item bank (3PL model)
+│   └── quiz-renderer.js   ← Client-side adaptive quiz component
+├── api/
+│   ├── irt-score.mjs      ← Vercel Edge Function for IRT scoring
+│   └── irt-schema.ts      ← Drizzle schema for response storage
 ├── assets/
 │   └── stylesheet.css     ← shared Tufte-inspired CSS for all lessons
 ├── lessons/
@@ -44,7 +51,9 @@
     ├── 0005-infrastructure-fixes.md
     ├── 0006-module-2-grants-web.md
     ├── 0007-module-3-class-of-1842.md
-    └── 0008-course-completion.md
+    ├── 0008-course-completion.md
+    ├── review-*.md          ← Student panel observations
+    └── expert-review-*.md   ← Expert review reports
 ```
 
 **Relationship between modules and Anki:** Module 0 drills 25 core facts. The Anki deck (`anki-deck-core25.tsv`) contains those same 25 facts in 3 question directions each (Name→Fact, Fact→Name, Jeopardy-style) = 78 cards total.
@@ -133,6 +142,80 @@ All lessons link `../assets/stylesheet.css` and cross-reference each other via r
 - Never delete or overwrite existing lessons
 - The course curriculum (Modules 0-12) is complete. New lessons are for deep-dives or thematic extensions only — confirm with user before adding.
 
+## Assessments (IRT-Based)
+
+Adaptive quizzes use Item Response Theory (3PL model) via the files in `assessments/` and `api/`.
+
+**Adding a quiz to a lesson:**
+```html
+<h2>Check Your Understanding</h2>
+<div id="quiz-container"
+     data-item-bank="../assessments/item-bank.json"
+     data-domain="civil-war-module-3"
+     data-n-items="5"
+     data-se-threshold="0.5">
+  <noscript>
+    <div class="warning-box">
+      <p>This adaptive quiz requires JavaScript.</p>
+      <p><a href="0009-quiz-static.html">Take the printable version</a></p>
+    </div>
+  </noscript>
+  <div class="quiz-progress">Question <span id="q-num">0</span> of <span id="q-total">0</span></div>
+  <div id="quiz-question"></div>
+  <div id="quiz-options"></div>
+  <div id="quiz-feedback"></div>
+</div>
+<script src="../assessments/quiz-renderer.js" defer></script>
+```
+
+Lessons stay JS-free; only the quiz container uses JavaScript. See `C:\Users\kwong318\.agents\skills\teach\NO-JS-FALLBACK.md` for the tiered approach.
+
+### Item Bank Format
+
+`assessments/item-bank.json` contains items with IRT parameters (a, b, c). Calibrate via the `psychometric-consultant` subagent after 500+ responses per item.
+
+## Image Workflow (Pexels API)
+
+Source lesson images via the Pexels API. The API key is in `.env.local`.
+
+```bash
+node "C:\Users\kwong318\.agents\skills\teach\scripts\fetch-lesson-image.js" ^
+  --query "Civil War battlefield fog" ^
+  --orientation landscape ^
+  --output assets/images/lesson-hero.jpg ^
+  --course .
+```
+
+Every image needs attribution:
+```html
+<p class="img-caption">Photo by <a href="...">Photographer</a> on <a href="https://www.pexels.com">Pexels</a></p>
+```
+
+## IMSCC Export
+
+Export the course for LMS import (Canvas, Moodle):
+
+```bash
+node "C:\Users\kwong318\.agents\skills\teach\scripts\export-imscc.mjs" ^
+  --course . ^
+  --output west-point-drama.imscc ^
+  --version 1.3
+```
+
+## Review Cycle
+
+### Student Panels
+Run after drafting a module. Observe 3-5 students. File observations as `learning-records/review-<lesson>-panel-<number>.md`.
+
+### Expert Reviews
+Before publishing, run:
+- **Learning design** (self-review — phase structure, ZPD)
+- **Content accuracy** (domain expert review)
+- **Accessibility** (WCAG 2.2 AA checklist)
+- **Pedagogical** (module coherence review)
+
+File reports as `learning-records/expert-review-*.md`.
+
 ## Verification
 
 After building a new lesson, verify against this checklist:
@@ -142,6 +225,11 @@ After building a new lesson, verify against this checklist:
 - [ ] Cross-references all prior modules in the Connection Map
 - [ ] Includes "Previously On…" spaced questions (skip for Module 1 only)
 - [ ] Preview section links to the next module
+- [ ] All images have alt text and photographer attribution
+- [ ] No JavaScript in core lesson (assessments may use JS with `<noscript>` fallback)
+- [ ] Print preview shows all content
+- [ ] WCAG: keyboard-navigable, color contrast ≥ 4.5:1, skip-to-content link
+- [ ] No horizontal scroll on mobile (600px)
 
 ## Lesson Structure Diagram (6 Phases)
 
