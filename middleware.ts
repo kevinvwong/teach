@@ -1,29 +1,42 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Neon Auth middleware — protects quiz and progress routes
-// Routes are public by default. Add paths to `protectedPaths` to require auth.
-// Set NEON_AUTH_PUBLIC_KEY env var in Vercel for production.
+const protectedPaths = ["/api/irt-score"];
 
-const protectedPaths = ["/api/irt-score", "/api/progress"];
-
-export default function middleware(req: NextRequest) {
+export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // Check if this is a protected path
   const isProtected = protectedPaths.some((path) => pathname.startsWith(path));
   if (!isProtected) return NextResponse.next();
 
-  // For now, allow all requests — auth enforcement is additive
-  // Uncomment below to require Neon Auth token:
-  // const authHeader = req.headers.get("authorization");
-  // if (!authHeader) {
-  //   return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  // }
+  const authBaseUrl = process.env.NEON_AUTH_BASE_URL;
+  if (!authBaseUrl) return NextResponse.next();
 
-  return NextResponse.next();
+  const authHeader = req.headers.get("authorization");
+  if (!authHeader) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  try {
+    const verifyUrl = `${authBaseUrl}/verify`;
+    const verifyRes = await fetch(verifyUrl, {
+      headers: { authorization: authHeader },
+    });
+
+    if (!verifyRes.ok) {
+      return NextResponse.json({ error: "Invalid token" }, { status: 401 });
+    }
+
+    const user = await verifyRes.json();
+    const requestHeaders = new Headers(req.headers);
+    requestHeaders.set("x-user-id", user.sub || user.id);
+
+    return NextResponse.next({ request: { headers: requestHeaders } });
+  } catch {
+    return NextResponse.json({ error: "Auth verification failed" }, { status: 500 });
+  }
 }
 
 export const config = {
-  matcher: ["/api/:path*"],
+  matcher: ["/api/irt-score"],
 };

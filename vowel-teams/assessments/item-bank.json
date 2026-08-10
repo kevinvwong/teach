@@ -2,9 +2,1202 @@
   "metadata": {
     "model": "3PL",
     "D": 1.702,
-    "nItems": 0,
+    "nItems": 70,
     "calibrationDate": null,
-    "calibrationSample": 0
+    "calibrationSample": 0,
+    "course": "vowel-teams",
+    "version": "1.0.0"
   },
-  "items": []
+  "items": [
+    {
+      "id": "vt-001",
+      "domain": "vowel-team-overview",
+      "type": "fr",
+      "stem": "A vowel team is when _____ vowels work together to make one sound.",
+      "correct": "two",
+      "a": 0.8,
+      "b": -1.5,
+      "c": 0,
+      "lesson": "0000",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-002",
+      "domain": "vowel-team-overview",
+      "type": "fr",
+      "stem": "Find the vowel team in the word \"rain\".",
+      "correct": "ai",
+      "a": 0.8,
+      "b": -1.2,
+      "c": 0,
+      "lesson": "0000",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-003",
+      "domain": "vowel-team-overview",
+      "type": "fr",
+      "stem": "Find the vowel team in the word \"boat\".",
+      "correct": "oa",
+      "a": 0.8,
+      "b": -1.2,
+      "c": 0,
+      "lesson": "0000",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-004",
+      "domain": "vowel-team-intro",
+      "type": "fr",
+      "stem": "A vowel team is when _____ vowels work together to make one sound.",
+      "correct": "two",
+      "a": 0.8,
+      "b": -1.5,
+      "c": 0,
+      "lesson": "0001",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-005",
+      "domain": "vowel-team-intro",
+      "type": "fr",
+      "stem": "Find the vowel team in the word \"play\".",
+      "correct": "ay",
+      "a": 0.8,
+      "b": -1.2,
+      "c": 0,
+      "lesson": "0001",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-006",
+      "domain": "vowel-team-intro",
+      "type": "fr",
+      "stem": "Find the vowel team in the word \"boat\".",
+      "correct": "oa",
+      "a": 0.8,
+      "b": -1.2,
+      "c": 0,
+      "lesson": "0001",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-007",
+      "domain": "vowel-team-ai-ay",
+      "type": "fr",
+      "stem": "Does \"ai\" go in the middle or at the end of a word?",
+      "correct": "middle",
+      "a": 0.8,
+      "b": -1,
+      "c": 0,
+      "lesson": "0002",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-008",
+      "domain": "vowel-team-ai-ay",
+      "type": "fr",
+      "stem": "Does \"ay\" go in the middle or at the end of a word?",
+      "correct": "end",
+      "a": 0.8,
+      "b": -1,
+      "c": 0,
+      "lesson": "0002",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-009",
+      "domain": "vowel-team-ai-ay",
+      "type": "fr",
+      "stem": "Find the vowel team in the word \"stay\".",
+      "correct": "ay",
+      "a": 0.8,
+      "b": -0.8,
+      "c": 0,
+      "lesson": "0002",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-010",
+      "domain": "vowel-team-ee-ea-ey",
+      "type": "fr",
+      "stem": "Which vowel team always says /ē/ with no exceptions: ee, ea, or ey?",
+      "correct": "ee",
+      "a": 0.8,
+      "b": -0.8,
+      "c": 0,
+      "lesson": "0003",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-011",
+      "domain": "vowel-team-ee-ea-ey",
+      "type": "fr",
+      "stem": "Find the vowel team in the word \"beach\".",
+      "correct": "ea",
+      "a": 0.8,
+      "b": -0.5,
+      "c": 0,
+      "lesson": "0003",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-012",
+      "domain": "vowel-team-ee-ea-ey",
+      "type": "fr",
+      "stem": "Find the vowel team in the word \"key\".",
+      "correct": "ey",
+      "a": 0.8,
+      "b": -0.5,
+      "c": 0,
+      "lesson": "0003",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-013",
+      "domain": "vowel-team-oa-ow-oe",
+      "type": "fr",
+      "stem": "Which vowel team goes in the middle of a word like b___t?",
+      "correct": "oa",
+      "a": 0.8,
+      "b": -0.5,
+      "c": 0,
+      "lesson": "0004",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-014",
+      "domain": "vowel-team-oa-ow-oe",
+      "type": "fr",
+      "stem": "Which vowel team goes at the end of a word like sn___?",
+      "correct": "ow",
+      "a": 0.8,
+      "b": -0.5,
+      "c": 0,
+      "lesson": "0004",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-015",
+      "domain": "vowel-team-oa-ow-oe",
+      "type": "fr",
+      "stem": "Which vowel team is the rarest of oa, ow, and oe, and always comes at the end?",
+      "correct": "oe",
+      "a": 0.8,
+      "b": -0.2,
+      "c": 0,
+      "lesson": "0004",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-016",
+      "domain": "vowel-team-oa-ow-oe",
+      "type": "fr",
+      "stem": "Fill in the blank: The car drove down the _____. (Choices: road, roast, coat)",
+      "correct": "road",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0004",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-017",
+      "domain": "vowel-team-oa-ow-oe",
+      "type": "fr",
+      "stem": "Fill in the blank: The deer and the _____ ate grass in the field. (Choices: toe, doe, hoe)",
+      "correct": "doe",
+      "a": 1,
+      "b": 0.2,
+      "c": 0,
+      "lesson": "0004",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-018",
+      "domain": "vowel-team-oa-ow-oe",
+      "type": "fr",
+      "stem": "Fill in the blank: We watched the _____ fall from the sky. (Choices: snow, grow, flow)",
+      "correct": "snow",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0004",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-019",
+      "domain": "vowel-team-oa-ow-oe",
+      "type": "fr",
+      "stem": "Fill in the blank: Don't forget to wash your hands with _____. (Choices: goal, soap, coach)",
+      "correct": "soap",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0004",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-020",
+      "domain": "vowel-team-oa-ow-oe",
+      "type": "fr",
+      "stem": "Fill in the blank: Plants need sunlight and water to _____. (Choices: throw, blow, grow)",
+      "correct": "grow",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0004",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-021",
+      "domain": "vowel-team-oa-ow-oe",
+      "type": "fr",
+      "stem": "Fill in the blank: She stubbed her _____ on the chair leg. (Choices: toe, doe, foe)",
+      "correct": "toe",
+      "a": 1,
+      "b": 0.2,
+      "c": 0,
+      "lesson": "0004",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-022",
+      "domain": "vowel-team-ie-igh",
+      "type": "fr",
+      "stem": "In the word \"light\", which letters are silent?",
+      "correct": "gh",
+      "a": 0.8,
+      "b": -0.5,
+      "c": 0,
+      "lesson": "0005",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-023",
+      "domain": "vowel-team-ie-igh",
+      "type": "fr",
+      "stem": "Does \"pie\" use igh or ie?",
+      "correct": "ie",
+      "a": 0.8,
+      "b": -0.5,
+      "c": 0,
+      "lesson": "0005",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-024",
+      "domain": "vowel-team-ie-igh",
+      "type": "fr",
+      "stem": "Which spelling has more letters: igh or ie?",
+      "correct": "igh",
+      "a": 0.8,
+      "b": -0.2,
+      "c": 0,
+      "lesson": "0005",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-025",
+      "domain": "vowel-team-long-vowel-review",
+      "type": "fr",
+      "stem": "Which vowel team says long A and is used at the end of a word like pl___?",
+      "correct": "ay",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0006",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-026",
+      "domain": "vowel-team-long-vowel-review",
+      "type": "fr",
+      "stem": "Which vowel team says long E and has a silent letter? (Hint: it's not ee or ea.)",
+      "correct": "ey",
+      "a": 1,
+      "b": 0.2,
+      "c": 0,
+      "lesson": "0006",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-027",
+      "domain": "vowel-team-long-vowel-review",
+      "type": "fr",
+      "stem": "What sound does \"ow\" make in the word \"snow\"?",
+      "correct": "long o",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0006",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-028",
+      "domain": "vowel-team-long-vowel-review",
+      "type": "fr",
+      "stem": "In \"light\", which two letters are silent?",
+      "correct": "gh",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0006",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-029",
+      "domain": "vowel-team-long-vowel-review",
+      "type": "fr",
+      "stem": "How many different vowel team spellings have you learned in the long vowel teams unit?",
+      "correct": "10",
+      "a": 1.2,
+      "b": 0.8,
+      "c": 0,
+      "lesson": "0006",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-030",
+      "domain": "vowel-team-oo",
+      "type": "fr",
+      "stem": "Does \"moon\" use the long or short oo sound?",
+      "correct": "long",
+      "a": 0.8,
+      "b": -0.8,
+      "c": 0,
+      "lesson": "0007",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-031",
+      "domain": "vowel-team-oo",
+      "type": "fr",
+      "stem": "Does \"look\" use the long or short oo sound?",
+      "correct": "short",
+      "a": 0.8,
+      "b": -0.8,
+      "c": 0,
+      "lesson": "0007",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-032",
+      "domain": "vowel-team-oo",
+      "type": "fr",
+      "stem": "True or false: The word \"good\" rhymes with \"mood\".",
+      "correct": "false",
+      "a": 1,
+      "b": 0.2,
+      "c": 0,
+      "lesson": "0007",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-033",
+      "domain": "vowel-team-ew-ui-ue",
+      "type": "fr",
+      "stem": "Which vowel team is in the word \"true\"?",
+      "correct": "ue",
+      "a": 0.8,
+      "b": -0.2,
+      "c": 0,
+      "lesson": "0008",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-034",
+      "domain": "vowel-team-ew-ui-ue",
+      "type": "fr",
+      "stem": "Which vowel team is in the word \"grew\"?",
+      "correct": "ew",
+      "a": 0.8,
+      "b": -0.2,
+      "c": 0,
+      "lesson": "0008",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-035",
+      "domain": "vowel-team-ew-ui-ue",
+      "type": "fr",
+      "stem": "Spell the word: /frūt/ (a sweet food from trees).",
+      "correct": "fruit",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0008",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-036",
+      "domain": "vowel-team-other-vowel-review",
+      "type": "fr",
+      "stem": "Which vowel team spells the /ū/ sound in \"grew\"?",
+      "correct": "ew",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0009",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-037",
+      "domain": "vowel-team-other-vowel-review",
+      "type": "fr",
+      "stem": "Does \"book\" use the long or short sound of oo?",
+      "correct": "short",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0009",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-038",
+      "domain": "vowel-team-other-vowel-review",
+      "type": "fr",
+      "stem": "Does \"ui\" usually appear at the end or the middle of a word?",
+      "correct": "middle",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0009",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-039",
+      "domain": "vowel-team-other-vowel-review",
+      "type": "fr",
+      "stem": "Spell the word: /flŭd/ (something you eat).",
+      "correct": "food",
+      "a": 1,
+      "b": 0.2,
+      "c": 0,
+      "lesson": "0009",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-040",
+      "domain": "vowel-team-other-vowel-review",
+      "type": "fr",
+      "stem": "Which two vowel teams both make the /ū/ sound at the end of a word?",
+      "correct": "ue and ew",
+      "a": 1.2,
+      "b": 0.5,
+      "c": 0,
+      "lesson": "0009",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-041",
+      "domain": "vowel-team-au-aw-augh",
+      "type": "fr",
+      "stem": "Which spelling usually goes at the end of a word: au or aw?",
+      "correct": "aw",
+      "a": 0.8,
+      "b": -0.2,
+      "c": 0,
+      "lesson": "0010",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-042",
+      "domain": "vowel-team-au-aw-augh",
+      "type": "fr",
+      "stem": "Which spelling has three letters but makes just one sound: au, aw, or augh?",
+      "correct": "augh",
+      "a": 0.8,
+      "b": 0,
+      "c": 0,
+      "lesson": "0010",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-043",
+      "domain": "vowel-team-au-aw-augh",
+      "type": "fr",
+      "stem": "Fill in the blank: The /aw/ sound in \"sauce\" is spelled _____.",
+      "correct": "au",
+      "a": 0.8,
+      "b": -0.2,
+      "c": 0,
+      "lesson": "0010",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-044",
+      "domain": "vowel-team-ea-short-a",
+      "type": "fr",
+      "stem": "What sound does \"ea\" make in \"bread\"?",
+      "correct": "short e",
+      "a": 0.8,
+      "b": 0,
+      "c": 0,
+      "lesson": "0011",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-045",
+      "domain": "vowel-team-ea-short-a",
+      "type": "fr",
+      "stem": "What sound does \"a\" make in \"want\"?",
+      "correct": "short o",
+      "a": 0.8,
+      "b": 0,
+      "c": 0,
+      "lesson": "0011",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-046",
+      "domain": "vowel-team-ea-short-a",
+      "type": "fr",
+      "stem": "Name one word where \"ea\" says short e.",
+      "correct": "bread",
+      "a": 1,
+      "b": 0.2,
+      "c": 0,
+      "lesson": "0011",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-047",
+      "domain": "vowel-team-oi-oy",
+      "type": "fr",
+      "stem": "Which spelling of /oi/ goes at the end of a word?",
+      "correct": "oy",
+      "a": 0.8,
+      "b": -0.5,
+      "c": 0,
+      "lesson": "0012",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-048",
+      "domain": "vowel-team-oi-oy",
+      "type": "fr",
+      "stem": "Which spelling of /oi/ goes in the middle of a word?",
+      "correct": "oi",
+      "a": 0.8,
+      "b": -0.5,
+      "c": 0,
+      "lesson": "0012",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-049",
+      "domain": "vowel-team-oi-oy",
+      "type": "fr",
+      "stem": "Fill in the blank: The word \"v___ce\" uses which spelling?",
+      "correct": "oi",
+      "a": 0.8,
+      "b": -0.2,
+      "c": 0,
+      "lesson": "0012",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-050",
+      "domain": "vowel-team-ou-ow",
+      "type": "fr",
+      "stem": "Which spelling of /ou/ usually goes at the end of a word?",
+      "correct": "ow",
+      "a": 0.8,
+      "b": -0.5,
+      "c": 0,
+      "lesson": "0013",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-051",
+      "domain": "vowel-team-ou-ow",
+      "type": "fr",
+      "stem": "Which spelling of /ou/ usually goes in the middle of a word?",
+      "correct": "ou",
+      "a": 0.8,
+      "b": -0.5,
+      "c": 0,
+      "lesson": "0013",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-052",
+      "domain": "vowel-team-ou-ow",
+      "type": "fr",
+      "stem": "Does \"snow\" use the /ou/ sound or the /ō/ sound?",
+      "correct": "long o",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0013",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-053",
+      "domain": "vowel-team-final-review",
+      "type": "fr",
+      "stem": "Which vowel team says /ā/ and usually goes in the middle of a word?",
+      "correct": "ai",
+      "a": 1.5,
+      "b": 1.5,
+      "c": 0,
+      "lesson": "0014",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-054",
+      "domain": "vowel-team-final-review",
+      "type": "fr",
+      "stem": "Name two vowel teams that say /ē/.",
+      "correct": "ee and ea",
+      "a": 1.5,
+      "b": 1.8,
+      "c": 0,
+      "lesson": "0014",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-055",
+      "domain": "vowel-team-final-review",
+      "type": "fr",
+      "stem": "What sound does \"oo\" make in \"book\"?",
+      "correct": "short oo",
+      "a": 1.5,
+      "b": 1.5,
+      "c": 0,
+      "lesson": "0014",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-056",
+      "domain": "vowel-team-final-review",
+      "type": "fr",
+      "stem": "Which vowel team goes at the end of a word: oi or oy?",
+      "correct": "oy",
+      "a": 1.5,
+      "b": 1.5,
+      "c": 0,
+      "lesson": "0014",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-057",
+      "domain": "vowel-team-final-review",
+      "type": "fr",
+      "stem": "How many vowel teams have you learned in this course?",
+      "correct": "17",
+      "a": 1.5,
+      "b": 2,
+      "c": 0,
+      "lesson": "0014",
+      "source": "check",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-058",
+      "domain": "vowel-team-au-aw-augh",
+      "type": "fr",
+      "stem": "Fill in the blank: Mom made gr___vy for dinner. (au, aw, or augh?)",
+      "correct": "au",
+      "a": 1,
+      "b": 0.2,
+      "c": 0,
+      "lesson": "0010",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-059",
+      "domain": "vowel-team-au-aw-augh",
+      "type": "fr",
+      "stem": "Fill in the blank: The baby has a str___nge cough. (au, aw, or augh?)",
+      "correct": "au",
+      "a": 1,
+      "b": 0.5,
+      "c": 0,
+      "lesson": "0010",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-060",
+      "domain": "vowel-team-au-aw-augh",
+      "type": "fr",
+      "stem": "Fill in the blank: My dad c___ght a fish this big! (au, aw, or augh?)",
+      "correct": "augh",
+      "a": 1,
+      "b": 0.5,
+      "c": 0,
+      "lesson": "0010",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-061",
+      "domain": "vowel-team-au-aw-augh",
+      "type": "fr",
+      "stem": "Fill in the blank: Don't forget to l___nch the rocket! (au, aw, or augh?)",
+      "correct": "au",
+      "a": 1,
+      "b": 0.2,
+      "c": 0,
+      "lesson": "0010",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-062",
+      "domain": "vowel-team-au-aw-augh",
+      "type": "fr",
+      "stem": "Fill in the blank: I s___ three deer in the woods. (au, aw, or augh?)",
+      "correct": "aw",
+      "a": 1,
+      "b": 0.2,
+      "c": 0,
+      "lesson": "0010",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-063",
+      "domain": "vowel-team-ee-ea-ey",
+      "type": "fr",
+      "stem": "Does the word \"beach\" have a long E vowel team?",
+      "correct": "yes",
+      "a": 0.8,
+      "b": -0.8,
+      "c": 0,
+      "lesson": "0003",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-064",
+      "domain": "vowel-team-ie-igh",
+      "type": "fr",
+      "stem": "Does the word \"rain\" use igh or ie?",
+      "correct": "neither",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0005",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-065",
+      "domain": "vowel-team-other-vowel-review",
+      "type": "fr",
+      "stem": "Is \"fruip\" a real English word or a nonsense word?",
+      "correct": "nonsense",
+      "a": 1,
+      "b": 0.5,
+      "c": 0,
+      "lesson": "0009",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-066",
+      "domain": "vowel-team-other-vowel-review",
+      "type": "fr",
+      "stem": "Is \"floom\" a real English word or a nonsense word?",
+      "correct": "nonsense",
+      "a": 1,
+      "b": 0.5,
+      "c": 0,
+      "lesson": "0009",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-067",
+      "domain": "vowel-team-ea-short-a",
+      "type": "fr",
+      "stem": "Which word is the odd one out: bread, head, dead, bean?",
+      "correct": "bean",
+      "a": 1,
+      "b": 0.5,
+      "c": 0,
+      "lesson": "0011",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-068",
+      "domain": "vowel-team-ea-short-a",
+      "type": "fr",
+      "stem": "Which word is the odd one out: want, wash, water, wake?",
+      "correct": "wake",
+      "a": 1,
+      "b": 0.5,
+      "c": 0,
+      "lesson": "0011",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-069",
+      "domain": "vowel-team-ou-ow",
+      "type": "fr",
+      "stem": "Does \"cow\" use the /ou/ sound or the /ō/ sound?",
+      "correct": "ou",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0013",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    },
+    {
+      "id": "vt-070",
+      "domain": "vowel-team-ou-ow",
+      "type": "fr",
+      "stem": "Does \"grow\" use the /ou/ sound or the /ō/ sound?",
+      "correct": "long o",
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "lesson": "0013",
+      "source": "game",
+      "calibration": {
+        "status": "draft",
+        "n": 0,
+        "date": null
+      }
+    }
+  ]
 }

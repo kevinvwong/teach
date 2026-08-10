@@ -2,9 +2,1446 @@
   "metadata": {
     "model": "3PL",
     "D": 1.702,
-    "nItems": 0,
+    "nItems": 58,
     "calibrationDate": null,
-    "calibrationSample": 0
+    "calibrationSample": 0,
+    "description": "West Point Drama: Civil War course item bank. Sources: self-test-modules-1-3.html (45 Q) and self-test-final.html (56 Q), deduplicated to 58 unique items."
   },
-  "items": []
+  "items": [
+    {
+      "id": "cw-001",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "Grant ranked ___ of 39 in the Class of 1843.",
+      "options": [
+        "5th",
+        "17th",
+        "21st",
+        "39th"
+      ],
+      "answer": "21st",
+      "answerIndex": 2,
+      "irt": {
+        "a": 1,
+        "b": -1.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Grant ranked ___ of 39 in the Class of 1843.",
+      "correct": "21st"
+    },
+    {
+      "id": "cw-002",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "Lee graduated ___ in the Class of 1829.",
+      "options": [
+        "1st",
+        "2nd",
+        "5th",
+        "17th"
+      ],
+      "answer": "2nd",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": -1.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Lee graduated ___ in the Class of 1829.",
+      "correct": "2nd"
+    },
+    {
+      "id": "cw-003",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "The Class of 1846 produced how many generals?",
+      "options": [
+        "12",
+        "22",
+        "59",
+        "7"
+      ],
+      "answer": "22",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": -0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "The Class of 1846 produced how many generals?",
+      "correct": "22"
+    },
+    {
+      "id": "cw-004",
+      "domain": "civil-war-generals",
+      "type": "mc",
+      "question": "How many demerits did Lee receive at West Point?",
+      "options": [
+        "0",
+        "12",
+        "47",
+        "102"
+      ],
+      "answer": "0",
+      "answerIndex": 0,
+      "irt": {
+        "a": 1,
+        "b": -1,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "How many demerits did Lee receive at West Point?",
+      "correct": "0"
+    },
+    {
+      "id": "cw-005",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "Pickett ranked ___ in the Class of 1846.",
+      "options": [
+        "59th (last)",
+        "2nd",
+        "17th",
+        "54th"
+      ],
+      "answer": "59th (last)",
+      "answerIndex": 0,
+      "irt": {
+        "a": 1,
+        "b": -0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Pickett ranked ___ in the Class of 1846.",
+      "correct": "59th (last)"
+    },
+    {
+      "id": "cw-006",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "Longstreet ranked ___ in the Class of 1842.",
+      "options": [
+        "5th",
+        "17th",
+        "28th",
+        "54th"
+      ],
+      "answer": "54th",
+      "answerIndex": 3,
+      "irt": {
+        "a": 1,
+        "b": 0,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Longstreet ranked ___ in the Class of 1842.",
+      "correct": "54th"
+    },
+    {
+      "id": "cw-007",
+      "domain": "civil-war-generals",
+      "type": "mc",
+      "question": "Beauregard served as West Point superintendent for how many days?",
+      "options": [
+        "5",
+        "30",
+        "90",
+        "365"
+      ],
+      "answer": "5",
+      "answerIndex": 0,
+      "irt": {
+        "a": 0.8,
+        "b": 0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Beauregard served as West Point superintendent for how many days?",
+      "correct": "5"
+    },
+    {
+      "id": "cw-008",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "The Class of 1846 had how many graduates?",
+      "options": [
+        "39",
+        "46",
+        "56",
+        "59"
+      ],
+      "answer": "59",
+      "answerIndex": 3,
+      "irt": {
+        "a": 0.8,
+        "b": -0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "The Class of 1846 had how many graduates?",
+      "correct": "59"
+    },
+    {
+      "id": "cw-009",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "Rosecrans ranked ___ in the Class of 1842.",
+      "options": [
+        "5th",
+        "17th",
+        "28th",
+        "54th"
+      ],
+      "answer": "5th",
+      "answerIndex": 0,
+      "irt": {
+        "a": 1,
+        "b": 0,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Rosecrans ranked ___ in the Class of 1842.",
+      "correct": "5th"
+    },
+    {
+      "id": "cw-010",
+      "domain": "civil-war-politics",
+      "type": "mc",
+      "question": "Jefferson Davis graduated in which West Point class?",
+      "options": [
+        "1828",
+        "1829",
+        "1843",
+        "1846"
+      ],
+      "answer": "1828",
+      "answerIndex": 0,
+      "irt": {
+        "a": 1,
+        "b": -0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Jefferson Davis graduated in which West Point class?",
+      "correct": "1828"
+    },
+    {
+      "id": "cw-011",
+      "domain": "civil-war-battles",
+      "type": "mc",
+      "question": "The battle of Antietam produced roughly how many casualties in one day?",
+      "options": [
+        "5,000",
+        "12,000",
+        "23,000",
+        "50,000"
+      ],
+      "answer": "23,000",
+      "answerIndex": 2,
+      "irt": {
+        "a": 1,
+        "b": -0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "The battle of Antietam produced roughly how many casualties in one day?",
+      "correct": "23,000"
+    },
+    {
+      "id": "cw-012",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "D.H. Hill ranked ___ in the Class of 1842.",
+      "options": [
+        "5th",
+        "17th",
+        "28th",
+        "54th"
+      ],
+      "answer": "28th",
+      "answerIndex": 2,
+      "irt": {
+        "a": 1,
+        "b": 0,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "D.H. Hill ranked ___ in the Class of 1842.",
+      "correct": "28th"
+    },
+    {
+      "id": "cw-013",
+      "domain": "civil-war-generals",
+      "type": "mc",
+      "question": "Which future general was three years ahead of Grant at West Point?",
+      "options": [
+        "Longstreet",
+        "Sherman",
+        "Buckner",
+        "Sheridan"
+      ],
+      "answer": "Sherman",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1.2,
+        "b": -0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Which future general was three years ahead of Grant at West Point?",
+      "correct": "Sherman"
+    },
+    {
+      "id": "cw-014",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "John Pope ranked ___ in the Class of 1842.",
+      "options": [
+        "5th",
+        "17th",
+        "28th",
+        "54th"
+      ],
+      "answer": "17th",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": 0,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "John Pope ranked ___ in the Class of 1842.",
+      "correct": "17th"
+    },
+    {
+      "id": "cw-015",
+      "domain": "civil-war-generals",
+      "type": "mc",
+      "question": "Grant's real name was:",
+      "options": [
+        "Hiram Ulysses Grant",
+        "Ulysses Simpson Grant",
+        "Hiram Simpson Grant",
+        "Samuel Grant"
+      ],
+      "answer": "Hiram Ulysses Grant",
+      "answerIndex": 0,
+      "irt": {
+        "a": 1,
+        "b": -1,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Grant's real name was:",
+      "correct": "Hiram Ulysses Grant"
+    },
+    {
+      "id": "cw-016",
+      "domain": "civil-war-relationships",
+      "type": "mc",
+      "question": "Robert E. Lee married into which family?",
+      "options": [
+        "The Jeffersons",
+        "The Washingtons",
+        "The Adamses",
+        "The Madisons"
+      ],
+      "answer": "The Washingtons",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": -0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Robert E. Lee married into which family?",
+      "correct": "The Washingtons"
+    },
+    {
+      "id": "cw-017",
+      "domain": "civil-war-relationships",
+      "type": "mc",
+      "question": "Who married Stonewall Jackson's sister?",
+      "options": [
+        "Longstreet",
+        "A.P. Hill",
+        "D.H. Hill",
+        "Pickett"
+      ],
+      "answer": "D.H. Hill",
+      "answerIndex": 2,
+      "irt": {
+        "a": 1.2,
+        "b": 0,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Who married Stonewall Jackson's sister?",
+      "correct": "D.H. Hill"
+    },
+    {
+      "id": "cw-018",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "The Class of 1842 is nicknamed:",
+      "options": [
+        "\"The class the stars fell on\"",
+        "\"The class the gods sent\"",
+        "\"The class of destiny\"",
+        "\"The fighting class\""
+      ],
+      "answer": "\"The class the stars fell on\"",
+      "answerIndex": 0,
+      "irt": {
+        "a": 1,
+        "b": -1,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "The Class of 1842 is nicknamed:",
+      "correct": "\"The class the stars fell on\""
+    },
+    {
+      "id": "cw-019",
+      "domain": "civil-war-relationships",
+      "type": "mc",
+      "question": "At Appomattox, Grant and Lee met for the ___ time.",
+      "options": [
+        "first",
+        "second",
+        "third",
+        "only"
+      ],
+      "answer": "first",
+      "answerIndex": 0,
+      "irt": {
+        "a": 1.2,
+        "b": 0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "At Appomattox, Grant and Lee met for the ___ time.",
+      "correct": "first"
+    },
+    {
+      "id": "cw-020",
+      "domain": "civil-war-generals",
+      "type": "mc",
+      "question": "How many West Pointers became Civil War generals (approximately)?",
+      "options": [
+        "100",
+        "200",
+        "300",
+        "500"
+      ],
+      "answer": "300",
+      "answerIndex": 2,
+      "irt": {
+        "a": 0.8,
+        "b": -0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "How many West Pointers became Civil War generals (approximately)?",
+      "correct": "300"
+    },
+    {
+      "id": "cw-021",
+      "domain": "civil-war-dates",
+      "type": "mc",
+      "question": "Antietam was fought in which year?",
+      "options": [
+        "1861",
+        "1862",
+        "1863",
+        "1864"
+      ],
+      "answer": "1862",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": -1.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Antietam was fought in which year?",
+      "correct": "1862"
+    },
+    {
+      "id": "cw-022",
+      "domain": "civil-war-battles",
+      "type": "mc",
+      "question": "Jackson was killed at Chancellorsville by:",
+      "options": [
+        "Union artillery",
+        "Friendly fire",
+        "A sniper",
+        "An accident"
+      ],
+      "answer": "Friendly fire",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": -1,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Jackson was killed at Chancellorsville by:",
+      "correct": "Friendly fire"
+    },
+    {
+      "id": "cw-023",
+      "domain": "civil-war-dates",
+      "type": "mc",
+      "question": "The Civil War's first shot was fired on:",
+      "options": [
+        "March 1, 1861",
+        "April 12, 1861",
+        "July 4, 1861",
+        "January 1, 1861"
+      ],
+      "answer": "April 12, 1861",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": -1.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "The Civil War's first shot was fired on:",
+      "correct": "April 12, 1861"
+    },
+    {
+      "id": "cw-024",
+      "domain": "civil-war-battles",
+      "type": "mc",
+      "question": "How many miles did A.P. Hill's division march to reach Antietam?",
+      "options": [
+        "10",
+        "17",
+        "25",
+        "30"
+      ],
+      "answer": "17",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": 0,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "How many miles did A.P. Hill's division march to reach Antietam?",
+      "correct": "17"
+    },
+    {
+      "id": "cw-025",
+      "domain": "civil-war-battles",
+      "type": "mc",
+      "question": "Pickett's Charge involved approximately how many men?",
+      "options": [
+        "5,000",
+        "12,500",
+        "20,000",
+        "30,000"
+      ],
+      "answer": "12,500",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": 0,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Pickett's Charge involved approximately how many men?",
+      "correct": "12,500"
+    },
+    {
+      "id": "cw-026",
+      "domain": "civil-war-relationships",
+      "type": "mc",
+      "question": "Grant and Lee met only ___ times in their lives.",
+      "options": [
+        "once",
+        "twice",
+        "three times",
+        "never before the war"
+      ],
+      "answer": "twice",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1.2,
+        "b": 0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Grant and Lee met only ___ times in their lives.",
+      "correct": "twice"
+    },
+    {
+      "id": "cw-027",
+      "domain": "civil-war-relationships",
+      "type": "mc",
+      "question": "Robert E. Lee married Mary Custis — the great-granddaughter of:",
+      "options": [
+        "Thomas Jefferson",
+        "Martha Washington",
+        "George Mason",
+        "John Adams"
+      ],
+      "answer": "Martha Washington",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1.2,
+        "b": 0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Robert E. Lee married Mary Custis — the great-granddaughter of:",
+      "correct": "Martha Washington"
+    },
+    {
+      "id": "cw-028",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "Odd One Out: Which does NOT belong? a) Longstreet  b) Rosecrans  c) Pope  d) Grant",
+      "options": [
+        "Longstreet",
+        "Rosecrans",
+        "Pope",
+        "Grant"
+      ],
+      "answer": "Grant",
+      "answerIndex": 3,
+      "irt": {
+        "a": 1.2,
+        "b": -0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Odd One Out: Which does NOT belong? a) Longstreet  b) Rosecrans  c) Pope  d) Grant",
+      "correct": "Grant"
+    },
+    {
+      "id": "cw-029",
+      "domain": "civil-war-class-ranks",
+      "type": "mc",
+      "question": "Odd One Out: Which does NOT belong? a) Class of 1843  b) Class of 1842  c) Class of 1846  d) Class of 1765",
+      "options": [
+        "Class of 1843",
+        "Class of 1842",
+        "Class of 1846",
+        "Class of 1765"
+      ],
+      "answer": "Class of 1765",
+      "answerIndex": 3,
+      "irt": {
+        "a": 0.8,
+        "b": -1,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Odd One Out: Which does NOT belong? a) Class of 1843  b) Class of 1842  c) Class of 1846  d) Class of 1765",
+      "correct": "Class of 1765"
+    },
+    {
+      "id": "cw-030",
+      "domain": "civil-war-generals",
+      "type": "mc",
+      "question": "Odd One Out: Which does NOT belong? a) McClellan  b) Jackson  c) Pickett  d) Longstreet",
+      "options": [
+        "McClellan",
+        "Jackson",
+        "Pickett",
+        "Longstreet"
+      ],
+      "answer": "McClellan",
+      "answerIndex": 0,
+      "irt": {
+        "a": 1,
+        "b": -0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Odd One Out: Which does NOT belong? a) McClellan  b) Jackson  c) Pickett  d) Longstreet",
+      "correct": "McClellan"
+    },
+    {
+      "id": "cw-031",
+      "domain": "civil-war-generals",
+      "type": "mc",
+      "question": "Odd One Out: Which does NOT belong? a) Rosecrans  b) Pope  c) D.H. Hill  d) Custer",
+      "options": [
+        "Rosecrans",
+        "Pope",
+        "D.H. Hill",
+        "Custer"
+      ],
+      "answer": "D.H. Hill",
+      "answerIndex": 2,
+      "irt": {
+        "a": 1.2,
+        "b": 0,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Odd One Out: Which does NOT belong? a) Rosecrans  b) Pope  c) D.H. Hill  d) Custer",
+      "correct": "D.H. Hill"
+    },
+    {
+      "id": "cw-032",
+      "domain": "civil-war-relationships",
+      "type": "mc",
+      "question": "Odd One Out: Which does NOT belong? a) Grant  b) Longstreet  c) Sherman  d) Lee",
+      "options": [
+        "Grant",
+        "Longstreet",
+        "Sherman",
+        "Lee"
+      ],
+      "answer": "Lee",
+      "answerIndex": 3,
+      "irt": {
+        "a": 1.2,
+        "b": 0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Odd One Out: Which does NOT belong? a) Grant  b) Longstreet  c) Sherman  d) Lee",
+      "correct": "Lee"
+    },
+    {
+      "id": "cw-033",
+      "domain": "civil-war-generals",
+      "type": "mc",
+      "question": "Odd One Out: Which does NOT belong? a) Grant  b) Lee  c) Longstreet  d) Custer",
+      "options": [
+        "Grant",
+        "Lee",
+        "Longstreet",
+        "Custer"
+      ],
+      "answer": "Custer",
+      "answerIndex": 3,
+      "irt": {
+        "a": 1.2,
+        "b": 0.5,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Odd One Out: Which does NOT belong? a) Grant  b) Lee  c) Longstreet  d) Custer",
+      "correct": "Custer"
+    },
+    {
+      "id": "cw-034",
+      "domain": "civil-war-battles",
+      "type": "mc",
+      "question": "Odd One Out: Which does NOT belong? a) Antietam  b) Gettysburg  c) Fort Sumter  d) Appomattox",
+      "options": [
+        "Antietam",
+        "Gettysburg",
+        "Fort Sumter",
+        "Appomattox"
+      ],
+      "answer": "Appomattox",
+      "answerIndex": 3,
+      "irt": {
+        "a": 1.2,
+        "b": 0,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Odd One Out: Which does NOT belong? a) Antietam  b) Gettysburg  c) Fort Sumter  d) Appomattox",
+      "correct": "Appomattox"
+    },
+    {
+      "id": "cw-035",
+      "domain": "civil-war-politics",
+      "type": "mc",
+      "question": "Odd One Out: Which does NOT belong? a) Grant  b) Longstreet  c) Sherman  d) Lee",
+      "options": [
+        "Grant",
+        "Longstreet",
+        "Sherman",
+        "Lee"
+      ],
+      "answer": "Lee",
+      "answerIndex": 3,
+      "irt": {
+        "a": 1.5,
+        "b": 1,
+        "c": 0.25
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Odd One Out: Which does NOT belong? a) Grant  b) Longstreet  c) Sherman  d) Lee",
+      "correct": "Lee"
+    },
+    {
+      "id": "cw-036",
+      "domain": "civil-war-generals",
+      "type": "fr",
+      "question": "\"I ranked 21st of 39 in my West Point class. I was the best horseman at the Academy. My real name was Hiram, but a paperwork error gave me the initials 'U.S.' My friends called me 'Sam.'\" Who am I?",
+      "options": [],
+      "answer": "Ulysses S. Grant",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.2,
+        "b": -1.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "\"I ranked 21st of 39 in my West Point class. I was the best horseman at the Academy. My real name was Hiram, but a paperwork error gave me the initials 'U.S.' My friends called me 'Sam.'\" Who am I?",
+      "correct": "Ulysses S. Grant"
+    },
+    {
+      "id": "cw-037",
+      "domain": "civil-war-generals",
+      "type": "fr",
+      "question": "\"I ranked 2nd in my West Point class. I never received a single demerit in four years. My classmates called me 'the Marble Model.' I married into George Washington's family.\" Who am I?",
+      "options": [],
+      "answer": "Robert E. Lee",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.2,
+        "b": -1.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "\"I ranked 2nd in my West Point class. I never received a single demerit in four years. My classmates called me 'the Marble Model.' I married into George Washington's family.\" Who am I?",
+      "correct": "Robert E. Lee"
+    },
+    {
+      "id": "cw-038",
+      "domain": "civil-war-generals",
+      "type": "fr",
+      "question": "\"I ranked 17th of 59 in the Class of 1846. I was called 'Tom Fool' at West Point for my odd mannerisms. My nickname at First Bull Run may have been an insult, not a compliment. I was Lee's right arm until friendly fire killed me.\" Who am I?",
+      "options": [],
+      "answer": "Thomas \"Stonewall\" Jackson",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.2,
+        "b": -1,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "\"I ranked 17th of 59 in the Class of 1846. I was called 'Tom Fool' at West Point for my odd mannerisms. My nickname at First Bull Run may have been an insult, not a compliment. I was Lee's right arm until friendly fire killed me.\" Who am I?",
+      "correct": "Thomas \"Stonewall\" Jackson"
+    },
+    {
+      "id": "cw-039",
+      "domain": "civil-war-generals",
+      "type": "fr",
+      "question": "\"I ranked 54th of 56 in the Class of 1842 — almost last. I was best man at Grant's wedding. I opposed Pickett's Charge. Lee overruled me. I was right. After the war, I became a Republican.\" Who am I?",
+      "options": [],
+      "answer": "James Longstreet",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.2,
+        "b": -0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "\"I ranked 54th of 56 in the Class of 1842 — almost last. I was best man at Grant's wedding. I opposed Pickett's Charge. Lee overruled me. I was right. After the war, I became a Republican.\" Who am I?",
+      "correct": "James Longstreet"
+    },
+    {
+      "id": "cw-040",
+      "domain": "civil-war-generals",
+      "type": "fr",
+      "question": "\"I graduated 2nd in the Class of 1846. They called me the 'Young Napoleon.' I built the Army of the Potomac but was too cautious to use it. I fired Lincoln — no wait, Lincoln fired me. Then I ran against him for president and lost.\" Who am I?",
+      "options": [],
+      "answer": "George B. McClellan",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.2,
+        "b": -0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "\"I graduated 2nd in the Class of 1846. They called me the 'Young Napoleon.' I built the Army of the Potomac but was too cautious to use it. I fired Lincoln — no wait, Lincoln fired me. Then I ran against him for president and lost.\" Who am I?",
+      "correct": "George B. McClellan"
+    },
+    {
+      "id": "cw-041",
+      "domain": "civil-war-generals",
+      "type": "fr",
+      "question": "\"I finished dead last in my class of 59. My name became attached to the war's most famous doomed charge — even though I didn't command the overall assault. After the war, I blamed Lee for the disaster.\" Who am I?",
+      "options": [],
+      "answer": "George Pickett",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.2,
+        "b": -0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "\"I finished dead last in my class of 59. My name became attached to the war's most famous doomed charge — even though I didn't command the overall assault. After the war, I blamed Lee for the disaster.\" Who am I?",
+      "correct": "George Pickett"
+    },
+    {
+      "id": "cw-042",
+      "domain": "civil-war-politics",
+      "type": "fr",
+      "question": "\"I graduated in 1828, one year ahead of Lee. I served as Secretary of War under Pierce. I became President of the Confederacy — a job I didn't want. I feuded bitterly with Joseph E. Johnston.\" Who am I?",
+      "options": [],
+      "answer": "Jefferson Davis",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.2,
+        "b": -0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "\"I graduated in 1828, one year ahead of Lee. I served as Secretary of War under Pierce. I became President of the Confederacy — a job I didn't want. I feuded bitterly with Joseph E. Johnston.\" Who am I?",
+      "correct": "Jefferson Davis"
+    },
+    {
+      "id": "cw-043",
+      "domain": "civil-war-generals",
+      "type": "fr",
+      "question": "\"I was Grant's friend from West Point. He demanded 'unconditional surrender' from me at Fort Donelson. I was furious. But after the war, I marched in his funeral procession.\" Who am I?",
+      "options": [],
+      "answer": "Simon Bolivar Buckner",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.5,
+        "b": 0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "\"I was Grant's friend from West Point. He demanded 'unconditional surrender' from me at Fort Donelson. I was furious. But after the war, I marched in his funeral procession.\" Who am I?",
+      "correct": "Simon Bolivar Buckner"
+    },
+    {
+      "id": "cw-044",
+      "domain": "civil-war-generals",
+      "type": "fr",
+      "question": "\"I was the Union general whose best friend led Pickett's Charge against me at Gettysburg. I was shot off my horse but insisted on directing the defense. The man leading the charge died asking for me.\" Who am I?",
+      "options": [],
+      "answer": "Winfield Scott Hancock",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.5,
+        "b": 0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "\"I was the Union general whose best friend led Pickett's Charge against me at Gettysburg. I was shot off my horse but insisted on directing the defense. The man leading the charge died asking for me.\" Who am I?",
+      "correct": "Winfield Scott Hancock"
+    },
+    {
+      "id": "cw-045",
+      "domain": "civil-war-generals",
+      "type": "fr",
+      "question": "\"I ranked 15th in the Class of 1846. I was McClellan's roommate at West Point. We both fell in love with Ellen Marcy. She chose him. At Antietam, my division arrived after a desperate march and saved Lee's army from my old roommate.\" Who am I?",
+      "options": [],
+      "answer": "A.P. Hill",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.5,
+        "b": 0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "\"I ranked 15th in the Class of 1846. I was McClellan's roommate at West Point. We both fell in love with Ellen Marcy. She chose him. At Antietam, my division arrived after a desperate march and saved Lee's army from my old roommate.\" Who am I?",
+      "correct": "A.P. Hill"
+    },
+    {
+      "id": "cw-046",
+      "domain": "civil-war-relationships",
+      "type": "fr",
+      "question": "What connects A.P. Hill, George McClellan, and Ellen Marcy?",
+      "options": [],
+      "answer": "Love triangle. A.P. Hill and George McClellan both courted Ellen Marcy, who chose McClellan. This poisoned Hill's relationship with his former roommate.",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.5,
+        "b": 0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "What connects A.P. Hill, George McClellan, and Ellen Marcy?",
+      "correct": "Love triangle. A.P. Hill and George McClellan both courted Ellen Marcy, who chose McClellan. This poisoned Hill's relationship with his former roommate."
+    },
+    {
+      "id": "cw-047",
+      "domain": "civil-war-politics",
+      "type": "fr",
+      "question": "What connects Grant, Longstreet, and the Republican Party?",
+      "options": [],
+      "answer": "Post-war politics. Longstreet became a Republican — Grant's party — after the Civil War, destroying his reputation in the South. Grant rewarded his loyalty with federal appointments.",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.5,
+        "b": 0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "What connects Grant, Longstreet, and the Republican Party?",
+      "correct": "Post-war politics. Longstreet became a Republican — Grant's party — after the Civil War, destroying his reputation in the South. Grant rewarded his loyalty with federal appointments."
+    },
+    {
+      "id": "cw-048",
+      "domain": "civil-war-class-ranks",
+      "type": "fr",
+      "question": "What connects the Class of 1842, the Class of 1843, and the Class of 1846?",
+      "options": [],
+      "answer": "They produced the war's key commanders. Class of 1842: Longstreet, D.H. Hill, Rosecrans, Pope. Class of 1843: Grant. Class of 1846: Jackson, McClellan, Pickett, and 22 generals total.",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.2,
+        "b": 0,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "What connects the Class of 1842, the Class of 1843, and the Class of 1846?",
+      "correct": "They produced the war's key commanders. Class of 1842: Longstreet, D.H. Hill, Rosecrans, Pope. Class of 1843: Grant. Class of 1846: Jackson, McClellan, Pickett, and 22 generals total."
+    },
+    {
+      "id": "cw-049",
+      "domain": "civil-war-relationships",
+      "type": "fr",
+      "question": "What connects D.H. Hill, Stonewall Jackson, and college presidencies?",
+      "options": [],
+      "answer": "Marriage and academia. D.H. Hill married Jackson's sister Isabella. After the war, Hill became a college president; Jackson was a VMI professor before the war.",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.5,
+        "b": 1,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "What connects D.H. Hill, Stonewall Jackson, and college presidencies?",
+      "correct": "Marriage and academia. D.H. Hill married Jackson's sister Isabella. After the war, Hill became a college president; Jackson was a VMI professor before the war."
+    },
+    {
+      "id": "cw-050",
+      "domain": "civil-war-battles",
+      "type": "fr",
+      "question": "What connects the Mexican-American War and Appomattox?",
+      "options": [],
+      "answer": "Training ground. Nearly every major Civil War general served together in the Mexican-American War (1846-1848), forming relationships that played out at Appomattox 17 years later.",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.2,
+        "b": 0,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "What connects the Mexican-American War and Appomattox?",
+      "correct": "Training ground. Nearly every major Civil War general served together in the Mexican-American War (1846-1848), forming relationships that played out at Appomattox 17 years later."
+    },
+    {
+      "id": "cw-051",
+      "domain": "civil-war-relationships",
+      "type": "fr",
+      "question": "What connects Lewis Armistead, Winfield Scott Hancock, and Gettysburg?",
+      "options": [],
+      "answer": "Enemies at Gettysburg. Armistead and Hancock were best friends before the war. At Gettysburg, Armistead led a Confederate brigade in Pickett's Charge against Hancock's Union position. Both were wounded; Armistead died asking for Hancock.",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.5,
+        "b": 0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "What connects Lewis Armistead, Winfield Scott Hancock, and Gettysburg?",
+      "correct": "Enemies at Gettysburg. Armistead and Hancock were best friends before the war. At Gettysburg, Armistead led a Confederate brigade in Pickett's Charge against Hancock's Union position. Both were wounded; Armistead died asking for Hancock."
+    },
+    {
+      "id": "cw-052",
+      "domain": "civil-war-relationships",
+      "type": "fr",
+      "question": "What connects Beauregard, Robert Anderson, and Fort Sumter?",
+      "options": [],
+      "answer": "Student vs. teacher. Beauregard had been an artillery student of Major Robert Anderson at West Point. When Beauregard bombarded Fort Sumter, Anderson was the Union commander inside. The first shot was a West Pointer firing on his own instructor.",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.5,
+        "b": 0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "What connects Beauregard, Robert Anderson, and Fort Sumter?",
+      "correct": "Student vs. teacher. Beauregard had been an artillery student of Major Robert Anderson at West Point. When Beauregard bombarded Fort Sumter, Anderson was the Union commander inside. The first shot was a West Pointer firing on his own instructor."
+    },
+    {
+      "id": "cw-053",
+      "domain": "civil-war-battles",
+      "type": "tf",
+      "question": "Pickett's Charge was commanded by George Pickett.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": -0.5,
+        "c": 0.5
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Pickett's Charge was commanded by George Pickett.",
+      "correct": "False"
+    },
+    {
+      "id": "cw-054",
+      "domain": "civil-war-generals",
+      "type": "tf",
+      "question": "Ulysses S. Grant was the general's name at birth.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": -1,
+        "c": 0.5
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Ulysses S. Grant was the general's name at birth.",
+      "correct": "False"
+    },
+    {
+      "id": "cw-055",
+      "domain": "civil-war-generals",
+      "type": "tf",
+      "question": "Robert E. Lee never received a single demerit at West Point.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "answerIndex": 0,
+      "irt": {
+        "a": 1,
+        "b": -1,
+        "c": 0.5
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Robert E. Lee never received a single demerit at West Point.",
+      "correct": "True"
+    },
+    {
+      "id": "cw-056",
+      "domain": "civil-war-class-ranks",
+      "type": "tf",
+      "question": "The Class of 1846 produced 22 generals — the most of any West Point class.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "answerIndex": 0,
+      "irt": {
+        "a": 1,
+        "b": -0.5,
+        "c": 0.5
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "The Class of 1846 produced 22 generals — the most of any West Point class.",
+      "correct": "True"
+    },
+    {
+      "id": "cw-057",
+      "domain": "civil-war-battles",
+      "type": "tf",
+      "question": "Longstreet agreed with Lee's plan for Pickett's Charge.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "answerIndex": 1,
+      "irt": {
+        "a": 1,
+        "b": -0.5,
+        "c": 0.5
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Longstreet agreed with Lee's plan for Pickett's Charge.",
+      "correct": "False"
+    },
+    {
+      "id": "cw-058",
+      "domain": "civil-war-dates",
+      "type": "order",
+      "question": "Arrange these 5 events from earliest to latest: A) Fort Sumter, B) Antietam, C) Mexican-American War begins, D) Gettysburg, E) Appomattox",
+      "options": [
+        "Mexican-American War begins (1846)",
+        "Fort Sumter (April 1861)",
+        "Antietam (Sept 1862)",
+        "Gettysburg (July 1863)",
+        "Appomattox (April 1865)"
+      ],
+      "answer": "C → A → B → D → E",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.2,
+        "b": -0.5,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "Arrange these 5 events from earliest to latest: A) Fort Sumter, B) Antietam, C) Mexican-American War begins, D) Gettysburg, E) Appomattox",
+      "correct": "C → A → B → D → E"
+    },
+    {
+      "id": "cw-059",
+      "domain": "civil-war-class-ranks",
+      "type": "fr",
+      "question": "This West Point class produced 22 generals from 59 graduates — a 37% general rate unmatched in Academy history. Name the class and at least 3 of its members.",
+      "options": [],
+      "answer": "Class of 1846. Members include: Stonewall Jackson, George B. McClellan, George Pickett, A.P. Hill, John Sedgwick, Samuel Sturgis, Cadmus Wilcox.",
+      "answerIndex": null,
+      "irt": {
+        "a": 1.5,
+        "b": 1,
+        "c": 0
+      },
+      "calibration": {
+        "status": "draft",
+        "responses": 0,
+        "lastCalibrated": null
+      },
+      "stem": "This West Point class produced 22 generals from 59 graduates — a 37% general rate unmatched in Academy history. Name the class and at least 3 of its members.",
+      "correct": "Class of 1846. Members include: Stonewall Jackson, George B. McClellan, George Pickett, A.P. Hill, John Sedgwick, Samuel Sturgis, Cadmus Wilcox."
+    }
+  ]
 }
