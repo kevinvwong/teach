@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const COURSES_DIR = path.resolve(/* turbopackIgnore: true */ process.cwd());
+const COURSES_DIR = path.resolve(  process.cwd());
 
 export interface CourseMeta {
   slug: string;
@@ -19,7 +19,7 @@ export interface LessonMeta {
 }
 
 export function getCourseSlugs(): string[] {
-  const entries = fs.readdirSync(/* turbopackIgnore: true */ COURSES_DIR, { withFileTypes: true });
+  const entries = fs.readdirSync(  COURSES_DIR, { withFileTypes: true });
   return entries
     .filter((e) => e.isDirectory() && fs.existsSync(path.join(COURSES_DIR, e.name, "CLAUDE.md")))
     .map((e) => e.name)
@@ -27,7 +27,7 @@ export function getCourseSlugs(): string[] {
 }
 
 export function getCourseMeta(slug: string): CourseMeta {
-  const courseDir = path.join(/* turbopackIgnore: true */ COURSES_DIR, slug);
+  const courseDir = path.join(  COURSES_DIR, slug);
   const lessonsDir = path.join(courseDir, "lessons");
   const assessmentsDir = path.join(courseDir, "assessments");
 
@@ -74,13 +74,13 @@ export function getCourseMeta(slug: string): CourseMeta {
 }
 
 export function getLessonHTML(courseSlug: string, lessonSlug: string): string | null {
-  const filePath = path.join(/* turbopackIgnore: true */ COURSES_DIR, courseSlug, "lessons", `${lessonSlug}.html`);
+  const filePath = path.join(  COURSES_DIR, courseSlug, "lessons", `${lessonSlug}.html`);
   if (!fs.existsSync(filePath)) return null;
   return fs.readFileSync(filePath, "utf-8");
 }
 
 export function getCourseAsset(courseSlug: string, assetPath: string[]): { data: Buffer; contentType: string } | null {
-  const filePath = path.join(/* turbopackIgnore: true */ COURSES_DIR, courseSlug, ...assetPath);
+  const filePath = path.join(  COURSES_DIR, courseSlug, ...assetPath);
   if (!fs.existsSync(filePath)) return null;
 
   const ext = path.extname(filePath).toLowerCase();
@@ -111,9 +111,11 @@ export function getCourseAsset(courseSlug: string, assetPath: string[]): { data:
 }
 
 export function getItemBank(courseSlug: string): any {
-  const bankPath = path.join(/* turbopackIgnore: true */ COURSES_DIR, courseSlug, "assessments", "item-bank.json");
+  const bankPath = path.join(COURSES_DIR, courseSlug, "assessments", "item-bank.json");
   if (!fs.existsSync(bankPath)) return null;
-  return JSON.parse(fs.readFileSync(bankPath, "utf-8"));
+  let raw = fs.readFileSync(bankPath, "utf-8");
+  if (raw.charCodeAt(0) === 0xFEFF) raw = raw.slice(1);
+  return JSON.parse(raw);
 }
 
 export function stripHTMLBody(fullHtml: string): string {
