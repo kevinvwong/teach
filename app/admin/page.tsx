@@ -17,10 +17,30 @@ export default async function AdminPage() {
           <h1 className="text-2xl font-bold">Course Management</h1>
           <p className="text-sm text-lms-text-secondary mt-1">Create, edit, and manage your courses.</p>
         </div>
-        <Link href="/admin/courses/new" className="lms-btn lms-btn-primary">
-          + New Course
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link href="/admin/results" className="lms-btn lms-btn-outline text-sm">
+            📊 Results
+          </Link>
+          <Link href="/admin/courses/new" className="lms-btn lms-btn-primary">
+            + New Course
+          </Link>
+        </div>
       </div>
+
+      {/* Search */}
+      <div className="relative">
+        <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-lms-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        <input id="course-search" className="lms-input pl-9" placeholder="Search courses by title, slug, or archetype..." />
+      </div>
+      <script dangerouslySetInnerHTML={{ __html: `
+        document.getElementById('course-search')?.addEventListener('input', function() {
+          const q = this.value.toLowerCase();
+          document.querySelectorAll('#course-table tbody tr').forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(q) ? '' : 'none';
+          });
+        });
+      `}} />
 
       {/* Workflow overview */}
       {(() => {
@@ -49,7 +69,7 @@ export default async function AdminPage() {
       })()}
 
       <div className="lms-card overflow-hidden">
-        <table className="w-full text-sm">
+        <table id="course-table" className="w-full text-sm">
           <thead>
             <tr className="border-b border-lms-border bg-lms-bg">
               <th className="text-left p-3 font-medium text-lms-text-secondary">Course</th>

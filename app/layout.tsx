@@ -81,6 +81,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             )}
             <NavGroup label="System">
               <NavItem href="/admin" icon="⚙" label="Course Manager" />
+              <NavItem href="/admin/results" icon="📊" label="Quiz Results" />
             </NavGroup>
           </nav>
           <div className="p-4 border-t border-white/10 shrink-0">
