@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getItemBank } from "@/lib/courses/loader";
-import { estimateThetaEAP, selectNextItem, classifyTheta, itemInfo, type ItemParams } from "@/lib/irt/scoring";
+import fs from "fs";
+import path from "path";
+import { estimateThetaEAP, selectNextItem, classifyTheta, itemInfo } from "@/lib/irt/scoring";
 import { getDb } from "@/lib/db";
 import { assessmentResponses, quizSessions } from "@/lib/db/schema";
 
@@ -13,23 +14,23 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // Load item bank
-    const bank = getItemBank(courseSlug || bankName.split("-")[0]);
-    if (!bank || !bank.items || bank.items.length === 0) {
-      return NextResponse.json({ error: `Item bank "${bankName}" not found` }, { status: 404 });
+    const courseId = courseSlug || bankName.split("-")[0];
+    const bankPath = path.join(process.cwd(), courseId, "assessments", "item-bank.json");
+    if (!fs.existsSync(bankPath)) {
+      return NextResponse.json({ error: `Item bank not found: ${bankPath}` }, { status: 404 });
     }
 
-    // Filter items for this domain (active or draft — all are usable until empirically calibrated)
-    const allItems = bankName
-      ? bank.items.filter((i: any) => i.domain === bankName && (!i.calibration || i.calibration.status !== "retired"))
-      : bank.items.filter((i: any) => !i.calibration || i.calibration.status !== "retired");
+    let raw = fs.readFileSync(bankPath, "utf-8");
+    const bank = JSON.parse(raw);
+    const allItems = bank.items.filter((i: any) =>
+      !i.calibration || i.calibration.status !== "retired"
+    );
 
-    // Build scored responses
     const scoredResponses = responses
       .map((r: any) => {
         const item = allItems.find((i: any) => i.id === r.itemId);
         if (!item) return null;
-        return { a: item.a, b: item.b, c: item.c, correct: r.correct };
+        return { a: item.a ?? item.irt?.a ?? 1, b: item.b ?? item.irt?.b ?? 0, c: item.c ?? item.irt?.c ?? 0.25, correct: r.correct };
       })
       .filter((r: any): r is { a: number; b: number; c: number; correct: boolean } => r !== null);
 
@@ -37,7 +38,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "No valid responses" }, { status: 400 });
     }
 
-    // Store responses in database
     try {
       const _db = getDb();
       for (const r of responses) {
@@ -51,14 +51,12 @@ export async function POST(req: NextRequest) {
         });
       }
     } catch (dbErr) {
-      console.warn("DB insert failed (non-fatal):", dbErr);
+      console.warn("DB insert failed:", dbErr);
     }
 
-    // Estimate theta
     const prior = currentTheta != null ? parseFloat(currentTheta) : 0;
     const { theta, se } = estimateThetaEAP(scoredResponses, prior);
 
-    // Select next items
     const exposedIds = new Set(responses.map((r: any) => r.itemId));
     const suggestedNextItems: string[] = [];
     for (let i = 0; i < 2; i++) {
@@ -71,20 +69,29 @@ export async function POST(req: NextRequest) {
 
     const classification = classifyTheta(theta);
     const sessionComplete = se < 0.4 || responses.length >= 20;
-    const info = allItems.reduce(
-      (sum: number, item: any) => sum + itemInfo(theta, item.a, item.b, item.c),
-      0
-    );
+    const info = allItems.reduce((sum: number, item: any) => {
+      const a = item.a ?? item.irt?.a ?? 1;
+      const b = item.b ?? item.irt?.b ?? 0;
+      const c = item.c ?? item.irt?.c ?? 0.25;
+      return sum + itemInfo(theta, a, b, c);
+    }, 0);
 
-    // Update session record
     try {
       const _db = getDb();
-      await _db
-        .insert(quizSessions)
-        .values({
-          id: sessionId,
-          itemBank: bankName,
-          courseSlug: courseSlug || null,
+      await _db.insert(quizSessions).values({
+        id: sessionId,
+        itemBank: bankName,
+        courseSlug: courseSlug || null,
+        nItems: responses.length,
+        nCorrect: responses.filter((r: any) => r.correct).length,
+        finalTheta: String(theta),
+        finalThetaSE: String(se),
+        classification,
+        completed: sessionComplete,
+        completedAt: sessionComplete ? new Date() : null,
+      }).onConflictDoUpdate({
+        target: quizSessions.id,
+        set: {
           nItems: responses.length,
           nCorrect: responses.filter((r: any) => r.correct).length,
           finalTheta: String(theta),
@@ -92,21 +99,10 @@ export async function POST(req: NextRequest) {
           classification,
           completed: sessionComplete,
           completedAt: sessionComplete ? new Date() : null,
-        })
-        .onConflictDoUpdate({
-          target: quizSessions.id,
-          set: {
-            nItems: responses.length,
-            nCorrect: responses.filter((r: any) => r.correct).length,
-            finalTheta: String(theta),
-            finalThetaSE: String(se),
-            classification,
-            completed: sessionComplete,
-            completedAt: sessionComplete ? new Date() : null,
-          },
-        });
+        },
+      });
     } catch (dbErr) {
-      console.warn("DB upsert failed (non-fatal):", dbErr);
+      console.warn("DB upsert failed:", dbErr);
     }
 
     return NextResponse.json({
@@ -122,8 +118,9 @@ export async function POST(req: NextRequest) {
       ],
     });
   } catch (err) {
-    console.error("IRT scoring error:", err);
+    console.error("IRT error:", err);
     const message = err instanceof Error ? err.message : String(err);
-    return NextResponse.json({ error: "Internal server error", detail: message }, { status: 500 });
+    const stack = err instanceof Error ? err.stack : "";
+    return NextResponse.json({ error: "Internal server error", detail: message, stack: stack?.split("\n").slice(0,5).join(" | ") }, { status: 500 });
   }
 }
