@@ -12,23 +12,24 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "next": "^16.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "@neondatabase/auth": "0.4.2-beta",
     "@neondatabase/serverless": "^1.1.0",
     "@vercel/postgres": "^0.10.0",
     "drizzle-orm": "^0.45.0",
-    "postgres": "^3.4.0"
+    "next": "^16.3.0",
+    "postgres": "^3.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.0.0",
+    "@tailwindcss/postcss": "^4.3.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "typescript": "^5.7.0",
-    "tailwindcss": "^4.3.0",
-    "@tailwindcss/postcss": "^4.3.0",
     "drizzle-kit": "^0.31.0",
-    "@eslint/eslintrc": "^3.0.0"
+    "sharp": "^0.35.3",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^5.7.0"
   }
 }
