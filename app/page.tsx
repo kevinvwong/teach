@@ -5,62 +5,95 @@ const courses = [
     slug: "civil_war",
     title: "Civil War: 1820–1865",
     subtitle: "West Point Drama",
-    description: "A character-driven narrative history course on the personal relationships between Civil War generals forged at West Point. Jeopardy-ready.",
+    description: "A character-driven narrative history course on the personal relationships between Civil War generals forged at West Point.",
     lessons: 13,
-    color: "bg-amber-50 border-amber-300",
-    accent: "text-amber-700",
+    color: "from-amber-500 to-orange-600",
+    icon: "⚔",
+    badge: "History",
   },
   {
     slug: "vowel-teams",
     title: "Vowel Teams",
     subtitle: "Phonics for Ages 9–11",
-    description: "Systematic, explicit instruction on vowel teams (ai, ay, ee, ea, igh, oa, oe, ue, ui, oi, oy, ou, ow, au, aw, oo). UFLI-aligned. Multi-sensory and game-like.",
+    description: "Systematic, explicit instruction on vowel teams. UFLI-aligned. Multi-sensory and game-like activities for developing readers.",
     lessons: 15,
-    color: "bg-blue-50 border-blue-300",
-    accent: "text-blue-700",
+    color: "from-blue-500 to-indigo-600",
+    icon: "🔤",
+    badge: "Literacy",
   },
 ];
 
 export default function Home() {
   return (
-    <div>
-      <section className="text-center py-12">
-        <h1 className="text-4xl font-heading font-bold mb-3">Teach</h1>
-        <p className="text-lg text-text-muted max-w-xl mx-auto">
-          Evidence-based interactive courses. IRT-adaptive assessments, child-centered design, and beautiful lessons.
-        </p>
-      </section>
+    <div className="space-y-8">
+      {/* Header */}
+      <div>
+        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <p className="text-lms-text-secondary mt-1 text-sm">Welcome back. Continue where you left off.</p>
+      </div>
 
-      <section className="grid md:grid-cols-2 gap-6 mt-8">
-        {courses.map((course) => (
-          <Link
-            key={course.slug}
-            href={`/courses/${course.slug}`}
-            className={`block rounded-xl border-2 ${course.color} p-6 no-underline transition-all hover:shadow-md hover:-translate-y-0.5`}
-          >
-            <h2 className={`text-xl font-heading font-bold ${course.accent} mb-1`}>{course.title}</h2>
-            <p className="text-sm text-text-muted font-medium mb-3">{course.subtitle}</p>
-            <p className="text-text text-sm leading-relaxed">{course.description}</p>
-            <p className="mt-4 text-xs text-text-muted">{course.lessons} modules</p>
-          </Link>
+      {/* Stats row */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { label: "Enrolled Courses", value: "2", color: "text-lms-accent" },
+          { label: "Total Modules", value: "28", color: "text-lms-success" },
+          { label: "Completed", value: "0", color: "text-lms-warning" },
+          { label: "Quiz Attempts", value: "0", color: "text-lms-text-secondary" },
+        ].map((stat) => (
+          <div key={stat.label} className="lms-card p-4">
+            <p className={`text-2xl font-bold ${stat.color}`}>{stat.value}</p>
+            <p className="text-xs text-lms-text-secondary mt-1">{stat.label}</p>
+          </div>
         ))}
+      </div>
+
+      {/* My Courses */}
+      <section>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold">My Courses</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-5">
+          {courses.map((course) => (
+            <Link
+              key={course.slug}
+              href={`/courses/${course.slug}`}
+              className="lms-card overflow-hidden no-underline hover:-translate-y-0.5 transition-all duration-200"
+            >
+              {/* Course header gradient */}
+              <div className={`h-32 bg-gradient-to-br ${course.color} p-5 flex items-end`}>
+                <div>
+                  <span className="inline-block lms-badge bg-white/20 text-white text-xs mb-2 backdrop-blur-sm">
+                    {course.badge}
+                  </span>
+                  <h3 className="text-white text-lg font-bold leading-tight">{course.title}</h3>
+                  <p className="text-white/80 text-xs mt-0.5">{course.subtitle}</p>
+                </div>
+              </div>
+              {/* Course body */}
+              <div className="p-5 space-y-3">
+                <p className="text-sm text-lms-text-secondary leading-relaxed line-clamp-2">
+                  {course.description}
+                </p>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-lms-text-secondary">{course.lessons} modules</span>
+                  <span className="text-lms-accent text-xs font-medium hover:underline">View Course →</span>
+                </div>
+                <div className="lms-progress">
+                  <div className="lms-progress-fill" style={{ width: "0%" }} />
+                </div>
+                <p className="text-xs text-lms-text-muted">0% complete</p>
+              </div>
+            </Link>
+          ))}
+        </div>
       </section>
 
-      <section className="mt-16 border-t border-border pt-8">
-        <h2 className="text-lg font-heading font-semibold mb-4">How It Works</h2>
-        <div className="grid sm:grid-cols-3 gap-6 text-sm text-text-muted">
-          <div>
-            <h3 className="font-semibold text-text mb-1">1. Study</h3>
-            <p>Self-paced lessons with narrative hooks, knowledge injection, and cumulative review.</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-text mb-1">2. Practice</h3>
-            <p>Retrieval practice with spaced repetition. Adaptive quizzes calibrated via Item Response Theory.</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-text mb-1">3. Track</h3>
-            <p>Progress tracked across modules. IRT ability estimates show your growth over time.</p>
-          </div>
+      {/* Activity */}
+      <section className="lms-card p-5">
+        <h2 className="text-lg font-semibold mb-3">Recent Activity</h2>
+        <div className="text-center py-8 text-lms-text-muted">
+          <p className="text-3xl mb-2">📚</p>
+          <p className="text-sm">No activity yet. Start a lesson to track your progress.</p>
         </div>
       </section>
     </div>
