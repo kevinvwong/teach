@@ -22,10 +22,13 @@ const standalone = [
 
 function CourseCard({ course, baseSlug }: { course: any; baseSlug?: string }) {
   const href = baseSlug ? `/courses/${baseSlug}` : `/courses/${course.slug}`;
+  const imgPath = `/course-images/${course.slug}.jpg`;
   return (
-    <Link href={href} className="lms-card overflow-hidden no-underline hover:-translate-y-0.5 transition-all duration-200">
-      <div className={`h-28 bg-gradient-to-br ${course.color} p-4 flex items-end`}>
-        <div>
+    <Link href={href} className="lms-card overflow-hidden no-underline hover:-translate-y-0.5 transition-all duration-200 group">
+      <div className="h-32 relative overflow-hidden">
+        <img src={imgPath} alt={course.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <div className={`absolute inset-0 bg-gradient-to-t ${course.color} opacity-80`} />
+        <div className="absolute bottom-0 left-0 right-0 p-4">
           {course.badge && <span className="inline-block lms-badge bg-white/20 text-white text-[10px] mb-1.5 backdrop-blur-sm">{course.badge}</span>}
           <h3 className="text-white text-base font-bold leading-tight">{course.title}</h3>
           <p className="text-white/70 text-[11px] mt-0.5">{course.subtitle}</p>
