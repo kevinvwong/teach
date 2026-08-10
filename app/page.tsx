@@ -11,7 +11,7 @@ const courses = [
     accent: "text-amber-700",
   },
   {
-    slug: "vowel_teams",
+    slug: "vowel-teams",
     title: "Vowel Teams",
     subtitle: "Phonics for Ages 9–11",
     description: "Systematic, explicit instruction on vowel teams (ai, ay, ee, ea, igh, oa, oe, ue, ui, oi, oy, ou, ow, au, aw, oo). UFLI-aligned. Multi-sensory and game-like.",

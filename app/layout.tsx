@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/courses/civil_war" className="text-text-muted hover:text-text transition-colors no-underline">
                 Civil War
               </Link>
-              <Link href="/courses/vowel_teams" className="text-text-muted hover:text-text transition-colors no-underline">
+              <Link href="/courses/vowel-teams" className="text-text-muted hover:text-text transition-colors no-underline">
                 Vowel Teams
               </Link>
             </div>
