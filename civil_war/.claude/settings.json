@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "claude_md_path": "CLAUDE.md"
+  },
+  "hooks": {
+    "preToolUse": [],
+    "postToolUse": []
+  }
+}

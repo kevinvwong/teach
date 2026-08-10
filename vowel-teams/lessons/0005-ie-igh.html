@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 5: ie, igh — Vowel Teams</title>
+<link rel="stylesheet" href="../assets/stylesheet.css">
+<style>
+  details.answer-reveal { margin: 1em 0; }
+  details.answer-reveal summary {
+    display: inline-block; background: var(--primary); color: #fff; border: none;
+    padding: 0.5em 1.2em; border-radius: 8px; font-size: 1rem; font-weight: 700;
+    cursor: pointer; font-family: inherit; margin: 0.5em 0; list-style: none;
+  }
+  details.answer-reveal summary::-webkit-details-marker { display: none; }
+  details.answer-reveal summary:hover { background: #1D4ED8; }
+  details.answer-reveal summary:active { transform: scale(0.97); }
+  details.answer-reveal[open] summary { background: var(--muted); }
+  .hunt-word { display: inline-block; background: var(--card-bg); border: 2px solid var(--border); border-radius: 10px; padding: 0.5rem 0.8rem; margin: 0.3rem; font-size: 1.05rem; font-weight: 700; }
+  .review-list { list-style: none; margin: 0; padding: 0; }
+  .review-list li { margin-bottom: 0.8em; font-size: 1.05rem; padding: 0.5em 0; border-bottom: 1px solid var(--border); }
+  .word-col { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .hunt-check-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.75rem; margin: 1.2em 0; }
+  .hunt-check-grid .word-card { user-select: none; position: relative; padding: 0.6rem 0.4rem; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .hunt-check-grid .word-card input[type="checkbox"] { width: 1.1rem; height: 1.1rem; cursor: pointer; accent-color: var(--primary); }
+  .hunt-check-grid .word-card .word-text { font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="season-header">Module 5</div>
+<h1>Long I: ie and igh</h1>
+<img src="../assets/images/reading-book.jpg" alt="Colorful alphabet letters scattered on a table" class="lesson-hero">
+<p class="module-header">UFLI Lesson 87</p>
+
+<!-- PHASE 1: HOOK -->
+<div class="hook">
+  <p>The long I sound is tricky — sometimes the <strong>gh</strong> is silent!</p>
+</div>
+
+<!-- PHASE 2: TEACH -->
+<h2>Two Ways to Spell /i/</h2>
+<p>The long I sound can be spelled <strong>igh</strong> or <strong>ie</strong>. One of them has a sneaky silent part. Can you spot it?</p>
+
+<div class="rule-box">
+  <h3>igh — silent gh</h3>
+  <p><strong>igh</strong> always says long /i/. The <em>gh</em> is silent — you only hear the long I sound. Look for <strong>igh</strong> in the middle or at the end of a word.</p>
+  <div class="rule-example">
+    <span class="example-item">l<span class="vowel-team">igh</span>t</span>
+    <span class="example-item">n<span class="vowel-team">igh</span>t</span>
+    <span class="example-item">h<span class="vowel-team">igh</span></span>
+    <span class="example-item">br<span class="vowel-team">igh</span>t</span>
+  </div>
+</div>
+
+<div class="rule-box">
+  <h3>ie — at the end</h3>
+  <p><strong>ie</strong> at the end of a word usually says long /i/. It's short and sweet — just two letters.</p>
+  <div class="rule-example">
+    <span class="example-item">p<span class="vowel-team">ie</span></span>
+    <span class="example-item">t<span class="vowel-team">ie</span></span>
+    <span class="example-item">l<span class="vowel-team">ie</span></span>
+    <span class="example-item">d<span class="vowel-team">ie</span></span>
+  </div>
+</div>
+
+<div class="info-box knowledge">
+  <p><strong>Heads up:</strong> The letters <em>ie</em> can also say long E in the middle of a word (like <em>field</em> or <em>piece</em>). For now, we're focusing on <strong>ie</strong> at the end saying long <strong>/i/</strong>.</p>
+</div>
+
+<!-- PHASE 3: PRACTICE -->
+<h2>Word Reading</h2>
+<p>Read each word below. Can you feel the silent <em>gh</em> in the <strong>igh</strong> words?</p>
+
+<div class="word-grid">
+  <div class="word-card">l<span class="vowel-team">igh</span>t</div>
+  <div class="word-card">n<span class="vowel-team">igh</span>t</div>
+  <div class="word-card">h<span class="vowel-team">igh</span></div>
+  <div class="word-card">r<span class="vowel-team">igh</span>t</div>
+  <div class="word-card">br<span class="vowel-team">igh</span>t</div>
+  <div class="word-card">p<span class="vowel-team">ie</span></div>
+  <div class="word-card">t<span class="vowel-team">ie</span></div>
+  <div class="word-card">l<span class="vowel-team">ie</span></div>
+</div>
+
+<!-- PHASE 4: GAME -->
+<h2>Long I Word Hunt</h2>
+
+<div class="game-zone">
+  <h3>Game: Long I Word Hunt</h3>
+  <p class="game-instruction">Below are 10 words. Some have the long I sound spelled <strong>igh</strong> or <strong>ie</strong>. Others don't. Say each word aloud. Do you hear long I? Do you see igh or ie? Then check the answers.</p>
+
+  <div class="hunt-check-grid">
+    <div class="word-card">
+      <input type="checkbox" class="vowel-check" id="h1">
+      <label for="h1" class="word-text">l<span class="vowel-team">igh</span>t</label>
+    </div>
+    <div class="word-card">
+      <input type="checkbox" class="vowel-check" id="h2">
+      <label for="h2" class="word-text">r<span class="vowel-team">ai</span>n</label>
+    </div>
+    <div class="word-card">
+      <input type="checkbox" class="vowel-check" id="h3">
+      <label for="h3" class="word-text">n<span class="vowel-team">igh</span>t</label>
+    </div>
+    <div class="word-card">
+      <input type="checkbox" class="vowel-check" id="h4">
+      <label for="h4" class="word-text">s<span class="vowel-team">ee</span></label>
+    </div>
+    <div class="word-card">
+      <input type="checkbox" class="vowel-check" id="h5">
+      <label for="h5" class="word-text">h<span class="vowel-team">igh</span></label>
+    </div>
+    <div class="word-card">
+      <input type="checkbox" class="vowel-check" id="h6">
+      <label for="h6" class="word-text">b<span class="vowel-team">oa</span>t</label>
+    </div>
+    <div class="word-card">
+      <input type="checkbox" class="vowel-check" id="h7">
+      <label for="h7" class="word-text">p<span class="vowel-team">ie</span></label>
+    </div>
+    <div class="word-card">
+      <input type="checkbox" class="vowel-check" id="h8">
+      <label for="h8" class="word-text">sn<span class="vowel-team">ow</span></label>
+    </div>
+    <div class="word-card">
+      <input type="checkbox" class="vowel-check" id="h9">
+      <label for="h9" class="word-text">t<span class="vowel-team">ie</span></label>
+    </div>
+    <div class="word-card">
+      <input type="checkbox" class="vowel-check" id="h10">
+      <label for="h10" class="word-text">c<span class="vowel-team">oa</span>t</label>
+    </div>
+  </div>
+
+  <details class="answer-reveal">
+    <summary>Check answers</summary>
+    <div class="info-box answers">
+      <p><strong>Words with igh or ie:</strong></p>
+      <p>
+        <span class="hunt-word">l<span class="vowel-team">igh</span>t</span>
+        <span class="hunt-word">n<span class="vowel-team">igh</span>t</span>
+        <span class="hunt-word">h<span class="vowel-team">igh</span></span>
+        <span class="hunt-word">p<span class="vowel-team">ie</span></span>
+        <span class="hunt-word">t<span class="vowel-team">ie</span></span>
+      </p>
+      <p><strong>Words with other vowel teams:</strong></p>
+      <p>
+        <span class="hunt-word">r<span class="vowel-team">ai</span>n</span>
+        <span class="hunt-word">s<span class="vowel-team">ee</span></span>
+        <span class="hunt-word">b<span class="vowel-team">oa</span>t</span>
+        <span class="hunt-word">sn<span class="vowel-team">ow</span></span>
+        <span class="hunt-word">c<span class="vowel-team">oa</span>t</span>
+      </p>
+      <p>Did you notice? The <strong>igh</strong> words have THREE letters but make just ONE sound. The <em>gh</em> is completely silent!</p>
+    </div>
+  </details>
+</div>
+
+<!-- PHASE 5: CHECK -->
+<h2>Quick Check</h2>
+
+<div class="info-box">
+  <ol class="review-list">
+    <li>In the word "light", which letters are silent? <span class="answer-toggle"><strong>gh</strong></span></li>
+    <li>Does "pie" use igh or ie? <span class="answer-toggle"><strong>ie</strong></span></li>
+    <li>Which spelling — igh or ie — has more letters? <span class="answer-toggle"><strong>igh</strong> (three letters vs. two)</span></li>
+  </ol>
+</div>
+
+<div class="info-box tip">
+  <p><strong>Excellent work!</strong> You've learned two ways to spell long I: <strong>igh</strong> (with a silent gh) and <strong>ie</strong> (at the end of words).</p>
+  <p>Review: <a href="0002-ai-ay.html">Long A (ai, ay)</a> | <a href="0003-ee-ea-ey.html">Long E (ee, ea, ey)</a> | <a href="0004-oa-ow-oe.html">Long O (oa, ow, oe)</a></p>
+  <p>Next up: <a href="0006-long-vowel-review.html">Long Vowel Teams Review</a></p>
+  <p style="font-size:0.85rem;color:var(--muted);margin-top:0.5em;">Module 5 of 14 complete</p>
+</div>
+
+<!-- UFLI RESOURCES -->
+<h2>UFLI Toolbox Resources</h2>
+
+<div class="info-box">
+<p>This lesson aligns with <strong>UFLI Foundations Lesson 87</strong> (ie, igh).</p>
+
+<h3>Digital Tools (Use Anytime)</h3>
+<ul>
+  <li><a href="https://research.dwi.ufl.edu/op.n/file/cbhd8xmn9i4ctf7i/embed">Word Work Mat — Beginner</a> — practice building words with letter tiles</li>
+  <li><a href="https://research.dwi.ufl.edu/op.n/file/bca9ju45kvvrvoan/embed">Blending Board</a> — practice sounding out words</li>
+</ul>
+
+<h3>Unit Resources (Lessons 84–88)</h3>
+<ul>
+  <li><a href="https://ufli.education.ufl.edu/foundations/toolbox/84-88/">Long Vowel Teams Unit (Lessons 84–88)</a> — ai/ay, ee/ea/ey, oa/ow/oe, ie/igh</li>
+  <li><a href="https://ufli.education.ufl.edu/wp-content/uploads/2022/08/87_Decodable_UFLIFoundations.pdf">Lesson 87 Decodable Passage</a></li>
+  <li><a href="https://ufli.education.ufl.edu/wp-content/uploads/2022/08/87_RollRead_UFLI-Foundations.pdf">Lesson 87 Roll and Read</a></li>
+  <li><a href="https://ufli.education.ufl.edu/wp-content/uploads/2022/08/87_HomePractice_UFLI-Foundations.pdf">Lesson 87 Home Practice</a></li>
+</ul>
+</div>
+
+</body>
+</html>

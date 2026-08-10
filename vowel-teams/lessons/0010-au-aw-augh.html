@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 10: au, aw, augh — Vowel Teams</title>
+<link rel="stylesheet" href="../assets/stylesheet.css">
+<style>
+  .game-sentences { list-style: none; margin: 0; padding: 0; }
+  .game-sentences li { margin-bottom: 1em; font-size: 1.1rem; padding: 0.5em 0; }
+  .game-sentence { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 0.6em 1em; }
+  .game-sentence .blank { display: inline-block; min-width: 80px; border-bottom: 3px solid var(--accent); padding: 0 0.3em; font-weight: 700; }
+  .game-choices { display: flex; gap: 0.5rem; margin-top: 0.4em; flex-wrap: wrap; }
+  .choice-btn { display: inline-block; padding: 0.25em 0.75em; border-radius: 6px; font-weight: 700; font-size: 0.9rem; cursor: pointer; border: 2px solid var(--border); background: var(--card-bg); transition: all 0.15s ease; }
+  .choice-btn:hover { border-color: var(--primary); background: var(--primary-light); }
+  .choice-btn.selected { border-color: var(--green); background: var(--green-light); }
+
+  details.answer-reveal { margin: 1em 0; }
+  details.answer-reveal summary {
+    display: inline-block; background: var(--primary); color: #fff; border: none;
+    padding: 0.5em 1.2em; border-radius: 8px; font-size: 1rem; font-weight: 700;
+    cursor: pointer; font-family: inherit; margin: 0.5em 0; list-style: none;
+  }
+  details.answer-reveal summary::-webkit-details-marker { display: none; }
+  details.answer-reveal summary:hover { background: #1D4ED8; }
+  details.answer-reveal summary:active { transform: scale(0.97); }
+  details.answer-reveal[open] summary { background: var(--muted); }
+
+  .check-list { list-style: none; margin: 0; padding: 0; }
+  .check-list li { margin-bottom: 0.8em; font-size: 1.05rem; padding: 0.5em 0; border-bottom: 1px solid var(--border); }
+
+  .answer-key-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 0.5rem; margin: 1em 0; }
+  .answer-key-word { padding: 0.4em; border-radius: 6px; text-align: center; font-weight: 700; font-size: 1rem; }
+  .answer-key-word.correct { background: var(--green-light); border: 2px solid var(--green); }
+</style>
+</head>
+<body>
+
+<div class="season-header">Module 10</div>
+<h1>au, aw, augh — The /aw/ Sound</h1>
+<img src="../assets/images/reading-book.jpg" alt="Colorful alphabet letters" class="lesson-hero">
+<p class="module-header">UFLI Lesson 93</p>
+
+<!-- ═══════════ PHASE 1: HOOK ═══════════ -->
+<div class="hook">
+  <p>The /aw/ sound can be spelled <span class="vowel-team">au</span>, <span class="vowel-team">aw</span>, or <span class="vowel-team">augh</span>. Three different spellings for one sound!</p>
+</div>
+
+<!-- ═══════════ PHASE 2: TEACH ═══════════ -->
+<h2>Three Ways to Spell /aw/</h2>
+
+<p>When you hear the /aw/ sound (like in <em>saw</em>), there are three ways to spell it. Where the sound appears in the word tells you which spelling to use.</p>
+
+<div class="rule-box">
+  <h3><span class="vowel-team">au</span> — Usually in the Middle</h3>
+  <p>Use <span class="vowel-team">au</span> when the /aw/ sound is in the <strong>middle</strong> of a word or syllable.</p>
+  <div class="rule-example">
+    <span class="example-item">s<span class="vowel-team">au</span>ce</span>
+    <span class="example-item"><span class="vowel-team">Au</span>gust</span>
+    <span class="example-item">f<span class="vowel-team">au</span>lt</span>
+    <span class="example-item">l<span class="vowel-team">au</span>nch</span>
+    <span class="example-item">c<span class="vowel-team">au</span>se</span>
+  </div>
+</div>
+
+<div class="rule-box">
+  <h3><span class="vowel-team">aw</span> — Usually at the End</h3>
+  <p>Use <span class="vowel-team">aw</span> when the /aw/ sound is at the <strong>end</strong> of a word or syllable.</p>
+  <div class="rule-example">
+    <span class="example-item">s<span class="vowel-team">aw</span></span>
+    <span class="example-item">dr<span class="vowel-team">aw</span></span>
+    <span class="example-item">str<span class="vowel-team">aw</span></span>
+    <span class="example-item">cl<span class="vowel-team">aw</span></span>
+    <span class="example-item">l<span class="vowel-team">aw</span></span>
+  </div>
+</div>
+
+<div class="rule-box">
+  <h3><span class="vowel-team">augh</span> — The Tricky One</h3>
+  <p><span class="vowel-team">augh</span> is a less common spelling. It always says /aw/.</p>
+  <div class="rule-example">
+    <span class="example-item">c<span class="vowel-team">augh</span>t</span>
+    <span class="example-item">t<span class="vowel-team">augh</span>t</span>
+    <span class="example-item">n<span class="vowel-team">augh</span>ty</span>
+    <span class="example-item">d<span class="vowel-team">augh</span>ter</span>
+    <span class="example-item">sl<span class="vowel-team">augh</span>ter</span>
+  </div>
+</div>
+
+<div class="info-box tip">
+  <p><strong>Tip:</strong> If you're not sure, try <span class="vowel-team">au</span> first. It is the most common spelling for the /aw/ sound.</p>
+</div>
+
+<!-- ═══════════ PHASE 3: PRACTICE ═══════════ -->
+<h2>Read These Words</h2>
+
+<p>Read each word aloud. Can you hear the /aw/ sound? Tap or click each card to see a sentence.</p>
+
+<div class="word-grid">
+  <div class="word-card">
+    s<span class="vowel-team">au</span>ce
+    <span class="example-sentence">Pasta with tomato s<span class="vowel-team">au</span>ce is my favorite.</span>
+  </div>
+  <div class="word-card">
+    <span class="vowel-team">Au</span>gust
+    <span class="example-sentence">School starts in <span class="vowel-team">Au</span>gust.</span>
+  </div>
+  <div class="word-card">
+    f<span class="vowel-team">au</span>lt
+    <span class="example-sentence">It wasn't my f<span class="vowel-team">au</span>lt — the dog ate my homework!</span>
+  </div>
+  <div class="word-card">
+    s<span class="vowel-team">aw</span>
+    <span class="example-sentence">I s<span class="vowel-team">aw</span> a shooting star last night.</span>
+  </div>
+  <div class="word-card">
+    dr<span class="vowel-team">aw</span>
+    <span class="example-sentence">Can you dr<span class="vowel-team">aw</span> a picture of a dragon?</span>
+  </div>
+  <div class="word-card">
+    str<span class="vowel-team">aw</span>
+    <span class="example-sentence">She drank her smoothie through a str<span class="vowel-team">aw</span>.</span>
+  </div>
+  <div class="word-card">
+    c<span class="vowel-team">augh</span>t
+    <span class="example-sentence">He c<span class="vowel-team">augh</span>t the ball with one hand.</span>
+  </div>
+  <div class="word-card">
+    t<span class="vowel-team">augh</span>t
+    <span class="example-sentence">My mom t<span class="vowel-team">augh</span>t me how to ride a bike.</span>
+  </div>
+</div>
+
+<!-- ═══════════ PHASE 4: GAME ═══════════ -->
+<h2>Choose the Right Spelling</h2>
+
+<p>Read each sentence below. Which spelling completes the word? Click your choice, then check your answers.</p>
+
+<div class="game-zone">
+  <h3>🎯 Choose the Spelling</h3>
+  <p class="game-instruction">Pick <span class="vowel-team">au</span>, <span class="vowel-team">aw</span>, or <span class="vowel-team">augh</span> for each blank.</p>
+
+  <ol class="game-sentences">
+    <li>
+      <div class="game-sentence">
+        Mom made gr<span class="blank">__</span>vy for dinner.
+        <div class="game-choices">
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">au</span>
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">aw</span>
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">augh</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="game-sentence">
+        The baby has a str<span class="blank">__</span>nge cough.
+        <div class="game-choices">
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">au</span>
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">aw</span>
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">augh</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="game-sentence">
+        My dad c<span class="blank">__</span>ght a fish this big!
+        <div class="game-choices">
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">au</span>
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">aw</span>
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">augh</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="game-sentence">
+        Don't forget to l<span class="blank">__</span>nch the rocket!
+        <div class="game-choices">
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">au</span>
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">aw</span>
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">augh</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="game-sentence">
+        I s<span class="blank">__</span> three deer in the woods.
+        <div class="game-choices">
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">au</span>
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">aw</span>
+          <span class="choice-btn" onclick="this.classList.toggle('selected')">augh</span>
+        </div>
+      </div>
+    </li>
+  </ol>
+
+  <details class="answer-reveal">
+    <summary>Show answers</summary>
+    <div class="info-box answers">
+      <p>✅ <strong>1. au</strong> &mdash; gr<span class="vowel-team">au</span>vy</p>
+      <p>✅ <strong>2. au</strong> &mdash; str<span class="vowel-team">au</span>nge</p>
+      <p>✅ <strong>3. augh</strong> &mdash; c<span class="vowel-team">augh</span>t</p>
+      <p>✅ <strong>4. au</strong> &mdash; l<span class="vowel-team">au</span>nch</p>
+      <p>✅ <strong>5. aw</strong> &mdash; s<span class="vowel-team">aw</span></p>
+    </div>
+  </details>
+</div>
+
+<!-- ═══════════ PHASE 5: CHECK ═══════════ -->
+<h2>Quick Check</h2>
+
+<ol class="check-list">
+  <li>Which spelling usually goes at the <strong>end</strong> of a word — <span class="vowel-team">au</span> or <span class="vowel-team">aw</span>? <span class="answer-toggle"><strong>aw</strong></span></li>
+  <li>Which spelling has three letters but makes just one sound? <span class="answer-toggle"><strong>augh</strong></span></li>
+  <li>Fill in the blank: The /aw/ sound in "sauce" is spelled <span class="vowel-team">__</span>. <span class="answer-toggle"><strong>au</strong></span></li>
+</ol>
+
+<div class="info-box tip">
+  <p><strong>Great work!</strong> You now know three ways to spell the /aw/ sound. Remember: <span class="vowel-team">au</span> in the middle, <span class="vowel-team">aw</span> at the end, and <span class="vowel-team">augh</span> is the tricky one.</p>
+  <p>Next up: <a href="0011-ea-short-a.html">ea says /ĕ/ and a says /ŏ/</a></p>
+  <p style="font-size:0.85rem;color:var(--muted);margin-top:0.5em;">Module 10 of 14 complete</p>
+</div>
+
+<!-- ═══════════ UFLI RESOURCES ═══════════ -->
+<h2>UFLI Toolbox Resources</h2>
+
+<div class="info-box">
+<p>This lesson aligns with <strong>UFLI Foundations Lesson 93</strong> (au, aw, augh). The free <a href="https://ufli.education.ufl.edu/foundations/toolbox/">UFLI Foundations Toolbox</a> has printable and digital resources for extra practice.</p>
+
+<h3>Digital Tools (Use Anytime)</h3>
+<ul>
+  <li><a href="https://research.dwi.ufl.edu/op.n/file/cbhd8xmn9i4ctf7i/embed">Word Work Mat &ndash; Beginner</a> &mdash; practice building words with letter tiles</li>
+  <li><a href="https://research.dwi.ufl.edu/op.n/file/bca9ju45kvvrvoan/embed">Blending Board</a> &mdash; practice sounding out words</li>
+</ul>
+
+<h3>Lesson 93 Resources</h3>
+<ul>
+  <li><a href="https://ufli.education.ufl.edu/foundations/toolbox/89-94/">Other Vowel Teams Unit (Lessons 89–94)</a></li>
+  <li><a href="https://ufli.education.ufl.edu/wp-content/uploads/2024/01/93-roll-and-read.pdf">Lesson 93 Roll &amp; Read</a> &mdash; fluency practice with /aw/ words</li>
+  <li><a href="https://ufli.education.ufl.edu/wp-content/uploads/2024/01/93-word-work-mat.pdf">Lesson 93 Word Work Mat</a> &mdash; printable word-building mat</li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 12: oi, oy — Vowel Teams</title>
+<link rel="stylesheet" href="../assets/stylesheet.css">
+<style>
+.odd-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1em 0; }
+.odd-card { background: var(--card-bg); border: 2px solid var(--border); border-radius: 10px; padding: 0.75rem 1rem; text-align: center; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.15s ease; }
+.odd-card:hover { box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12); transform: translateY(-2px); }
+
+details.answer-reveal { margin: 1em 0; }
+details.answer-reveal summary {
+  display: inline-block; background: var(--primary); color: #fff; border: none;
+  padding: 0.5em 1.2em; border-radius: 8px; font-size: 1rem; font-weight: 700;
+  cursor: pointer; font-family: inherit; margin: 0.5em 0; list-style: none;
+}
+details.answer-reveal summary::-webkit-details-marker { display: none; }
+details.answer-reveal summary:hover { background: #1D4ED8; }
+details.answer-reveal summary:active { transform: scale(0.97); }
+details.answer-reveal[open] summary { background: var(--muted); }
+
+.check-list { list-style: none; margin: 0; padding: 0; }
+.check-list li { margin-bottom: 0.8em; font-size: 1.05rem; padding: 0.5em 0; border-bottom: 1px solid var(--border); }
+
+.sort-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1em 0; }
+.sort-column { background: var(--code-bg); border: 2px dashed var(--border); border-radius: 10px; padding: 1rem; min-height: 120px; }
+.sort-column h4 { margin: 0 0 0.5em; text-align: center; }
+.sort-column.oi { border-color: var(--primary); }
+.sort-column.oy { border-color: var(--accent); }
+.sort-word { display: inline-block; background: var(--card-bg); border: 2px solid var(--border); border-radius: 8px; padding: 0.4em 0.8em; margin: 0.3em; font-weight: 700; font-size: 1rem; }
+</style>
+</head>
+<body>
+
+<div class="season-header">Module 12</div>
+<h1>oi and oy — The /oi/ Sound</h1>
+<img src="../assets/images/kids-learning.jpg" alt="Colorful alphabet letters" class="lesson-hero">
+<p class="module-header">UFLI Lesson 95</p>
+
+<!-- ═══════════ PHASE 1: HOOK ═══════════ -->
+<div class="hook">
+  <p>The /oi/ sound might be one of the noisiest sounds in English! Just think <em>b<span class="vowel-team">oy</span></em>, <em>c<span class="vowel-team">oi</span>n</em>, and <em>j<span class="vowel-team">oy</span></em>.</p>
+</div>
+
+<!-- ═══════════ PHASE 2: TEACH ═══════════ -->
+<h2>oi in the Middle, oy at the End</h2>
+
+<p>The /oi/ sound follows a very simple rule. Once you learn it, you'll know exactly which spelling to use.</p>
+
+<div class="rule-box">
+  <h3><span class="vowel-team">oi</span> — In the Middle</h3>
+  <p>Use <span class="vowel-team">oi</span> when the /oi/ sound is in the <strong>middle</strong> of a word or syllable.</p>
+  <div class="rule-example">
+    <span class="example-item">c<span class="vowel-team">oi</span>n</span>
+    <span class="example-item"><span class="vowel-team">oi</span>l</span>
+    <span class="example-item">p<span class="vowel-team">oi</span>nt</span>
+    <span class="example-item">v<span class="vowel-team">oi</span>ce</span>
+    <span class="example-item">b<span class="vowel-team">oi</span>l</span>
+  </div>
+</div>
+
+<div class="rule-box">
+  <h3><span class="vowel-team">oy</span> — At the End</h3>
+  <p>Use <span class="vowel-team">oy</span> when the /oi/ sound is at the <strong>end</strong> of a word or syllable.</p>
+  <div class="rule-example">
+    <span class="example-item">b<span class="vowel-team">oy</span></span>
+    <span class="example-item">t<span class="vowel-team">oy</span></span>
+    <span class="example-item">j<span class="vowel-team">oy</span></span>
+    <span class="example-item">enj<span class="vowel-team">oy</span></span>
+    <span class="example-item">ann<span class="vowel-team">oy</span></span>
+  </div>
+</div>
+
+<div class="info-box knowledge">
+  <p><strong>This pattern is super reliable.</strong> Unlike some vowel teams, <span class="vowel-team">oi</span> and <span class="vowel-team">oy</span> almost never break this rule. If you hear /oi/ at the end of a word, it's <span class="vowel-team">oy</span>. If you hear it in the middle, it's <span class="vowel-team">oi</span>.</p>
+</div>
+
+<!-- ═══════════ PHASE 3: PRACTICE ═══════════ -->
+<h2>Read These Words</h2>
+
+<p>Read each word aloud. Notice where the /oi/ sound appears in each word.</p>
+
+<div class="word-grid">
+  <div class="word-card">
+    c<span class="vowel-team">oi</span>n
+    <span class="example-sentence">I found a shiny c<span class="vowel-team">oi</span>n on the sidewalk.</span>
+  </div>
+  <div class="word-card">
+    <span class="vowel-team">oi</span>l
+    <span class="example-sentence">Mom used <span class="vowel-team">oi</span>l to cook the vegetables.</span>
+  </div>
+  <div class="word-card">
+    p<span class="vowel-team">oi</span>nt
+    <span class="example-sentence">Can you p<span class="vowel-team">oi</span>nt to the capital on the map?</span>
+  </div>
+  <div class="word-card">
+    v<span class="vowel-team">oi</span>ce
+    <span class="example-sentence">She has a loud v<span class="vowel-team">oi</span>ce on the playground.</span>
+  </div>
+  <div class="word-card">
+    b<span class="vowel-team">oy</span>
+    <span class="example-sentence">The b<span class="vowel-team">oy</span> rode his bike to school.</span>
+  </div>
+  <div class="word-card">
+    t<span class="vowel-team">oy</span>
+    <span class="example-sentence">My favorite t<span class="vowel-team">oy</span> is a remote-control car.</span>
+  </div>
+  <div class="word-card">
+    j<span class="vowel-team">oy</span>
+    <span class="example-sentence">The puppy brought so much j<span class="vowel-team">oy</span> to the family.</span>
+  </div>
+  <div class="word-card">
+    enj<span class="vowel-team">oy</span>
+    <span class="example-sentence">I enj<span class="vowel-team">oy</span> reading comic books.</span>
+  </div>
+</div>
+
+<!-- ═══════════ PHASE 4: GAME ═══════════ -->
+<h2>Sort by Spelling</h2>
+
+<p>Look at each word. Does it use <span class="vowel-team">oi</span> or <span class="vowel-team">oy</span>? Sort them into the correct columns, then check your answers.</p>
+
+<div class="game-zone">
+  <h3>🗂️ Sort by Spelling</h3>
+  <p class="game-instruction">Decide whether each word uses <span class="vowel-team">oi</span> or <span class="vowel-team">oy</span>.</p>
+
+  <div class="sort-grid">
+    <div class="sort-column oi">
+      <h4><span class="color-box blue">oi</span> Words</h4>
+      <span class="sort-word">c<span class="vowel-team">oi</span>n</span>
+      <span class="sort-word"><span class="vowel-team">oi</span>l</span>
+      <span class="sort-word">p<span class="vowel-team">oi</span>nt</span>
+      <span class="sort-word">v<span class="vowel-team">oi</span>ce</span>
+      <span class="sort-word">b<span class="vowel-team">oi</span>l</span>
+      <span class="sort-word">n<span class="vowel-team">oi</span>se</span>
+    </div>
+    <div class="sort-column oy">
+      <h4><span class="color-box amber">oy</span> Words</h4>
+      <span class="sort-word">b<span class="vowel-team">oy</span></span>
+      <span class="sort-word">t<span class="vowel-team">oy</span></span>
+      <span class="sort-word">j<span class="vowel-team">oy</span></span>
+      <span class="sort-word">enj<span class="vowel-team">oy</span></span>
+      <span class="sort-word">s<span class="vowel-team">oy</span></span>
+      <span class="sort-word">ann<span class="vowel-team">oy</span></span>
+    </div>
+  </div>
+
+  <details class="answer-reveal">
+    <summary>Show answers</summary>
+    <div class="info-box answers">
+      <p><strong><span class="color-box blue">oi</span> Words:</strong> coin, oil, point, voice, boil, noise — /oi/ sound is in the <strong>middle</strong> of each word.</p>
+      <p><strong><span class="color-box amber">oy</span> Words:</strong> boy, toy, joy, enjoy, soy, annoy — /oi/ sound is at the <strong>end</strong> of each word (or the end of a syllable, like <em>en-joy</em>).</p>
+    </div>
+  </details>
+</div>
+
+<!-- ═══════════ PHASE 5: CHECK ═══════════ -->
+<h2>Quick Check</h2>
+
+<ol class="check-list">
+  <li>Which spelling of /oi/ goes at the <strong>end</strong> of a word? <span class="answer-toggle"><strong>oy</strong></span></li>
+  <li>Which spelling of /oi/ goes in the <strong>middle</strong> of a word? <span class="answer-toggle"><strong>oi</strong></span></li>
+  <li>Fill in the blank: The word "v___ce" uses which spelling? <span class="answer-toggle"><strong>oi</strong> &mdash; v<span class="vowel-team">oi</span>ce</span></li>
+</ol>
+
+<div class="info-box tip">
+  <p><strong>Amazing!</strong> The <span class="vowel-team">oi</span> / <span class="vowel-team">oy</span> rule is one of the most reliable in English. Middle = <span class="vowel-team">oi</span>, end = <span class="vowel-team">oy</span>. You've got this!</p>
+  <p>Next up: <a href="0013-ou-ow.html">ou and ow — The /ou/ Sound</a></p>
+  <p style="font-size:0.85rem;color:var(--muted);margin-top:0.5em;">Module 12 of 14 complete</p>
+</div>
+
+<!-- ═══════════ UFLI RESOURCES ═══════════ -->
+<h2>UFLI Toolbox Resources</h2>
+
+<div class="info-box">
+<p>This lesson aligns with <strong>UFLI Foundations Lesson 95</strong> (oi, oy). The free <a href="https://ufli.education.ufl.edu/foundations/toolbox/">UFLI Foundations Toolbox</a> has printable and digital resources for extra practice.</p>
+
+<h3>Digital Tools (Use Anytime)</h3>
+<ul>
+  <li><a href="https://research.dwi.ufl.edu/op.n/file/cbhd8xmn9i4ctf7i/embed">Word Work Mat &ndash; Beginner</a> &mdash; practice building words with letter tiles</li>
+  <li><a href="https://research.dwi.ufl.edu/op.n/file/bca9ju45kvvrvoan/embed">Blending Board</a> &mdash; practice sounding out words</li>
+</ul>
+
+<h3>Lesson 95 Resources</h3>
+<ul>
+  <li><a href="https://ufli.education.ufl.edu/foundations/toolbox/95-98/">Diphthongs Unit (Lessons 95–98)</a></li>
+  <li><a href="https://ufli.education.ufl.edu/wp-content/uploads/2024/01/95-roll-and-read.pdf">Lesson 95 Roll &amp; Read</a> &mdash; fluency practice with /oi/ words</li>
+  <li><a href="https://ufli.education.ufl.edu/wp-content/uploads/2024/01/95-word-work-mat.pdf">Lesson 95 Word Work Mat</a> &mdash; printable word-building mat</li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,520 @@
+/* === VOWEL TEAMS — Design System === */
+/* Bright, kid-friendly palette. Clean typography. Game-like feel. */
+
+/* ── Design Tokens ── */
+:root {
+  --bg: #F8FAFC;
+  --text: #0F172A;
+  --muted: #64748B;
+  --primary: #2563EB;
+  --primary-light: #DBEAFE;
+  --accent: #F59E0B;
+  --accent-light: #FEF3C7;
+  --red: #DC2626;
+  --red-light: #FEE2E2;
+  --green: #16A34A;
+  --green-light: #DCFCE7;
+  --border: #E2E8F0;
+  --card-bg: #FFFFFF;
+  --code-bg: #F1F5F9;
+  --vowel-highlight: #FEF08A;
+}
+
+/* ── Font Self-Hosting ── */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/atkinson-hyperlegible-latin.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/atkinson-hyperlegible-bold-latin.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  src: url('fonts/jetbrains-mono-latin.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Focus States ── */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ── Body ── */
+body {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 400;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 2rem 1.5rem;
+  max-width: 840px;
+  margin: 0 auto;
+  font-size: 1rem;
+  overscroll-behavior: contain;
+}
+
+/* ── Headings ── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--text);
+  scroll-margin-top: 2rem;
+}
+h1 {
+  font-size: 2.25rem;
+  border-bottom: 3px solid var(--primary);
+  padding-bottom: 0.3em;
+  text-wrap: balance;
+}
+h2 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  text-wrap: balance;
+}
+h3 {
+  font-size: 1.35rem;
+}
+h4 {
+  font-size: 1.15rem;
+}
+
+/* ── Paragraphs & Links ── */
+p { margin-bottom: 1em; }
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.15s ease;
+}
+a:hover { border-bottom-color: var(--primary); }
+
+/* ── Lists ── */
+ul, ol { margin: 0.5em 0 1em 1.5em; }
+li { margin-bottom: 0.3em; }
+
+/* ── Blockquotes ── */
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1em 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ── Inline Code ── */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+pre {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1em 0;
+  font-size: 0.85rem;
+}
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* ── Horizontal Rule ── */
+hr {
+  border: none;
+  border-top: 2px solid var(--border);
+  margin: 2em 0;
+}
+
+/* ── Module Header ── */
+.module-header {
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+.season-header {
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* ── Hook (Cold Open) ── */
+.hook {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.8;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 1rem 1.2rem;
+  margin: 1.5em 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--text);
+}
+
+/* ── Vowel Team Highlight ── */
+.vowel-team {
+  background: var(--vowel-highlight);
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+/* ── Word Cards ── */
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin: 1.5em 0;
+}
+.word-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+  touch-action: manipulation;
+  cursor: default;
+}
+.word-card:hover {
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+  transform: translateY(-2px);
+}
+.word-card .example-sentence {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 0.3em;
+}
+
+/* ── Color Boxes ── */
+.color-box {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.color-box.blue {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.color-box.amber {
+  background: var(--accent-light);
+  color: #92400E;
+}
+.color-box.green {
+  background: var(--green-light);
+  color: var(--green);
+}
+.color-box.red {
+  background: var(--red-light);
+  color: var(--red);
+}
+
+/* ── Rule Box ── */
+.rule-box {
+  background: var(--primary-light);
+  border-left: 4px solid var(--primary);
+  padding: 1rem 1.2rem;
+  margin: 1.2em 0;
+  border-radius: 0 8px 8px 0;
+}
+.rule-box h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+.rule-box p:last-child {
+  margin-bottom: 0;
+}
+.rule-box .rule-example {
+  background: var(--card-bg);
+  padding: 0.5em 0.75em;
+  border-radius: 6px;
+  margin-top: 0.5em;
+  font-size: 1.05rem;
+}
+
+/* ── Info Boxes ── */
+.info-box {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin: 1.2em 0;
+  font-size: 0.95rem;
+}
+.info-box.knowledge {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+}
+.info-box.answers {
+  border-left: 4px solid var(--green);
+  background: var(--green-light);
+}
+.info-box.tip {
+  border-left: 4px solid var(--primary);
+  background: var(--primary-light);
+}
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Answer Toggle ── */
+.answer-toggle {
+  color: var(--muted);
+  font-style: italic;
+}
+.answer-toggle::before {
+  content: "\2192 ";
+}
+.answer-toggle strong {
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ── Game Zone ── */
+.game-zone {
+  background: var(--card-bg);
+  border: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5em 0;
+}
+.game-zone h3 {
+  margin-top: 0;
+  color: #92400E;
+  font-size: 1.2rem;
+}
+.game-zone .game-instruction {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.8em;
+}
+
+/* ── Tables ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95rem;
+}
+th {
+  background: var(--primary);
+  color: white;
+  padding: 0.5em 0.75em;
+  font-weight: 700;
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+td {
+  padding: 0.5em 0.75em;
+  border-bottom: 1px solid var(--border);
+}
+tr:nth-child(even) td {
+  background: var(--code-bg);
+}
+
+/* ── Glossary Table Variant ── */
+table.glossary th {
+  background: var(--accent);
+  color: #92400E;
+}
+table.glossary td:first-child {
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.05rem;
+}
+table.glossary .sound-cell {
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ── Images ── */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1em 0;
+}
+
+/* ── Figure ── */
+figure {
+  margin: 1.5em 0;
+  text-align: center;
+}
+figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.4em;
+  font-style: italic;
+}
+
+/* ── Small / Muted Text ── */
+small {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  body { max-width: 100%; padding: 1.5rem 1.25rem; }
+}
+@media (max-width: 600px) {
+  body { padding: 1rem; font-size: 0.95rem; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+  .word-grid { grid-template-columns: repeat(2, 1fr); }
+  .hook { font-size: 1.05rem; padding: 0.6rem 0.8rem; }
+  table { font-size: 0.8rem; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  th, td { padding: 0.3em 0.4em; }
+  .game-zone { padding: 1rem; }
+  .module-header { font-size: 0.65rem; }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* === Images === */
+.lesson-hero {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 1em 0 1.5em;
+  display: block;
+  background: var(--code-bg);
+}
+.lesson-hero.tall {
+  height: 280px;
+}
+.lesson-hero.small {
+  height: 160px;
+}
+
+.index-hero {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 1em 0 1.5em;
+  display: block;
+  background: var(--code-bg);
+}
+
+.img-caption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: -0.8em;
+  margin-bottom: 1.5em;
+  font-style: italic;
+}
+
+/* decorative inline image - smaller, right-floated on desktop */
+.img-inline {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1em 0;
+  display: block;
+}
+
+@media (min-width: 700px) {
+  .img-inline.right {
+    float: right;
+    max-width: 45%;
+    margin-left: 1.2em;
+    margin-bottom: 0.8em;
+  }
+  .img-inline.left {
+    float: left;
+    max-width: 45%;
+    margin-right: 1.2em;
+    margin-bottom: 0.8em;
+  }
+}
+
+@media (max-width: 600px) {
+  .lesson-hero { height: 150px; }
+  .lesson-hero.tall { height: 200px; }
+  .index-hero { height: 160px; }
+  .img-inline.right, .img-inline.left { float: none; max-width: 100%; }
+}
+
+/* ── Print ── */
+@media print {
+  body {
+    font-size: 11pt;
+    padding: 0.5in;
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .word-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 0.5pt solid #ccc;
+  }
+  .info-box, .rule-box, .game-zone {
+    break-inside: avoid;
+    border: 0.5pt solid #ccc;
+  }
+  a {
+    color: #000;
+    border-bottom: none;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.75in;
+  }
+}

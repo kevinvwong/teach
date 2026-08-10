@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 0: Vowel Team Overview — Vowel Teams</title>
+<link rel="stylesheet" href="../assets/stylesheet.css">
+<style>
+  .explore-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.75rem; margin: 1.2em 0; }
+  .explore-grid .word-card { user-select: none; position: relative; padding: 0.6rem 0.4rem; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .explore-grid .word-card input[type="checkbox"] { width: 1.1rem; height: 1.1rem; cursor: pointer; accent-color: var(--primary); }
+  .explore-grid .word-card .word-text { font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+
+  .write-row { display: flex; align-items: center; gap: 0.75rem; margin: 0.6em 0; flex-wrap: wrap; }
+  .write-row label { font-weight: 700; font-size: 1.05rem; min-width: 3rem; }
+  .write-row input[type="text"] { padding: 0.4em 0.6em; border: 2px solid var(--border); border-radius: 6px; font-size: 1rem; font-family: inherit; width: 140px; }
+  .write-row input[type="text"]:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 3px var(--primary-light); }
+  .write-examples { font-size: 0.85rem; color: var(--muted); margin-top: 0.3em; }
+
+  details.answer-reveal { margin: 1em 0; }
+  details.answer-reveal summary {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1.2em;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    margin: 0.5em 0;
+    list-style: none;
+  }
+  details.answer-reveal summary::-webkit-details-marker { display: none; }
+  details.answer-reveal summary:hover { background: #1D4ED8; }
+  details.answer-reveal summary:active { transform: scale(0.97); }
+  details.answer-reveal[open] summary { background: var(--muted); }
+
+  details.write-reveal { margin: 1em 0; }
+  details.write-reveal summary {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1.2em;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    margin: 0.5em 0;
+    list-style: none;
+  }
+  details.write-reveal summary::-webkit-details-marker { display: none; }
+  details.write-reveal summary:hover { background: #1D4ED8; }
+  details.write-reveal summary:active { transform: scale(0.97); }
+  details.write-reveal[open] summary { background: var(--muted); }
+
+  .answer-key-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.5rem; margin: 1em 0; }
+  .answer-key-word { padding: 0.4em; border-radius: 6px; text-align: center; font-weight: 700; font-size: 1rem; }
+  .answer-key-word.has-team { background: var(--green-light); border: 2px solid var(--green); }
+  .answer-key-word.no-team { background: var(--red-light); border: 2px solid var(--red); }
+
+  .check-list { list-style: none; margin: 0; padding: 0; }
+  .check-list li { margin-bottom: 0.8em; font-size: 1.05rem; padding: 0.5em 0; border-bottom: 1px solid var(--border); }
+
+  .rule-box .rule-example { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; align-items: center; }
+  .rule-box .rule-example .example-item { display: inline-flex; align-items: center; gap: 0.4rem; }
+  .rule-box .rule-example .vowel-team { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="season-header">Module 0</div>
+<h1>Vowel Team Overview</h1>
+<img src="../assets/images/letters-colorful.jpg" alt="Colorful magnetic alphabet letters" class="lesson-hero">
+<p class="module-header">Warm-up &amp; Introduction</p>
+
+<!-- ═══════════ PHASE 1: HOOK ═══════════ -->
+<div class="hook">
+  <p>Vowel teams are everywhere. Can you spot them?</p>
+</div>
+
+<!-- ═══════════ PHASE 2: QUICK TEACH ═══════════ -->
+<h2>What's a Vowel Team?</h2>
+
+<div class="info-box knowledge">
+  <p>A <strong>vowel team</strong> is when two vowels work together to make one sound. They share the job.</p>
+</div>
+
+<p>There are lots of vowel teams. Let's start with four common pairs.</p>
+
+<div class="rule-box">
+  <h3>Long A &mdash; ai / ay</h3>
+  <div class="rule-example">
+    <span class="example-item"><span class="color-box amber">ai</span> r<span class="vowel-team">ai</span>n</span>
+    <span class="example-item"><span class="color-box amber">ay</span> pl<span class="vowel-team">ay</span></span>
+  </div>
+</div>
+
+<div class="rule-box">
+  <h3>Long E &mdash; ee / ea</h3>
+  <div class="rule-example">
+    <span class="example-item"><span class="color-box blue">ee</span> s<span class="vowel-team">ee</span></span>
+    <span class="example-item"><span class="color-box blue">ea</span> <span class="vowel-team">ea</span>t</span>
+  </div>
+</div>
+
+<div class="rule-box">
+  <h3>Long O &mdash; oa / ow / oe</h3>
+  <div class="rule-example">
+    <span class="example-item"><span class="color-box green">oa</span> b<span class="vowel-team">oa</span>t</span>
+    <span class="example-item"><span class="color-box green">ow</span> sn<span class="vowel-team">ow</span></span>
+    <span class="example-item"><span class="color-box green">oe</span> t<span class="vowel-team">oe</span></span>
+  </div>
+</div>
+
+<div class="rule-box">
+  <h3>Two Sounds &mdash; oo</h3>
+  <div class="rule-example">
+    <span class="example-item"><span class="color-box amber">oo</span> m<span class="vowel-team">oo</span>n</span>
+    <span class="example-item"><span class="color-box amber">oo</span> b<span class="vowel-team">oo</span>k</span>
+  </div>
+</div>
+
+<img src="../assets/images/reading-book.jpg" alt="A child reading a book" class="img-inline">
+<p class="img-caption">You already know most of these words — you just haven't noticed the patterns yet</p>
+
+<!-- ═══════════ PHASE 3: EXPLORE ═══════════ -->
+<h2>Find the Vowel Teams</h2>
+
+<p>Below are 12 words. Check the ones that have a vowel team. Then click <strong>Check answers</strong> to see how you did.</p>
+
+<div class="explore-grid">
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w1">
+    <label for="w1" class="word-text">r<span class="vowel-team">ai</span>n</label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w2">
+    <label for="w2" class="word-text">s<span class="vowel-team">ee</span></label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w3">
+    <label for="w3" class="word-text">b<span class="vowel-team">oa</span>t</label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w4">
+    <label for="w4" class="word-text">m<span class="vowel-team">oo</span>n</label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w5">
+    <label for="w5" class="word-text">pl<span class="vowel-team">ay</span></label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w6">
+    <label for="w6" class="word-text"><span class="vowel-team">ea</span>t</label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w7">
+    <label for="w7" class="word-text">sn<span class="vowel-team">ow</span></label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w8">
+    <label for="w8" class="word-text">b<span class="vowel-team">oo</span>k</label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w9">
+    <label for="w9" class="word-text">cat</label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w10">
+    <label for="w10" class="word-text">run</label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w11">
+    <label for="w11" class="word-text">shop</label>
+  </div>
+  <div class="word-card">
+    <input type="checkbox" class="vowel-check" id="w12">
+    <label for="w12" class="word-text">desk</label>
+  </div>
+</div>
+
+<details class="answer-reveal">
+  <summary>Check answers</summary>
+  <div class="info-box answers">
+    <p><strong>Words with vowel teams (8 of 12):</strong></p>
+    <div class="answer-key-grid">
+      <div class="answer-key-word has-team">r<span class="vowel-team">ai</span>n</div>
+      <div class="answer-key-word has-team">s<span class="vowel-team">ee</span></div>
+      <div class="answer-key-word has-team">b<span class="vowel-team">oa</span>t</div>
+      <div class="answer-key-word has-team">m<span class="vowel-team">oo</span>n</div>
+      <div class="answer-key-word has-team">pl<span class="vowel-team">ay</span></div>
+      <div class="answer-key-word has-team"><span class="vowel-team">ea</span>t</div>
+      <div class="answer-key-word has-team">sn<span class="vowel-team">ow</span></div>
+      <div class="answer-key-word has-team">b<span class="vowel-team">oo</span>k</div>
+    </div>
+    <p><strong>Words without vowel teams (4 of 12):</strong></p>
+    <div class="answer-key-grid">
+      <div class="answer-key-word no-team">cat</div>
+      <div class="answer-key-word no-team">run</div>
+      <div class="answer-key-word no-team">shop</div>
+      <div class="answer-key-word no-team">desk</div>
+    </div>
+    <p>Each word with a vowel team has two vowels that work together to make one sound. Words like <em>cat</em> or <em>run</em> only have single vowels &mdash; no team.</p>
+  </div>
+</details>
+
+<!-- ═══════════ PHASE 4: QUICK WRITE ═══════════ -->
+<h2>Your Turn</h2>
+
+<p>For each vowel team below, think of a word that uses it.</p>
+
+<div class="write-row">
+  <label>&ldquo;ee&rdquo;</label>
+  <input type="text" id="q1" placeholder="type a word" autocomplete="off" aria-label="Write a word with the ee vowel team">
+</div>
+<div class="write-row">
+  <label>&ldquo;ai&rdquo;</label>
+  <input type="text" id="q2" placeholder="type a word" autocomplete="off" aria-label="Write a word with the ai vowel team">
+</div>
+<div class="write-row">
+  <label>&ldquo;oa&rdquo;</label>
+  <input type="text" id="q3" placeholder="type a word" autocomplete="off" aria-label="Write a word with the oa vowel team">
+</div>
+
+<details class="write-reveal">
+  <summary>Show examples</summary>
+  <div class="write-examples">
+    <p><strong>Examples:</strong></p>
+    <p>&ldquo;ee&rdquo; &rarr; see, green, keep, sleep, tree</p>
+    <p>&ldquo;ai&rdquo; &rarr; rain, train, wait, mail, paint</p>
+    <p>&ldquo;oa&rdquo; &rarr; boat, road, coat, soap, goal</p>
+  </div>
+</details>
+
+<!-- ═══════════ PHASE 5: CHECK ═══════════ -->
+<h2>Quick Check</h2>
+
+<div class="info-box">
+  <ol class="check-list">
+    <li>A vowel team is when <input type="text" id="c1" placeholder="type a number" style="width:60px;" autocomplete="off" aria-label="How many vowels work together in a vowel team"> vowels work together to make one sound. <span class="answer-toggle"><strong>two</strong></span></li>
+    <li>Find the vowel team in &ldquo;rain&rdquo;: <input type="text" id="c2" placeholder="type the letters" style="width:60px;" autocomplete="off" aria-label="Find the vowel team in the word rain"> <span class="answer-toggle"><strong>ai</strong></span></li>
+    <li>Find the vowel team in &ldquo;boat&rdquo;: <input type="text" id="c3" placeholder="type the letters" style="width:60px;" autocomplete="off" aria-label="Find the vowel team in the word boat"> <span class="answer-toggle"><strong>oa</strong></span></li>
+  </ol>
+</div>
+
+<div class="info-box tip">
+  <p><strong>Nice work.</strong> You know what vowel teams look like and how to spot them.</p>
+  <p>Next up: <a href="0001-ai-ay.html">Long A &mdash; ai and ay</a></p>
+  <p style="font-size:0.85rem;color:var(--muted);margin-top:0.5em;">Module 0 of 14 complete</p>
+</div>
+
+<!-- ═══════════ UFLI RESOURCES ═══════════ -->
+<h2>UFLI Toolbox Resources</h2>
+
+<div class="info-box">
+<p>This course is aligned with the <strong>UFLI Foundations</strong> scope and sequence (Lessons 84–97). The free <a href="https://ufli.education.ufl.edu/foundations/toolbox/">UFLI Foundations Toolbox</a> has printable and digital resources for extra practice.</p>
+
+<h3>Digital Tools (Use Anytime)</h3>
+<ul>
+  <li><a href="https://research.dwi.ufl.edu/op.n/file/cbhd8xmn9i4ctf7i/embed">Word Work Mat &ndash; Beginner</a> &mdash; practice building words with letter tiles</li>
+  <li><a href="https://research.dwi.ufl.edu/op.n/file/bca9ju45kvvrvoan/embed">Blending Board</a> &mdash; practice sounding out words</li>
+</ul>
+
+<h3>Unit Resources (Lessons 84–97)</h3>
+<ul>
+  <li><a href="https://ufli.education.ufl.edu/foundations/toolbox/84-88/">Long Vowel Teams Unit (Lessons 84–88)</a> &mdash; ai/ay, ee/ea/ey, oa/ow/oe, ie/igh</li>
+  <li><a href="https://ufli.education.ufl.edu/foundations/toolbox/89-94/">Other Vowel Teams Unit (Lessons 89–94)</a> &mdash; oo, ew/ui/ue, au/aw/augh, ea/ĕ</li>
+  <li><a href="https://ufli.education.ufl.edu/foundations/toolbox/95-98/">Diphthongs Unit (Lessons 95–97)</a> &mdash; oi/oy, ou/ow</li>
+</ul>
+</div>
+
+</body>
+</html>

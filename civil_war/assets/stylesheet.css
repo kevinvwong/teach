@@ -1,0 +1,549 @@
+/* === WEST POINT DRAMA — Design System === */
+/* Tufte-inspired + Swiss Modernism: clean grid, mathematical spacing, clear hierarchy */
+
+/* ── Design Tokens ── */
+:root {
+  --bg: #F8FAFC;
+  --text: #0F172A;
+  --muted: #64748B;
+  --accent: #B45309;
+  --accent-light: #D97706;
+  --union: #1E3A5F;
+  --confederate: #8B2F2F;
+  --border: #CBD5E1;
+  --card-bg: #FFFFFF;
+  --code-bg: #F1F5F9;
+}
+
+/* ── Font Self-Hosting ── */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 200 900;
+  src: url('fonts/crimson-pro-latin.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: italic;
+  font-weight: 200 900;
+  src: url('fonts/crimson-pro-italic-latin.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/atkinson-hyperlegible-latin.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/atkinson-hyperlegible-bold-latin.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  src: url('fonts/jetbrains-mono-latin.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Focus States ── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ── Body ── */
+body {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 400;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 2rem 1.5rem;
+  max-width: 840px;
+  margin: 0 auto;
+  font-size: 1rem;
+  overscroll-behavior: contain;
+}
+
+/* ── Headings ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Pro', serif;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--text);
+  scroll-margin-top: 2rem;
+}
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.3em;
+  text-wrap: balance;
+}
+h2 {
+  font-size: 1.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-wrap: balance;
+}
+h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+/* ── Paragraphs & Links ── */
+p { margin-bottom: 1em; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.15s ease;
+}
+a:hover { border-bottom-color: var(--accent); }
+
+/* ── Lists ── */
+ul, ol { margin: 0.5em 0 1em 1.5em; }
+li { margin-bottom: 0.3em; }
+
+/* ── Blockquotes ── */
+blockquote {
+  border-left: 3px solid var(--accent-light);
+  padding-left: 1rem;
+  margin: 1em 0;
+  color: var(--muted);
+  font-style: italic;
+}
+blockquote cite {
+  display: block;
+  text-align: right;
+  font-size: 0.85rem;
+  font-style: normal;
+  margin-top: 0.3em;
+}
+
+/* ── Inline Code ── */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+pre {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1em 0;
+  font-size: 0.85rem;
+}
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* ── Horizontal Rule ── */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+
+/* ── Season / Episode Header ── */
+.season-header {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* ── Hook (Cold Open) ── */
+.hook {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.8;
+  border-left: 4px solid var(--union);
+  padding: 1rem 0 1rem 1.2rem;
+  margin: 1.5em 0;
+  color: var(--text);
+}
+
+/* ── Cast Cards ── */
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5em 0;
+}
+.cast-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+  touch-action: manipulation;
+}
+.cast-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.cast-card .name {
+  font-family: 'Crimson Pro', serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+.cast-card .class-year {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.2em 0;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+.cast-card .side {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0.3em 0;
+}
+.cast-card .side.union {
+  background: var(--union);
+  color: white;
+}
+.cast-card .side.confederate {
+  background: var(--confederate);
+  color: white;
+}
+.cast-card .role {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ── Trick-Note (Cast-Card Footnotes) ── */
+.trick-note {
+  display: block;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--accent-light);
+  margin-top: 0.3em;
+}
+.trick-note::before {
+  content: "\2020 ";
+}
+
+/* ── Answer Toggle (Odd One Out / Fill-the-Blank) ── */
+.answer-toggle {
+  color: var(--muted);
+  font-style: italic;
+}
+.answer-toggle::before {
+  content: "\2192 ";
+}
+.answer-toggle strong {
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ── Relationship Arcs ── */
+.arc {
+  background: var(--card-bg);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.2rem;
+  margin: 1.2em 0;
+  border-radius: 0 8px 8px 0;
+}
+.arc h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-family: 'Crimson Pro', serif;
+  font-weight: 600;
+}
+.arc p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Info Boxes ── */
+.info-box {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin: 1.2em 0;
+  font-size: 0.95rem;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+.info-box.knowledge {
+  border-left: 4px solid var(--accent);
+}
+.info-box.answers {
+  border-left: 4px solid var(--union);
+}
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin: 1.5em 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.2em;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.timeline-item .year {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+.timeline-item .description {
+  font-size: 0.95rem;
+}
+
+/* ── Tables ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95rem;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+th {
+  background: var(--accent);
+  color: white;
+  padding: 0.5em 0.75em;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+td {
+  padding: 0.5em 0.75em;
+  border-bottom: 1px solid var(--border);
+}
+tr:nth-child(even) td {
+  background: var(--code-bg);
+}
+
+/* ── Anchors Table Variant ── */
+table.anchors th {
+  background: var(--union);
+}
+table.anchors td:last-child {
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  border-top: 1px solid var(--union);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Images ── */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1em 0;
+}
+
+/* ── Figure ── */
+figure {
+  margin: 1.5em 0;
+  text-align: center;
+}
+figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.4em;
+  font-style: italic;
+}
+
+/* ── Small / Muted Text ── */
+small {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  body { max-width: 100%; padding: 1.5rem 1.25rem; }
+}
+@media (max-width: 600px) {
+  body { padding: 1rem; font-size: 0.95rem; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+  .cast-grid { grid-template-columns: 1fr; }
+  .hook { font-size: 1.05rem; padding: 0.6rem 0 0.6rem 0.8rem; }
+  .timeline { padding-left: 1.2rem; }
+  table { font-size: 0.8rem; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  th, td { padding: 0.3em 0.4em; }
+  .lesson-hero { height: 140px; }
+  .lesson-hero.tall { height: 180px; }
+  .index-hero { height: 160px; }
+  .lesson-img.left, .lesson-img.right { float: none; max-width: 100%; margin-right: 0; margin-left: 0; }
+  .season-header { font-size: 0.65rem; }
+  .session-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1100px) {
+  body { border-left: 1px solid var(--border); border-right: 1px solid var(--border); box-shadow: 0 0 40px rgba(0,0,0,0.04); }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* === Lesson Hero Images === */
+.lesson-hero {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1em 0 1.5em;
+  display: block;
+  background: var(--code-bg);
+}
+.lesson-hero.small {
+  height: 160px;
+}
+.lesson-hero.tall {
+  height: 320px;
+}
+
+/* === Inline lesson images === */
+.lesson-img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 1em 0;
+  display: block;
+  background: var(--code-bg);
+}
+.lesson-img.left {
+  float: left;
+  margin-right: 1em;
+  max-width: 40%;
+}
+.lesson-img.right {
+  float: right;
+  margin-left: 1em;
+  max-width: 40%;
+}
+
+/* === Captions === */
+.img-caption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: -0.5em;
+  margin-bottom: 1.5em;
+  font-style: italic;
+}
+
+/* === Index hero === */
+.index-hero {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1em 0 2em;
+  display: block;
+  background: var(--code-bg);
+}
+
+/* ── Print ── */
+@media print {
+  body {
+    font-size: 11pt;
+    padding: 0.5in;
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .cast-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 0.5pt solid #ccc;
+  }
+  .info-box {
+    break-inside: avoid;
+    border: 0.5pt solid #ccc;
+  }
+  .arc {
+    break-inside: avoid;
+  }
+  a {
+    color: #000;
+    border-bottom: none;
+  }
+  .season-header {
+    color: #666;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.75in;
+  }
+}
