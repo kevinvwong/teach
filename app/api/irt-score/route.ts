@@ -123,6 +123,7 @@ export async function POST(req: NextRequest) {
     });
   } catch (err) {
     console.error("IRT scoring error:", err);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    const message = err instanceof Error ? err.message : String(err);
+    return NextResponse.json({ error: "Internal server error", detail: message }, { status: 500 });
   }
 }
