@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F1F5F9;
+  --color-surface-info: #EFF6FF;
+  --color-text: #0F172A;
+  --color-text-muted: #64748B;
+  --color-text-inverse: #FFFFFF;
+  --color-accent: #B45309;
+  --color-accent-hover: #92400E;
+  --color-accent-light: #FEF3C7;
+  --color-success: #16A34A;
+  --color-error: #DC2626;
+  --color-warning: #F59E0B;
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
+  --color-union: #1E3A5F;
+  --color-confederate: #8B2F2F;
+  --color-cw-primary: #B45309;
+  --color-vt-primary: #2563EB;
+
+  --font-body: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-heading: 'Crimson Pro', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: var(--color-bg);
+    overscroll-behavior: contain;
+    line-height: 1.7;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 600; line-height: 1.3; }
+  h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+  h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+  h3 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+  a { color: var(--color-accent); transition: color 150ms ease; }
+  a:hover { color: var(--color-accent-hover); }
+  img { max-width: 100%; border-radius: 8px; }
+  code { font-family: var(--font-mono); font-size: 0.9em; background: var(--color-surface-hover); padding: 0.15em 0.3em; border-radius: 3px; }
+  *:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0s !important; } }
+}
