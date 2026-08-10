@@ -5,9 +5,7 @@ import { getDb } from "@/lib/db";
 import { courses as coursesTable, modules as modulesTable } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 
-export async function generateStaticParams() {
-  return [];
-}
+export const dynamic = 'force-dynamic';
 
 export default async function CoursePage({ params }: { params: Promise<{ course: string }> }) {
   const { course } = await params;
@@ -15,10 +13,14 @@ export default async function CoursePage({ params }: { params: Promise<{ course:
   let dbCourse: any = null;
   let dbModules: any[] = [];
 
-  // Try filesystem first, then database
-  try {
-    meta = getCourseMeta(course);
-  } catch {
+  // Try filesystem first
+  let fsMeta;
+  try { fsMeta = getCourseMeta(course); } catch { fsMeta = null; }
+
+  if (fsMeta && fsMeta.lessons.length > 0) {
+    meta = fsMeta;
+  } else {
+    // Fall back to database
     try {
       const _db = getDb();
       const [found] = await _db.select().from(coursesTable).where(eq(coursesTable.slug, course)).limit(1);
@@ -37,24 +39,23 @@ export default async function CoursePage({ params }: { params: Promise<{ course:
         })),
         hasAssessment: false,
       };
-    } catch { notFound(); }
+    } catch {
+      if (fsMeta) { meta = fsMeta; }
+      else { notFound(); }
+    }
   }
 
   const moduleCount = meta.lessons.length;
   const completed = meta.lessons.filter((l) => l.number === 0).length;
   const progress = moduleCount > 0 ? Math.round((completed / moduleCount) * 100) : 0;
 
-  const courseTheme = course === "civil_war"
-    ? { gradient: "from-amber-500 to-orange-600", accent: "bg-amber-50 border-amber-200", badge: "bg-amber-100 text-amber-800" }
-    : course === "vowel-teams"
-    ? { gradient: "from-blue-500 to-indigo-600", accent: "bg-blue-50 border-blue-200", badge: "bg-blue-100 text-blue-800" }
-    : { gradient: "from-emerald-500 to-teal-600", accent: "bg-emerald-50 border-emerald-200", badge: "bg-emerald-100 text-emerald-800" };
+  const courseGradient = dbCourse ? "from-emerald-500 to-teal-600"
+    : course === "civil_war" ? "from-amber-500 to-orange-600"
+    : course === "vowel-teams" ? "from-blue-500 to-indigo-600"
+    : "from-emerald-500 to-teal-600";
 
-  // Override from DB if available
-  if (dbCourse) {
-    courseTheme.gradient = "from-emerald-500 to-teal-600";
-    courseTheme.accent = "bg-emerald-50 border-emerald-200";
-  }
+  const courseIcon = dbCourse?.icon || (course === "civil_war" ? "⚔" : course === "vowel-teams" ? "🔤" : "📚");
+  const courseTitle = meta.title;
 
   return (
     <div className="space-y-6">
@@ -66,13 +67,13 @@ export default async function CoursePage({ params }: { params: Promise<{ course:
       </nav>
 
       {/* Course header */}
-      <div className={`rounded-xl bg-gradient-to-br ${courseTheme.gradient} p-6 md:p-8 text-white`}>
+      <div className={`rounded-xl bg-gradient-to-br ${courseGradient} p-6 md:p-8 text-white`}>
         <div className="flex items-start gap-4">
           <div className="w-14 h-14 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-2xl shrink-0">
-            {course === "civil_war" ? "⚔" : "🔤"}
+            {courseIcon}
           </div>
           <div className="flex-1 min-w-0">
-            <h1 className="text-2xl md:text-3xl font-bold">{meta.title}</h1>
+            <h1 className="text-2xl md:text-3xl font-bold">{courseTitle}</h1>
             <p className="text-white/80 text-sm mt-1 max-w-2xl">{meta.description}</p>
             <div className="flex items-center gap-4 mt-3 text-sm text-white/70">
               <span>{moduleCount} modules</span>
@@ -158,7 +159,7 @@ export default async function CoursePage({ params }: { params: Promise<{ course:
 
       {/* Assessments */}
       {meta.hasAssessment && (
-        <section className={`rounded-xl border p-5 ${courseTheme.accent}`}>
+        <section className="rounded-xl border p-5 bg-lms-accent-light border-lms-accent/30">
           <h2 className="text-base font-semibold mb-2">Adaptive Assessments</h2>
           <p className="text-sm text-lms-text-secondary mb-3">
             Each module includes an IRT-calibrated adaptive quiz. Questions adapt to your ability level using Item Response Theory.
