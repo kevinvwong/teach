@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { getDb } from "@/lib/db";
+import { courses, modules as modulesTable } from "@/lib/db/schema";
+import { eq, and } from "drizzle-orm";
 
 export async function GET(
   _req: NextRequest,
@@ -10,11 +13,37 @@ export async function GET(
   const cwd = process.cwd();
   const filePath = path.join(cwd, course, "lessons", `${slug}.html`);
 
-  if (!fs.existsSync(filePath)) {
-    return new NextResponse("Lesson not found", { status: 404 });
+  // Try filesystem first
+  let html: string | null = null;
+  let isDbCourse = false;
+  let dbTitle = "";
+
+  if (fs.existsSync(filePath)) {
+    html = fs.readFileSync(filePath, "utf-8");
+  } else {
+    // Try database
+    try {
+      const _db = getDb();
+      const [courseRow] = await _db.select().from(courses).where(eq(courses.slug, course)).limit(1);
+      if (courseRow) {
+        isDbCourse = true;
+        dbTitle = courseRow.title;
+        // slug is the module number
+        const modNum = parseInt(slug.replace(/^\D+/g, "")) || 0;
+        const [mod] = await _db.select().from(modulesTable)
+          .where(and(eq(modulesTable.courseId, courseRow.id), eq(modulesTable.number, modNum)))
+          .limit(1);
+        if (mod && mod.lessonHtml) {
+          const title = mod.title;
+          html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>${title} — ${courseRow.title}</title><link rel="stylesheet" href="/courses/${course}/assets/stylesheet.css"></head><body>${mod.lessonHtml}</body></html>`;
+        }
+      }
+    } catch { /* DB not available */ }
   }
 
-  let html = fs.readFileSync(filePath, "utf-8");
+  if (!html) {
+    return new NextResponse("Lesson not found", { status: 404 });
+  }
 
   const titleMatch = html.match(/<title>([^<]*)<\/title>/);
   const lessonTitle = titleMatch ? titleMatch[1].trim() : slug.replace(/-/g, " ");

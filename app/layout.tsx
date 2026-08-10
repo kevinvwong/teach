@@ -11,6 +11,7 @@ const navItems = [
   { href: "/", label: "Dashboard", icon: "□" },
   { href: "/courses/civil_war", label: "Civil War", icon: "⚔" },
   { href: "/courses/vowel-teams", label: "Vowel Teams", icon: "🔤" },
+  { href: "/admin", label: "Course Manager", icon: "⚙" },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

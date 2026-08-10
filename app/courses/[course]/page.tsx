@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getCourseMeta } from "@/lib/courses/loader";
+import { getDb } from "@/lib/db";
+import { courses as coursesTable, modules as modulesTable } from "@/lib/db/schema";
+import { eq } from "drizzle-orm";
 
 export async function generateStaticParams() {
   return [];
@@ -9,7 +12,33 @@ export async function generateStaticParams() {
 export default async function CoursePage({ params }: { params: Promise<{ course: string }> }) {
   const { course } = await params;
   let meta;
-  try { meta = getCourseMeta(course); } catch { notFound(); }
+  let dbCourse: any = null;
+  let dbModules: any[] = [];
+
+  // Try filesystem first, then database
+  try {
+    meta = getCourseMeta(course);
+  } catch {
+    try {
+      const _db = getDb();
+      const [found] = await _db.select().from(coursesTable).where(eq(coursesTable.slug, course)).limit(1);
+      if (!found) notFound();
+      dbCourse = found;
+      dbModules = await _db.select().from(modulesTable).where(eq(modulesTable.courseId, found.id)).orderBy(modulesTable.number);
+      meta = {
+        slug: found.slug,
+        title: found.title,
+        description: found.description || "",
+        lessons: dbModules.map((m: any) => ({
+          slug: `lesson-${String(m.number).padStart(4, "0")}`,
+          number: m.number,
+          title: m.title,
+          filePath: "",
+        })),
+        hasAssessment: false,
+      };
+    } catch { notFound(); }
+  }
 
   const moduleCount = meta.lessons.length;
   const completed = meta.lessons.filter((l) => l.number === 0).length;
@@ -17,7 +46,15 @@ export default async function CoursePage({ params }: { params: Promise<{ course:
 
   const courseTheme = course === "civil_war"
     ? { gradient: "from-amber-500 to-orange-600", accent: "bg-amber-50 border-amber-200", badge: "bg-amber-100 text-amber-800" }
-    : { gradient: "from-blue-500 to-indigo-600", accent: "bg-blue-50 border-blue-200", badge: "bg-blue-100 text-blue-800" };
+    : course === "vowel-teams"
+    ? { gradient: "from-blue-500 to-indigo-600", accent: "bg-blue-50 border-blue-200", badge: "bg-blue-100 text-blue-800" }
+    : { gradient: "from-emerald-500 to-teal-600", accent: "bg-emerald-50 border-emerald-200", badge: "bg-emerald-100 text-emerald-800" };
+
+  // Override from DB if available
+  if (dbCourse) {
+    courseTheme.gradient = "from-emerald-500 to-teal-600";
+    courseTheme.accent = "bg-emerald-50 border-emerald-200";
+  }
 
   return (
     <div className="space-y-6">

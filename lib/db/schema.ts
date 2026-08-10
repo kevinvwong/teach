@@ -1,4 +1,4 @@
-import { pgTable, uuid, varchar, integer, numeric, boolean, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, uuid, varchar, integer, numeric, boolean, timestamp, text, jsonb } from "drizzle-orm/pg-core";
 
 export const assessmentResponses = pgTable("assessment_responses", {
   id: uuid("id").defaultRandom().primaryKey(),
@@ -52,4 +52,33 @@ export const studentProgress = pgTable("student_progress", {
   overallTheta: numeric("overall_theta", { precision: 6, scale: 3 }),
   modulesCompleted: integer("modules_completed").default(0),
   lastActivityAt: timestamp("last_activity_at").defaultNow().notNull(),
+});
+
+export const courses = pgTable("courses", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  slug: varchar("slug", { length: 100 }).notNull().unique(),
+  title: varchar("title", { length: 255 }).notNull(),
+  description: text("description"),
+  subtitle: varchar("subtitle", { length: 255 }),
+  archetype: varchar("archetype", { length: 50 }).default("custom").notNull(),
+  icon: varchar("icon", { length: 10 }).default("📚"),
+  badge: varchar("badge", { length: 50 }),
+  status: varchar("status", { length: 20 }).default("draft").notNull(),
+  mission: text("mission"),
+  syllabus: jsonb("syllabus"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export const modules = pgTable("modules", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  courseId: uuid("course_id").references(() => courses.id, { onDelete: "cascade" }).notNull(),
+  number: integer("number").notNull(),
+  title: varchar("title", { length: 255 }).notNull(),
+  description: text("description"),
+  lessonHtml: text("lesson_html"),
+  objectives: jsonb("objectives"),
+  status: varchar("status", { length: 20 }).default("draft").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
