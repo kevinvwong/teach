@@ -66,6 +66,9 @@ export const courses = pgTable("courses", {
   status: varchar("status", { length: 20 }).default("draft").notNull(),
   mission: text("mission"),
   syllabus: jsonb("syllabus"),
+  imageUrl: varchar("image_url", { length: 500 }),
+  imagePhotographer: varchar("image_photographer", { length: 255 }),
+  imagePhotographerUrl: varchar("image_photographer_url", { length: 500 }),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });

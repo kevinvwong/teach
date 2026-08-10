@@ -70,6 +70,7 @@ export default async function CoursePage({ params }: { params: Promise<{ course:
       {/* Course header with image */}
       <CourseHeroImage
         src={`/course-images/${course}.jpg`}
+        pexelsUrl={dbCourse?.imageUrl || undefined}
         alt={courseTitle}
         gradient={courseGradient}
         icon={courseIcon}

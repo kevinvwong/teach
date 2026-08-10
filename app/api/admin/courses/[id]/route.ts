@@ -25,7 +25,36 @@ export async function PUT(
   try {
     const body = await req.json();
     const _db = getDb();
-    const [updated] = await _db.update(courses).set({ ...body, updatedAt: new Date() }).where(eq(courses.id, id)).returning();
+
+    // Handle Pexels image fetch
+    if (body.pexelsQuery) {
+      const query = body.pexelsQuery as string;
+      const apiKey = process.env.PEXELS_API_KEY || "";
+      if (!apiKey) {
+        return NextResponse.json({ error: "PEXELS_API_KEY not configured" }, { status: 400 });
+      }
+      const params = new URLSearchParams({ query, per_page: "5", orientation: "landscape" });
+      const res = await fetch(`https://api.pexels.com/v1/search?${params}`, {
+        headers: { Authorization: apiKey },
+      });
+      if (!res.ok) return NextResponse.json({ error: "Pexels search failed" }, { status: 502 });
+      const data = await res.json();
+      const photo = data.photos?.[0];
+      if (!photo) return NextResponse.json({ error: "No images found" }, { status: 404 });
+
+      const [updated] = await _db.update(courses).set({
+        imageUrl: photo.src.large2x || photo.src.large,
+        imagePhotographer: photo.photographer,
+        imagePhotographerUrl: photo.photographer_url,
+        updatedAt: new Date(),
+      }).where(eq(courses.id, id)).returning();
+      if (!updated) return NextResponse.json({ error: "Not found" }, { status: 404 });
+      return NextResponse.json(updated);
+    }
+
+    // Normal update
+    const { pexelsQuery, ...updateData } = body;
+    const [updated] = await _db.update(courses).set({ ...updateData, updatedAt: new Date() }).where(eq(courses.id, id)).returning();
     if (!updated) return NextResponse.json({ error: "Not found" }, { status: 404 });
     return NextResponse.json(updated);
   } catch { return NextResponse.json({ error: "Failed to update" }, { status: 500 }); }

@@ -1,14 +1,19 @@
 "use client";
 
-export function CourseHeroImage({ src, alt, gradient, icon, title, description, moduleCount, hasAssessment }: {
-  src: string; alt: string; gradient: string; icon: string;
+import { useState } from "react";
+
+export function CourseHeroImage({ src, pexelsUrl, alt, gradient, icon, title, description, moduleCount, hasAssessment }: {
+  src: string; pexelsUrl?: string; alt: string; gradient: string; icon: string;
   title: string; description?: string; moduleCount: number; hasAssessment: boolean;
 }) {
+  const [imgError, setImgError] = useState(false);
+  const imgSrc = !imgError ? src : (pexelsUrl || src);
+
   return (
     <div className="rounded-xl overflow-hidden relative h-48 md:h-56">
-      <img src={src} alt={alt}
+      <img src={imgSrc} alt={alt}
         className="absolute inset-0 w-full h-full object-cover"
-        onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
+        onError={() => setImgError(true)} />
       <div className={`absolute inset-0 bg-gradient-to-t ${gradient} opacity-85`} />
       <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
         <div className="flex items-start gap-4">
