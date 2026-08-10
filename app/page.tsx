@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const courses = [
   {
-    slug: "civil-war",
+    slug: "civil_war",
     title: "Civil War: 1820–1865",
     subtitle: "West Point Drama",
     description: "A character-driven narrative history course on the personal relationships between Civil War generals forged at West Point. Jeopardy-ready.",
@@ -11,7 +11,7 @@ const courses = [
     accent: "text-amber-700",
   },
   {
-    slug: "vowel-teams",
+    slug: "vowel_teams",
     title: "Vowel Teams",
     subtitle: "Phonics for Ages 9–11",
     description: "Systematic, explicit instruction on vowel teams (ai, ay, ee, ea, igh, oa, oe, ue, ui, oi, oy, ou, ow, au, aw, oo). UFLI-aligned. Multi-sensory and game-like.",
