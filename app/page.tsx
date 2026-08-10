@@ -31,6 +31,36 @@ const courses = [
     icon: "🏌️",
     badge: "Business",
   },
+  {
+    slug: "power-table",
+    title: "The Power Table",
+    subtitle: "Business Dining & Etiquette",
+    description: "Master the etiquette, strategy, and relationship-building power of the business meal — from wine selection to seating politics.",
+    lessons: 10,
+    color: "from-rose-500 to-pink-600",
+    icon: "🍽",
+    badge: "Business",
+  },
+  {
+    slug: "inner-circle",
+    title: "The Inner Circle",
+    subtitle: "Private Clubs & Networks",
+    description: "Understand the power of private membership clubs — deal flow on leather sofas, unwritten rules of admission, reciprocity, and belonging.",
+    lessons: 10,
+    color: "from-violet-500 to-purple-600",
+    icon: "🏛",
+    badge: "Business",
+  },
+  {
+    slug: "offsite-advantage",
+    title: "The Off-Site Advantage",
+    subtitle: "Conferences & Events",
+    description: "Master the hidden economy of conferences — the real business that happens between sessions in hallways, bars, and after-parties.",
+    lessons: 10,
+    color: "from-sky-500 to-cyan-600",
+    icon: "🎤",
+    badge: "Business",
+  },
 ];
 
 export default function Home() {
@@ -45,8 +75,8 @@ export default function Home() {
       {/* Stats row */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: "Enrolled Courses", value: "3", color: "text-lms-accent" },
-          { label: "Total Modules", value: "38", color: "text-lms-success" },
+          { label: "Enrolled Courses", value: "6", color: "text-lms-accent" },
+          { label: "Total Modules", value: "68", color: "text-lms-success" },
           { label: "Completed", value: "0", color: "text-lms-warning" },
           { label: "Quiz Attempts", value: "0", color: "text-lms-text-secondary" },
         ].map((stat) => (

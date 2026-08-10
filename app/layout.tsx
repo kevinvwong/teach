@@ -9,9 +9,12 @@ export const metadata: Metadata = {
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: "□" },
+  { href: "/courses/green-advantage", label: "Green Advantage", icon: "🏌️" },
+  { href: "/courses/power-table", label: "Power Table", icon: "🍽" },
+  { href: "/courses/inner-circle", label: "Inner Circle", icon: "🏛" },
+  { href: "/courses/offsite-advantage", label: "Off-Site Advantage", icon: "🎤" },
   { href: "/courses/civil_war", label: "Civil War", icon: "⚔" },
   { href: "/courses/vowel-teams", label: "Vowel Teams", icon: "🔤" },
-  { href: "/courses/green-advantage", label: "Green Advantage", icon: "🏌️" },
   { href: "/admin", label: "Course Manager", icon: "⚙" },
 ];
 
