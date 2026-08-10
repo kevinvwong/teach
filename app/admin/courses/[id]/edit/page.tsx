@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
+import { WorkflowProgress } from "@/components/workflow-progress";
 
 const ARCHETYPES = [
   { value: "history", label: "History / Narrative" },
@@ -20,6 +21,14 @@ export default function EditCoursePage() {
   const [saving, setSaving] = useState(false);
   const [fetchingImage, setFetchingImage] = useState(false);
   const [imageSearch, setImageSearch] = useState("");
+
+  const handlePhaseChange = async (phase: string) => {
+    setCourse({ ...course, workflowPhase: phase });
+    await fetch(`/api/admin/courses/${params.id}`, {
+      method: "PUT", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ workflowPhase: phase }),
+    });
+  };
 
   useEffect(() => {
     fetch(`/api/admin/courses/${params.id}`)
@@ -149,6 +158,12 @@ export default function EditCoursePage() {
           <p className="text-xs text-lms-text-muted">Has Content</p>
         </div>
       </div>
+
+      {/* Workflow Progress */}
+      <WorkflowProgress
+        currentPhase={course.workflowPhase || "foundation"}
+        onPhaseChange={handlePhaseChange}
+      />
 
       {/* Image + Export row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
