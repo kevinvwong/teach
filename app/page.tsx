@@ -21,6 +21,16 @@ const courses = [
     icon: "🔤",
     badge: "Literacy",
   },
+  {
+    slug: "green-advantage",
+    title: "The Green Advantage",
+    subtitle: "Business, Networking & Golf",
+    description: "Master the unwritten rules, etiquette, and networking power of golf — the game where deals are made and careers are advanced.",
+    lessons: 10,
+    color: "from-emerald-500 to-teal-600",
+    icon: "🏌️",
+    badge: "Business",
+  },
 ];
 
 export default function Home() {
@@ -35,8 +45,8 @@ export default function Home() {
       {/* Stats row */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: "Enrolled Courses", value: "2", color: "text-lms-accent" },
-          { label: "Total Modules", value: "28", color: "text-lms-success" },
+          { label: "Enrolled Courses", value: "3", color: "text-lms-accent" },
+          { label: "Total Modules", value: "38", color: "text-lms-success" },
           { label: "Completed", value: "0", color: "text-lms-warning" },
           { label: "Quiz Attempts", value: "0", color: "text-lms-text-secondary" },
         ].map((stat) => (
