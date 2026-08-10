@@ -4,29 +4,31 @@ import path from "path";
 
 export async function GET() {
   const cwd = process.cwd();
-  const entries: string[] = [];
+  const results: Record<string, any> = {};
 
-  try {
-    const dirs = fs.readdirSync(cwd, { withFileTypes: true });
-    for (const d of dirs) {
-      entries.push(`${d.isDirectory() ? "[DIR]" : "[FILE]"} ${d.name}`);
-    }
-  } catch (e: any) {
-    return NextResponse.json({ error: `readdir failed: ${e.message}`, cwd });
+  // Check if civil_war/CLAUDE.md exists
+  const claudePath = path.join(cwd, "civil_war", "CLAUDE.md");
+  results.claudeExists = fs.existsSync(claudePath);
+  results.claudePath = claudePath;
+
+  // Check lesson path
+  const lessonPath = path.join(cwd, "civil_war", "lessons", "0002-grants-web.html");
+  results.lessonExists = fs.existsSync(lessonPath);
+  results.lessonPath = lessonPath;
+
+  // Try reading a lesson
+  if (results.lessonExists) {
+    const content = fs.readFileSync(lessonPath, "utf-8");
+    results.lessonLength = content.length;
+    results.lessonHasBody = content.includes("<body");
   }
 
-  // Check for civil_war lessons
-  let civilWarLessons: string[] = [];
-  const civilWarDir = path.join(cwd, "civil_war", "lessons");
+  // List civil_war dir contents
   try {
-    if (fs.existsSync(civilWarDir)) {
-      civilWarLessons = fs.readdirSync(civilWarDir);
-    } else {
-      civilWarLessons = ["DIR NOT FOUND"];
-    }
+    results.civilWarContents = fs.readdirSync(path.join(cwd, "civil_war"));
   } catch (e: any) {
-    civilWarLessons = [`Error: ${e.message}`];
+    results.civilWarContents = `Error: ${e.message}`;
   }
 
-  return NextResponse.json({ cwd, entries, civilWarLessons });
+  return NextResponse.json(results);
 }
