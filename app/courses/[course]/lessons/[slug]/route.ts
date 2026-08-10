@@ -47,15 +47,35 @@ export async function GET(
 
   const titleMatch = html.match(/<title>([^<]*)<\/title>/);
   const lessonTitle = titleMatch ? titleMatch[1].trim() : slug.replace(/-/g, " ");
-  const courseDisplay = course === "civil_war" ? "Civil War" : "Vowel Teams";
+  const courseDisplay = isDbCourse ? dbTitle : course === "civil_war" ? "Civil War" : "Vowel Teams";
 
-  const lessonsDir = path.join(cwd, course, "lessons");
-  const lessonFiles = fs.readdirSync(lessonsDir)
-    .filter((f) => f.endsWith(".html"))
-    .sort();
-  const currentIndex = lessonFiles.findIndex((f) => f.startsWith(slug));
-  const prevSlug = currentIndex > 0 ? lessonFiles[currentIndex - 1].replace(".html", "") : null;
-  const nextSlug = currentIndex < lessonFiles.length - 1 ? lessonFiles[currentIndex + 1].replace(".html", "") : null;
+  // Build prev/next nav
+  let prevSlug: string | null = null, nextSlug: string | null = null;
+  let currentIndex = 0, totalLessons = 0;
+
+  if (isDbCourse) {
+    // DB course — use modules from the course
+    const _db = getDb();
+    const [courseRow] = await _db.select().from(courses).where(eq(courses.slug, course)).limit(1);
+    if (courseRow) {
+      const dbModules = await _db.select().from(modulesTable)
+        .where(eq(modulesTable.courseId, courseRow.id)).orderBy(modulesTable.number);
+      totalLessons = dbModules.length;
+      const modNum = parseInt(slug.replace(/^\D+/g, "")) || 0;
+      currentIndex = dbModules.findIndex((m: any) => m.number === modNum);
+      if (currentIndex > 0) prevSlug = `lesson-${String(dbModules[currentIndex - 1].number).padStart(4, "0")}`;
+      if (currentIndex < dbModules.length - 1) nextSlug = `lesson-${String(dbModules[currentIndex + 1].number).padStart(4, "0")}`;
+      if (currentIndex === -1) currentIndex = 0;
+    }
+  } else {
+    const lessonsDir = path.join(cwd, course, "lessons");
+    const lessonFiles = fs.readdirSync(lessonsDir).filter((f) => f.endsWith(".html")).sort();
+    totalLessons = lessonFiles.length;
+    currentIndex = lessonFiles.findIndex((f) => f.startsWith(slug));
+    if (currentIndex > 0) prevSlug = lessonFiles[currentIndex - 1].replace(".html", "");
+    if (currentIndex < lessonFiles.length - 1) nextSlug = lessonFiles[currentIndex + 1].replace(".html", "");
+    if (currentIndex === -1) currentIndex = 0;
+  }
 
   const lmsChrome = `
     <div class="lms-lesson-bar" style="background:#FFFFFF;border-bottom:1px solid #E5E7EB;position:sticky;top:0;z-index:50;">
@@ -74,7 +94,7 @@ export async function GET(
         </div>
       </div>
       <div style="height:3px;background:#E5E7EB;">
-        <div style="height:100%;width:${((currentIndex + 1) / lessonFiles.length) * 100}%;background:#4F46E5;border-radius:0 2px 2px 0;transition:width 300ms ease;"></div>
+        <div style="height:100%;width:${totalLessons > 0 ? ((currentIndex + 1) / totalLessons) * 100 : 0}%;background:#4F46E5;border-radius:0 2px 2px 0;transition:width 300ms ease;"></div>
       </div>
     </div>
   `;
@@ -111,14 +131,14 @@ export async function GET(
         <div id="quiz-feedback" style="margin-top:1rem;"></div>
       </div>
     </div>
-    <script src="/courses/${course}/assessments/quiz-renderer.js" defer></script>
+    ${!isDbCourse ? `<script src="/courses/${course}/assessments/quiz-renderer.js" defer></script>` : ""}
   `;
 
   const navFooter = `
     <div style="max-width:840px;margin:2rem auto 3rem;padding:0 1.5rem;font-family:Inter,system-ui,sans-serif;">
       <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
         ${prevSlug ? `<a href="/courses/${course}/lessons/${prevSlug}" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.625rem 1.25rem;border-radius:8px;border:1px solid #E5E7EB;color:#374151;text-decoration:none;font-size:0.875rem;font-weight:500;">← Previous Lesson</a>` : '<div></div>'}
-        <span style="font-size:0.8rem;color:#9CA3AF;">${currentIndex + 1} of ${lessonFiles.length}</span>
+        <span style="font-size:0.8rem;color:#9CA3AF;">${currentIndex + 1} of ${totalLessons}</span>
         ${nextSlug ? `<a href="/courses/${course}/lessons/${nextSlug}" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.625rem 1.25rem;border-radius:8px;background:#4F46E5;color:#fff;text-decoration:none;font-size:0.875rem;font-weight:500;">Next Lesson →</a>` : '<div></div>'}
       </div>
     </div>
