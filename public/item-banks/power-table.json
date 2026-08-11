@@ -1,0 +1,588 @@
+﻿{
+  "metadata": {
+    "model": "3PL",
+    "D": 1.702,
+    "nItems": 30,
+    "calibrationDate": null,
+    "calibrationSample": 0,
+    "course": "The Power Table",
+    "description": "IRT-calibrated item bank for business dining etiquette and power meal strategy.",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "id": "pt-001",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 0,
+      "moduleTitle": "Why the Table is the Original Deal Room",
+      "a": 1.0,
+      "b": -1.2,
+      "c": 0.20,
+      "stem": "According to the 'original deal room' concept, why has the dining table historically been a preferred setting for business negotiations?",
+      "options": [
+        {"key": "A", "text": "It creates a neutral, non-territorial space where hierarchy can be temporarily suspended or strategically reinforced"},
+        {"key": "B", "text": "Restaurants offer better audio privacy than most office conference rooms"},
+        {"key": "C", "text": "Alcohol consumption lowers inhibitions, making counterparts easier to persuade"},
+        {"key": "D", "text": "The cost of the meal serves as a financial commitment device for both parties"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-002",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 0,
+      "moduleTitle": "Why the Table is the Original Deal Room",
+      "a": 1.1,
+      "b": -0.3,
+      "c": 0.20,
+      "stem": "A client hesitates to discuss contract terms over appetizers. Which response best applies the 'table as deal room' principle?",
+      "options": [
+        {"key": "A", "text": "Acknowledge the shift in setting and suggest a brief agenda, framing the meal as a working session with natural breaks for relationship-building"},
+        {"key": "B", "text": "Drop the business topic entirely and focus only on personal conversation for the rest of the meal"},
+        {"key": "C", "text": "Remind the client that the meal is being expensed and therefore constitutes a business meeting"},
+        {"key": "D", "text": "Propose moving to the bar after eating where the 'real' negotiation can take place"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-003",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 0,
+      "moduleTitle": "Why the Table is the Original Deal Room",
+      "a": 1.2,
+      "b": 0.8,
+      "c": 0.20,
+      "stem": "A senior executive insists on holding a critical partnership negotiation at a private club rather than a restaurant. Which analysis best explains this preference through the 'table as deal room' framework?",
+      "options": [
+        {"key": "A", "text": "The private club signals membership in an exclusive network, reinforcing status asymmetry and leveraging the setting itself as a negotiation asset"},
+        {"key": "B", "text": "Private clubs have better acoustics and fewer distractions than public restaurants"},
+        {"key": "C", "text": "The executive is avoiding the obligation to reciprocate hospitality that a restaurant meal would create"},
+        {"key": "D", "text": "Private clubs allow the host to control the menu in advance, removing ordering as a variable"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-004",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 1,
+      "moduleTitle": "Seating Politics",
+      "a": 0.9,
+      "b": -1.0,
+      "c": 0.20,
+      "stem": "In a Western business dinner, which seat typically carries the highest status?",
+      "options": [
+        {"key": "A", "text": "The seat at the center of the table, facing the entrance"},
+        {"key": "B", "text": "The seat immediately to the host's right"},
+        {"key": "C", "text": "The seat at the head of the table, farthest from the door"},
+        {"key": "D", "text": "The seat with the best view of the restaurant"}
+      ],
+      "correct": "C",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-005",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 1,
+      "moduleTitle": "Seating Politics",
+      "a": 1.0,
+      "b": 0.1,
+      "c": 0.20,
+      "stem": "You are hosting a dinner for a client team of four and your own team of three. The restaurant offers a round table. How should you arrange the seating to maintain appropriate hierarchy?",
+      "options": [
+        {"key": "A", "text": "Seat yourself with your back to the wall or best sightline, place the most senior client to your right, and alternate your team with client team members"},
+        {"key": "B", "text": "Seat all client team members on one side and your team on the other to create a clear negotiation line"},
+        {"key": "C", "text": "Seat yourself at the center of the table and arrange everyone else alphabetically by surname"},
+        {"key": "D", "text": "Let the clients choose their own seats to demonstrate flexibility and respect for their preferences"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-006",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 1,
+      "moduleTitle": "Seating Politics",
+      "a": 1.3,
+      "b": 1.1,
+      "c": 0.20,
+      "stem": "At a Franco-German joint venture dinner, the French delegation arrives first and seats themselves. The German delegation later objects to the arrangement. What is the most likely source of the conflict?",
+      "options": [
+        {"key": "A", "text": "French and German seating hierarchies place the highest-status guest in different positions relative to the host, creating conflicting expectations about who controls the table"},
+        {"key": "B", "text": "The German delegation expected assigned seating cards, which the French consider overly formal"},
+        {"key": "C", "text": "The French seated themselves near the kitchen entrance, which Germans consider a low-status position"},
+        {"key": "D", "text": "The German delegation prefers rectangular tables for negotiations, while the French chose a round table"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    }
+    ,
+    {
+      "id": "pt-007",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 2,
+      "moduleTitle": "The Language of Wine",
+      "a": 0.9,
+      "b": -1.4,
+      "c": 0.20,
+      "stem": "When the sommelier presents the cork at a business dinner, what is the primary purpose of this ritual?",
+      "options": [
+        {"key": "A", "text": "To verify the wine has been stored properly and the bottle is authentic"},
+        {"key": "B", "text": "To allow the guest to smell the cork and assess the wine's aroma"},
+        {"key": "C", "text": "To confirm the vintage matches what was ordered"},
+        {"key": "D", "text": "To demonstrate that the bottle was sealed at the winery"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-008",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 2,
+      "moduleTitle": "The Language of Wine",
+      "a": 1.0,
+      "b": 0.0,
+      "c": 0.20,
+      "stem": "You are hosting a dinner for a conservative client who does not drink alcohol. How should you handle the wine service to maintain rapport and status?",
+      "options": [
+        {"key": "A", "text": "Order a premium non-alcoholic pairing for the table and skip the wine ritual entirely, treating the non-alcoholic option with the same ceremony as wine"},
+        {"key": "B", "text": "Order a bottle of wine for yourself only and let the client drink water"},
+        {"key": "C", "text": "Ask the sommelier to decant the wine out of sight so the client is not reminded of what they are missing"},
+        {"key": "D", "text": "Order wine for the table but instruct the server to pour only for those who want it"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-009",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 2,
+      "moduleTitle": "The Language of Wine",
+      "a": 1.2,
+      "b": 0.9,
+      "c": 0.20,
+      "stem": "A junior associate is tasked with selecting wine for a dinner with a Bordeaux-exporting client. Which strategy best demonstrates wine competence without overreaching?",
+      "options": [
+        {"key": "A", "text": "Name a specific Bordeaux producer and vintage, explain the choice briefly in terms of the client's region, then defer the tasting decision to the client"},
+        {"key": "B", "text": "Ask the sommelier to choose a Bordeaux and simply approve the recommendation"},
+        {"key": "C", "text": "Order a California Cabernet Sauvignon and explain that it is made from the same grape as Bordeaux"},
+        {"key": "D", "text": "Select the second-cheapest Bordeaux on the list to show fiscal responsibility"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-010",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 3,
+      "moduleTitle": "Ordering Strategy",
+      "a": 0.8,
+      "b": -1.1,
+      "c": 0.20,
+      "stem": "As a guest at a business dinner, what is the safest ordering strategy when the menu is unfamiliar?",
+      "options": [
+        {"key": "A", "text": "Order something mid-priced that is easy to eat and matches the host's course structure"},
+        {"key": "B", "text": "Order the most expensive item to signal that you value the host's generosity"},
+        {"key": "C", "text": "Order the cheapest item to show fiscal restraint and respect for the host's budget"},
+        {"key": "D", "text": "Ask the server for extra time and wait to see what the host orders first"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-011",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 3,
+      "moduleTitle": "Ordering Strategy",
+      "a": 1.0,
+      "b": 0.2,
+      "c": 0.20,
+      "stem": "A host notices that a guest has ordered the most expensive item on the menu. Which interpretation of this signal is most consistent with power dining principles?",
+      "options": [
+        {"key": "A", "text": "The guest may be testing the host's commitment to the relationship or signaling their own perceived value to the deal"},
+        {"key": "B", "text": "The guest is simply hungry and has poor menu judgment"},
+        {"key": "C", "text": "The guest is trying to maximize the cost to the host's company expense account"},
+        {"key": "D", "text": "The guest is demonstrating sophisticated taste that should be praised"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-012",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 3,
+      "moduleTitle": "Ordering Strategy",
+      "a": 1.1,
+      "b": 0.7,
+      "c": 0.20,
+      "stem": "During a business dinner, a guest with dietary restrictions spends several minutes interrogating the server about menu modifications. How does this behavior affect the host's strategic objectives?",
+      "options": [
+        {"key": "A", "text": "It disrupts the host's pacing and draws attention away from relationship-building, potentially signaling that the guest's individual needs override the group dynamic"},
+        {"key": "B", "text": "It demonstrates thoroughness and attention to detail, which reflects well on the guest's professional competence"},
+        {"key": "C", "text": "It has no effect because dietary restrictions are a neutral, non-political topic"},
+        {"key": "D", "text": "It helps the host by breaking the ice and giving others permission to ask questions"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    }
+    ,
+    {
+      "id": "pt-013",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 4,
+      "moduleTitle": "Who Pays and Why",
+      "a": 0.9,
+      "b": -1.3,
+      "c": 0.20,
+      "stem": "In a standard business dinner, who is expected to pay?",
+      "options": [
+        {"key": "A", "text": "The person who extended the invitation"},
+        {"key": "B", "text": "The most senior person at the table"},
+        {"key": "C", "text": "The bill is always split evenly among all parties"},
+        {"key": "D", "text": "The person who ordered the most expensive items"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-014",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 4,
+      "moduleTitle": "Who Pays and Why",
+      "a": 1.0,
+      "b": -0.2,
+      "c": 0.20,
+      "stem": "A prospective client insists on paying the bill after you invited them to dinner. What is the most strategically sound response?",
+      "options": [
+        {"key": "A", "text": "Thank them graciously and allow them to pay, recognizing that accepting their hospitality can build reciprocal goodwill for future negotiations"},
+        {"key": "B", "text": "Insist firmly on paying because the inviter always pays, regardless of the guest's protests"},
+        {"key": "C", "text": "Suggest splitting the bill as a compromise to avoid any awkwardness"},
+        {"key": "D", "text": "Let them pay but make a note that they now owe you a favor"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-015",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 4,
+      "moduleTitle": "Who Pays and Why",
+      "a": 1.3,
+      "b": 1.0,
+      "c": 0.20,
+      "stem": "In a cross-cultural negotiation, a Chinese delegation hosts a lavish dinner for your team. The next evening, you are scheduled to host. How should you handle the payment dynamic to maintain face and balance reciprocity?",
+      "options": [
+        {"key": "A", "text": "Host a dinner of at least equal lavishness and ensure you settle the bill discreetly before it arrives, reciprocating the honor without creating a public contest"},
+        {"key": "B", "text": "Suggest combining both dinners into a single bill split between both companies"},
+        {"key": "C", "text": "Host a modest dinner to signal that you value substance over extravagance"},
+        {"key": "D", "text": "Let the Chinese delegation pay again since they offered first, to avoid offending them"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-016",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 5,
+      "moduleTitle": "Tipping as a Status Signal",
+      "a": 0.8,
+      "b": -1.5,
+      "c": 0.20,
+      "stem": "In the United States, what is the standard minimum tip percentage for full-service restaurant dining?",
+      "options": [
+        {"key": "A", "text": "15 to 20 percent of the pre-tax bill"},
+        {"key": "B", "text": "10 percent of the total bill including tax"},
+        {"key": "C", "text": "25 percent of the pre-tax bill"},
+        {"key": "D", "text": "There is no standard; tipping is entirely optional"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-017",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 5,
+      "moduleTitle": "Tipping as a Status Signal",
+      "a": 1.0,
+      "b": 0.3,
+      "c": 0.20,
+      "stem": "A host tips 30 percent at a business dinner while the client is watching. What message does this tip most likely convey?",
+      "options": [
+        {"key": "A", "text": "The host is financially comfortable, values quality service, and understands the social dynamics of the restaurant — all of which signal reliability and sophistication"},
+        {"key": "B", "text": "The host is bad with money and cannot be trusted with a budget"},
+        {"key": "C", "text": "The host is trying to impress the client through conspicuous spending"},
+        {"key": "D", "text": "The host is a regular at this restaurant and receives preferential treatment"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-018",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 5,
+      "moduleTitle": "Tipping as a Status Signal",
+      "a": 1.2,
+      "b": 1.2,
+      "c": 0.20,
+      "stem": "You are hosting a business dinner in Tokyo, where tipping is not customary, but your American client tips the hotel concierge generously earlier in the day. At dinner, the client asks whether you will tip the restaurant staff. Which response best navigates the cross-cultural tipping signal?",
+      "options": [
+        {"key": "A", "text": "Explain that in Japan, excellent service is the standard and tipping can embarrass the staff, but offer to handle any gratuity privately if the client feels strongly about it"},
+        {"key": "B", "text": "Tip 20 percent anyway to maintain the American standard and show the client you are on the same page"},
+        {"key": "C", "text": "Tell the client that Japanese restaurants add a service charge so no additional tip is needed"},
+        {"key": "D", "text": "Leave a modest cash tip on the table and tell the client this is how it is done locally"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    }
+    ,
+    {
+      "id": "pt-019",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 6,
+      "moduleTitle": "The Restaurant as a Stage",
+      "a": 0.9,
+      "b": -0.8,
+      "c": 0.20,
+      "stem": "Why is it strategically important for a host to have a pre-established relationship with the restaurant staff?",
+      "options": [
+        {"key": "A", "text": "It ensures smoother service, better table placement, and signals to guests that the host has status and influence in the venue"},
+        {"key": "B", "text": "It guarantees a discount on the final bill"},
+        {"key": "C", "text": "It allows the host to bypass the wine corkage fee"},
+        {"key": "D", "text": "It ensures the kitchen will prepare the food exactly to the host's specifications"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-020",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 6,
+      "moduleTitle": "The Restaurant as a Stage",
+      "a": 1.0,
+      "b": 0.4,
+      "c": 0.20,
+      "stem": "A host chooses a quiet, dimly lit restaurant with private booths for a dinner with a new client. What strategic objective does this setting best serve?",
+      "options": [
+        {"key": "A", "text": "It creates an intimate, confidential atmosphere that encourages candid conversation and signals that the host values privacy and discretion"},
+        {"key": "B", "text": "It reduces the visibility of the meal, allowing the host to spend less on the food quality"},
+        {"key": "C", "text": "It prevents the client from being recognized by competitors who might be dining nearby"},
+        {"key": "D", "text": "It makes the client feel drowsy and more agreeable after a heavy meal"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-021",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 6,
+      "moduleTitle": "The Restaurant as a Stage",
+      "a": 1.3,
+      "b": 1.3,
+      "c": 0.20,
+      "stem": "A host deliberately books a table in the center of a busy, high-profile restaurant rather than a private room. Which of the following is the most sophisticated strategic rationale for this choice?",
+      "options": [
+        {"key": "A", "text": "Being seen in a power restaurant with a key client signals market credibility to observers, and the visible energy of the room can elevate the perceived importance of the meeting"},
+        {"key": "B", "text": "The center table has better service coverage from the waitstaff"},
+        {"key": "C", "text": "The host wants to demonstrate that they are too important to need privacy"},
+        {"key": "D", "text": "The private room was unavailable and the host is making the best of a bad situation"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-022",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 7,
+      "moduleTitle": "International Dining Diplomacy",
+      "a": 0.8,
+      "b": -0.9,
+      "c": 0.20,
+      "stem": "In many East Asian business dining contexts, what does refusing an offered drink typically communicate?",
+      "options": [
+        {"key": "A", "text": "A reluctance to fully engage in the relationship-building process"},
+        {"key": "B", "text": "Responsible personal conduct and professionalism"},
+        {"key": "C", "text": "A medical or religious restriction that must be accommodated"},
+        {"key": "D", "text": "Displeasure with the quality of the establishment"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-023",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 7,
+      "moduleTitle": "International Dining Diplomacy",
+      "a": 1.0,
+      "b": 0.0,
+      "c": 0.20,
+      "stem": "During a business dinner in Saudi Arabia, your host uses their right hand to tear bread and offers you a piece. What is the appropriate response?",
+      "options": [
+        {"key": "A", "text": "Accept the bread with your right hand and eat it, as the left hand is considered unclean in many Islamic cultures"},
+        {"key": "B", "text": "Politely decline the bread to avoid any cultural misstep"},
+        {"key": "C", "text": "Accept the bread with both hands to show respect and gratitude"},
+        {"key": "D", "text": "Accept the bread with your left hand to demonstrate that you are left-handed and cannot use your right"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-024",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 7,
+      "moduleTitle": "International Dining Diplomacy",
+      "a": 1.3,
+      "b": 1.4,
+      "c": 0.20,
+      "stem": "A Japanese client makes an audible slurping sound while eating noodles at a business dinner. Your American colleague looks uncomfortable. Which interpretation is correct?",
+      "options": [
+        {"key": "A", "text": "In Japan, slurping noodles is a sign of enjoyment and appreciation for the chef; the client is paying a compliment, not being rude"},
+        {"key": "B", "text": "The client has poor table manners and your colleague's discomfort is justified"},
+        {"key": "C", "text": "The client is testing whether your team can adapt to cultural differences"},
+        {"key": "D", "text": "The client is eating too quickly and should be encouraged to slow down"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    }
+    ,
+    {
+      "id": "pt-025",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 8,
+      "moduleTitle": "The After-Dinner Strategy",
+      "a": 0.9,
+      "b": -0.7,
+      "c": 0.20,
+      "stem": "What is the recommended timeframe for sending a follow-up message after a business dinner?",
+      "options": [
+        {"key": "A", "text": "Within 24 hours, while the conversation is still fresh and the relationship momentum is high"},
+        {"key": "B", "text": "Immediately, before leaving the restaurant"},
+        {"key": "C", "text": "Within one week, to avoid appearing overly eager"},
+        {"key": "D", "text": "Only if a specific action item was discussed during the meal"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-026",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 8,
+      "moduleTitle": "The After-Dinner Strategy",
+      "a": 1.0,
+      "b": 0.5,
+      "c": 0.20,
+      "stem": "A deal was discussed but not closed during a business dinner. What follow-up strategy best advances the negotiation?",
+      "options": [
+        {"key": "A", "text": "Send a thank-you note that references a specific personal topic from the dinner, then separately propose a concrete next step with a timeline"},
+        {"key": "B", "text": "Send a formal proposal immediately the next morning to capitalize on the goodwill"},
+        {"key": "C", "text": "Wait for the other party to make the first move since they were the guest"},
+        {"key": "D", "text": "Invite them to another dinner to continue the conversation before putting anything in writing"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-027",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 8,
+      "moduleTitle": "The After-Dinner Strategy",
+      "a": 1.2,
+      "b": 1.0,
+      "c": 0.20,
+      "stem": "A week after a successful business dinner, you learn that your client had a negative reaction to something you said about their competitor. The client has not responded to your follow-up. What is the most effective recovery strategy?",
+      "options": [
+        {"key": "A", "text": "Send a brief, direct message acknowledging that you may have misspoken, reaffirm your respect for their perspective, and propose a low-pressure meeting to reset the conversation"},
+        {"key": "B", "text": "Ignore the issue and send a second follow-up about a different topic to change the subject"},
+        {"key": "C", "text": "Ask your mutual contacts to intervene and smooth things over on your behalf"},
+        {"key": "D", "text": "Send a gift basket with a note that makes no reference to the incident"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-028",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 9,
+      "moduleTitle": "The Ultimate Power Table Framework",
+      "a": 0.9,
+      "b": -0.6,
+      "c": 0.20,
+      "stem": "Which of the following best describes the core principle of the Power Table Framework?",
+      "options": [
+        {"key": "A", "text": "Every element of a business meal — from seating to tipping — is a deliberate signal that can be orchestrated to advance a strategic objective"},
+        {"key": "B", "text": "The most expensive restaurant always produces the best business outcomes"},
+        {"key": "C", "text": "Business meals are primarily about enjoying good food in good company"},
+        {"key": "D", "text": "The host should always maintain complete control over every aspect of the meal"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-029",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 9,
+      "moduleTitle": "The Ultimate Power Table Framework",
+      "a": 1.1,
+      "b": 0.6,
+      "c": 0.20,
+      "stem": "A junior executive is preparing to host their first solo business dinner. According to the Power Table Framework, which preparation step is most critical?",
+      "options": [
+        {"key": "A", "text": "Pre-briefing the restaurant on the objective of the dinner so the staff can support the desired atmosphere and service pace"},
+        {"key": "B", "text": "Memorizing the entire wine list to appear knowledgeable"},
+        {"key": "C", "text": "Practicing the handshake they will use when greeting each guest"},
+        {"key": "D", "text": "Pre-ordering the most expensive tasting menu for the table"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    },
+    {
+      "id": "pt-030",
+      "type": "mc",
+      "domain": "power-table-dining",
+      "module": 9,
+      "moduleTitle": "The Ultimate Power Table Framework",
+      "a": 1.4,
+      "b": 1.5,
+      "c": 0.20,
+      "stem": "A seasoned executive reflects that their most successful deal was closed over a simple lunch, while an elaborate multi-course dinner with a different client led to no deal. How does the Power Table Framework explain this apparent contradiction?",
+      "options": [
+        {"key": "A", "text": "The framework's effectiveness depends on aligning the setting, signals, and stakes with the specific client and deal context — a simple lunch can be a more powerful signal of focus and efficiency when the counterpart values those traits"},
+        {"key": "B", "text": "The framework only applies to dinners, not lunches, so the comparison is invalid"},
+        {"key": "C", "text": "The elaborate dinner failed because the executive did not spend enough money on it"},
+        {"key": "D", "text": "The simple lunch succeeded by chance, and the framework would have predicted the opposite outcome"}
+      ],
+      "correct": "A",
+      "calibration": { "status": "draft", "nResponses": 0, "infitMNSQ": null, "outfitMNSQ": null }
+    }
+  ]
+}

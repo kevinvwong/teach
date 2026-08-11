@@ -104,14 +104,23 @@ export async function GET(
   html = html.replace(/(["'])(\.\.\/assessments\/)/g, `$1/courses/${course}/assessments/`);
   html = html.replace(/(["'])(\.\.\/reference\/)/g, `$1/courses/${course}/reference/`);
 
-  const quizSection = `
+  // Determine item bank path
+  const itemBankPath = isDbCourse
+    ? `/item-banks/${course}.json`
+    : `/courses/${course}/assessments/item-bank.json`;
+  const itemBankFile = isDbCourse
+    ? path.join(cwd, "public", "item-banks", `${course}.json`)
+    : path.join(cwd, course, "assessments", "item-bank.json");
+  const hasItemBank = fs.existsSync(itemBankFile);
+
+  const quizSection = hasItemBank ? `
     <div style="max-width:840px;margin:2.5rem auto 1rem;padding:0 1.5rem;font-family:Inter,system-ui,sans-serif;">
       <hr style="border:none;border-top:1px solid #E5E7EB;margin-bottom:2rem;">
       <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:0.25rem;color:#1C1E2B;">Check Your Understanding</h2>
       <p style="font-size:0.875rem;color:#6B7280;margin-bottom:1.5rem;">Adaptive quiz — questions adjust to your level using Item Response Theory.</p>
 
       <div id="quiz-container"
-           data-item-bank="/courses/${course}/assessments/item-bank.json"
+           data-item-bank="${itemBankPath}"
            data-domain="${course}"
            data-api-endpoint="/api/irt-score"
            data-n-items="5"
@@ -131,8 +140,8 @@ export async function GET(
         <div id="quiz-feedback" style="margin-top:1rem;"></div>
       </div>
     </div>
-    ${!isDbCourse ? `<script src="/courses/${course}/assessments/quiz-renderer.js" defer></script>` : ""}
-  `;
+    <script src="/courses/${isDbCourse ? "civil_war" : course}/assessments/quiz-renderer.js" defer></script>
+  ` : "";
 
   const navFooter = `
     <div style="max-width:840px;margin:2rem auto 3rem;padding:0 1.5rem;font-family:Inter,system-ui,sans-serif;">
